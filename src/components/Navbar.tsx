@@ -75,7 +75,7 @@ export default function Navbar({ onNavigate, activeSection, isDark, onToggleDark
     { label: t('nav_about'), id: 'about' },
     { label: t('nav_services'), id: 'services' },
     { label: t('nav_tracking_tech'), id: 'tracking-tech' },
-    { label: t('nav_faq'), id: 'faq' },
+    { label: t('nav_faq'), id: 'reviews-faq' },
     { label: t('nav_contact'), id: 'contact' },
   ];
 

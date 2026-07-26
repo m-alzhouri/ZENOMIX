@@ -6,14 +6,14 @@ import Calculator from './components/Calculator';
 import Tracker from './components/Tracker';
 import Fleet from './components/Fleet';
 import About from './components/About';
-import Faq from './components/Faq';
 import Contact from './components/Contact';
 import Impressum from './components/Impressum';
 import Datenschutz from './components/Datenschutz';
+import ReviewsFaqPage from './components/ReviewsFaqPage';
 import Footer from './components/Footer';
 import { ChevronUp, ArrowRight, Shield } from 'lucide-react';
 
-type AppPage = 'home' | 'tracking-tech' | 'impressum' | 'datenschutz';
+type AppPage = 'home' | 'tracking-tech' | 'impressum' | 'datenschutz' | 'reviews-faq';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -73,7 +73,7 @@ export default function App() {
 
     const observer = new IntersectionObserver(handleIntersection, observerOptions);
 
-    const sections = ['home', 'about', 'services', 'faq', 'contact'];
+    const sections = ['home', 'about', 'services', 'contact'];
     sections.forEach((id) => {
       const element = document.getElementById(id);
       if (element) {
@@ -116,6 +116,15 @@ export default function App() {
   }, []);
 
   const handleNavigate = (sectionId: string) => {
+    if (sectionId === 'reviews-faq') {
+      if (currentPage !== 'reviews-faq') {
+        navigatePage('reviews-faq');
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      return;
+    }
+
     const trackingTechSections = ['tracking-tech', 'calculator', 'tracker', 'fleet'];
     const isTrackingTechTarget = trackingTechSections.includes(sectionId);
 
@@ -208,7 +217,6 @@ export default function App() {
             <Hero onNavigate={handleNavigate} />
             <About />
             <Services />
-            <Faq />
             <Contact />
           </>
         )}
@@ -229,6 +237,10 @@ export default function App() {
 
         {currentPage === 'datenschutz' && (
           <Datenschutz onBack={() => navigatePage('home')} />
+        )}
+
+        {currentPage === 'reviews-faq' && (
+          <ReviewsFaqPage />
         )}
       </main>
 

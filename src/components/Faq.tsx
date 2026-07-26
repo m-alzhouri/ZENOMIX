@@ -20,7 +20,8 @@ export default function Faq() {
   };
 
   return (
-    <section id="faq" className="py-24 relative overflow-hidden bg-slate-50 dark:bg-slate-950 border-t border-slate-100 dark:border-slate-900">
+    <section id="faq" className="py-24 relative overflow-hidden bg-slate-50
+     dark:bg-slate-950 border-t border-slate-100 dark:border-slate-900">
       
       {/* Background decoration circles (style parity with Fleet, About, Contact) */}
       <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-blue-50/40 dark:bg-blue-950/10 rounded-full filter blur-[100px] pointer-events-none" />

@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { Mail, Phone, MapPin, Send, CheckCircle2, RefreshCw, AlertCircle, History, X } from 'lucide-react';
 import { ContactSubmission } from '../types';
+import emailjs from '@emailjs/browser';
+
+
+const EMAILJS_SERVICE_ID = 'service_4vayxa5';
+const EMAILJS_TEMPLATE_ID = 'template_4vvlwtv';
+const EMAILJS_PUBLIC_KEY = 'KYTYzaPBiNElEYxRO';
 
 export default function Contact() {
   const { t, isRtl } = useLanguage();
@@ -23,7 +29,7 @@ export default function Contact() {
     { value: 'Carbon Neutral Consultation', label: t('contact_topic_carbon') },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
 
@@ -38,8 +44,23 @@ export default function Contact() {
 
     setSubmitting(true);
 
-    // Simulate standard secure network latency
-    setTimeout(() => {
+    try {
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+
+      const templateParams = {
+        name,
+        email,
+        subject: subjectOptions.find(opt => opt.value === subject)?.label || subject,
+        message,
+        to_email: 'info@zenomix.de'
+      };
+
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams
+      );
+
       const newSubmission: ContactSubmission = {
         id: `ZN-SUB-${Math.floor(1000 + Math.random() * 9000)}`,
         name,
@@ -51,13 +72,20 @@ export default function Contact() {
 
       setSubmissions((prev) => [newSubmission, ...prev]);
       setSuccess(true);
-      setSubmitting(false);
 
-      // Reset inputs
       setName('');
       setEmail('');
       setMessage('');
-    }, 800);
+    } catch (err) {
+      setError(
+        isRtl
+          ? 'فشل إرسال الرسالة. يرجى المحاولة مرة أخرى.'
+          : 'Failed to send message. Please try again.'
+      );
+      console.error('EmailJS error:', err);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const removeSubmission = (id: string) => {

@@ -1,18 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLanguage } from '../LanguageContext';
-import { Award, ShieldCheck, HeartHandshake, Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Award, ShieldCheck, HeartHandshake } from 'lucide-react';
 
 export default function About() {
-  const { t, isRtl, testimonials } = useLanguage();
-  const [activeTestimonial, setActiveTestimonial] = useState<number>(0);
-
-  const handlePrevTest = () => {
-    setActiveTestimonial((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-  };
-
-  const handleNextTest = () => {
-    setActiveTestimonial((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-  };
+  const { t, isRtl } = useLanguage();
 
   const values = [
     {
@@ -108,75 +99,6 @@ export default function About() {
           </div>
 
         </div>
-
-        {/* Corporate Endorsement / Testimonial Slider */}
-        {testimonials && testimonials.length > 0 && (
-          <div className="bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-10 md:p-12 relative overflow-hidden shadow-sm animate-none">
-            
-            {/* Accent decoration */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50/50 dark:bg-blue-900/10 rounded-full filter blur-2xl" />
-
-            {/* Slider Layout */}
-            <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-              
-              {/* Stars */}
-              <div className="flex items-center gap-1.5 text-amber-500 mb-6 justify-center">
-                {[...Array(testimonials[activeTestimonial]?.rating || 5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-current" />
-                ))}
-              </div>
-
-              {/* Testimonial Quote */}
-              <blockquote className="text-lg sm:text-xl md:text-2xl font-medium italic text-slate-800 dark:text-slate-300 leading-relaxed mb-8">
-                "{testimonials[activeTestimonial]?.quote}"
-              </blockquote>
-
-              {/* Testimonial Author */}
-              <div className="mb-8">
-                <div className="text-base sm:text-lg font-bold font-display text-slate-900 dark:text-white">
-                  {testimonials[activeTestimonial]?.name}
-                </div>
-                <div className="text-xs font-mono text-blue-600 dark:text-blue-400 mt-1 uppercase tracking-wider font-bold">
-                  {testimonials[activeTestimonial]?.role} — {testimonials[activeTestimonial]?.company}
-                </div>
-              </div>
-
-              {/* Controls */}
-              <div className={`flex items-center gap-4 ${isRtl ? 'flex-row-reverse' : ''}`}>
-                <button
-                  onClick={isRtl ? handleNextTest : handlePrevTest}
-                  className="p-3.5 rounded-full bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-all hover:scale-105 shadow-sm cursor-pointer"
-                  aria-label="Previous testimonial"
-                >
-                  <ChevronLeft className={`h-5 w-5 ${isRtl ? 'rotate-180' : ''}`} />
-                </button>
-                
-                <div className="flex items-center gap-2">
-                  {testimonials.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setActiveTestimonial(idx)}
-                      className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                        activeTestimonial === idx ? 'w-6 bg-blue-600' : 'w-2 bg-slate-200 dark:bg-slate-700'
-                      }`}
-                      aria-label={`Go to slide ${idx + 1}`}
-                    />
-                  ))}
-                </div>
-
-                <button
-                  onClick={isRtl ? handlePrevTest : handleNextTest}
-                  className="p-3.5 rounded-full bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-all hover:scale-105 shadow-sm cursor-pointer"
-                  aria-label="Next testimonial"
-                >
-                  <ChevronRight className={`h-5 w-5 ${isRtl ? 'rotate-180' : ''}`} />
-                </button>
-              </div>
-
-            </div>
-
-          </div>
-        )}
 
       </div>
     </section>
