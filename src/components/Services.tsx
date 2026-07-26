@@ -6,7 +6,6 @@ import { Zap, Truck, Globe, Shield, ArrowRight, CheckCircle2, ChevronRight, X, B
 export default function Services() {
   const { services, t, isRtl, language } = useLanguage();
   const [selectedService, setSelectedService] = useState<ServiceItem | null>(null);
-  const marqueeGroups = [services, services];
 
   useEffect(() => {
     if (!selectedService) return;
@@ -73,20 +72,16 @@ export default function Services() {
             <div className="absolute right-[-8%] top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-indigo-100/70 blur-[120px] dark:bg-indigo-950/30" />
           </div>
 
-          <div className="relative overflow-hidden rounded-[2rem] border border-slate-200/70 dark:border-slate-800/80 bg-white/70 dark:bg-slate-950/60 backdrop-blur-md shadow-[0_12px_50px_-18px_rgba(37,99,235,0.45)] dark:shadow-[0_20px_80px_-25px_rgba(59,130,246,0.35)] py-4 sm:py-5">
-            <div className="pointer-events-none absolute inset-y-0 left-0 z-20 w-16 bg-gradient-to-r from-white via-white/70 to-transparent dark:from-slate-950 dark:via-slate-950/80 dark:to-transparent" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 z-20 w-16 bg-gradient-to-l from-white via-white/70 to-transparent dark:from-slate-950 dark:via-slate-950/80 dark:to-transparent" />
-
-            <div dir="ltr" className={`marquee-track ${isRtl ? 'marquee-rtl' : 'marquee-ltr'} flex w-max`}>
-              {marqueeGroups.map((group, groupIndex) => (
-                <div key={`services-group-${groupIndex}`} className="marquee-group flex gap-4 sm:gap-5 px-3 sm:px-4" aria-hidden={groupIndex === 1}>
-                  {group.map((service, index) => (
-                    <div
-                      key={`${service.id}-${groupIndex}-${index}`}
-                      id={`service-card-${service.id}-${groupIndex}`}
-                      className="group relative min-w-[280px] sm:min-w-[320px] lg:min-w-[340px] bg-white dark:bg-slate-900 hover:bg-slate-50/50 dark:hover:bg-slate-900/50 border border-slate-200/80 dark:border-slate-800 hover:border-blue-300 dark:hover:border-blue-700 rounded-3xl p-6 sm:p-7 transition-all duration-500 flex flex-col justify-between cursor-pointer shadow-[0_10px_30px_-18px_rgba(15,23,42,0.45)] hover:shadow-[0_16px_40px_-18px_rgba(37,99,235,0.45)] dark:shadow-none"
-                      onClick={() => setSelectedService(service)}
-                    >
+          <div className="relative rounded-[2rem] border border-slate-200/70 dark:border-slate-800/80 bg-white/70 dark:bg-slate-950/60 backdrop-blur-md shadow-[0_12px_50px_-18px_rgba(37,99,235,0.45)] dark:shadow-[0_20px_80px_-25px_rgba(59,130,246,0.35)] py-4 sm:py-5 px-4 sm:px-6">
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+              {services.map((service, index) => (
+                <div
+                  key={`${service.id}-${index}`}
+                  id={`service-card-${service.id}`}
+                  className="group relative bg-white dark:bg-slate-900 hover:bg-slate-50/50 dark:hover:bg-slate-900/50 border border-slate-200/80 dark:border-slate-800 hover:border-blue-300 dark:hover:border-blue-700 rounded-3xl p-6 sm:p-7 transition-all duration-500 flex flex-col justify-between cursor-pointer shadow-[0_10px_30px_-18px_rgba(15,23,42,0.45)] hover:shadow-[0_16px_40px_-18px_rgba(37,99,235,0.45)] dark:shadow-none"
+                  onClick={() => setSelectedService(service)}
+                >
                       <div className="absolute inset-x-0 top-0 h-1.5 rounded-t-3xl bg-gradient-to-r from-blue-600 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                       <div>
@@ -107,14 +102,14 @@ export default function Services() {
                           {service.shortDesc}
                         </p>
 
-                        <ul className="mt-5 space-y-2">
+                        {/* <ul className="mt-5 space-y-2">
                           {service.features.slice(0, 2).map((feat, idx) => (
                             <li key={idx} className={`flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 ${isRtl ? 'flex-row-reverse text-right' : 'text-left'}`}>
                               <CheckCircle2 className="h-4 w-4 text-blue-600 dark:text-blue-400 shrink-0" />
                               <span className="truncate font-medium">{feat}</span>
                             </li>
                           ))}
-                        </ul>
+                        </ul> */}
                       </div>
 
                       <div className={`mt-8 pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between ${isRtl ? 'flex-row-reverse' : ''}`}>
@@ -125,14 +120,12 @@ export default function Services() {
                           </div>
                         </div>
                         <div className={`flex items-center gap-1 text-xs font-bold text-blue-600 dark:text-blue-400 ${isRtl ? 'flex-row-reverse group-hover:-translate-x-1.5' : 'group-hover:translate-x-1.5'} transition-transform duration-300`}>
-                          <span>{isRtl ? 'استكشف التفاصيل' : 'Explore Details'}</span>
+                          <span>{isRtl ? 'استكمل التفاصيل' : 'Explore Details'}</span>
                           <ChevronRight className={`h-4 w-4 ${isRtl ? 'rotate-180' : ''}`} />
                         </div>
                       </div>
                     </div>
                   ))}
-                </div>
-              ))}
             </div>
           </div>
         </div>

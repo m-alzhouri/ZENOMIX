@@ -5,7 +5,7 @@ import { ContactSubmission } from '../types';
 import emailjs from '@emailjs/browser';
 
 
-const EMAILJS_SERVICE_ID = 'service_4vayxa5';
+const EMAILJS_SERVICE_ID = 'service_wecrjhc';
 const EMAILJS_TEMPLATE_ID = 'template_4vvlwtv';
 const EMAILJS_PUBLIC_KEY = 'KYTYzaPBiNElEYxRO';
 
@@ -27,6 +27,7 @@ export default function Contact() {
     { value: 'Bespoke High-Value Cargo Transport', label: t('contact_topic_highval') },
     { value: 'Interstate Fleet Relay Contracts', label: t('contact_topic_relay') },
     { value: 'Carbon Neutral Consultation', label: t('contact_topic_carbon') },
+    { value: 'Other', label: isRtl ? 'غير ذلك' : 'Other' },
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {

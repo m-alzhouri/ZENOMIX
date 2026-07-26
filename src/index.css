@@ -6,7 +6,6 @@
   --font-display: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  /* Custom colors matching the 'Professional Polish' palette */
   --color-brand-navy: #0f172a;       /* deep slate-900 for dark accents/footers */
   --color-brand-navy-light: #1e293b; /* slate-800 for details */
   --color-brand-blue: #2563eb;       /* main blue-600 for the accent gradient */
@@ -99,20 +98,42 @@ html.dark body {
 }
 
 .marquee-track {
-  will-change: transform;
-  direction: ltr;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f8fafc;
 }
 
-.marquee-ltr {
-  animation: marquee-ltr 28s linear infinite;
+html.dark .marquee-track {
+  scrollbar-color: #334155 #0f172a;
 }
 
-.marquee-rtl {
-  animation: marquee-rtl 28s linear infinite;
+.marquee-track::-webkit-scrollbar {
+  height: 8px;
 }
 
-.marquee-track:hover {
-  animation-play-state: paused;
+.marquee-track::-webkit-scrollbar-track {
+  background: #f8fafc;
+  border-radius: 4px;
+}
+
+html.dark .marquee-track::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+.marquee-track::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+html.dark .marquee-track::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+.marquee-track::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
 }
 
 .marquee-group {
