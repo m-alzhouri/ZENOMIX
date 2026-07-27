@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Logo from './Logo';
 import { useLanguage } from '../LanguageContext';
-import { Mail, Send, Linkedin, Twitter, Github, Youtube, CheckCircle, Shield, Award } from 'lucide-react';
+import { Mail, Send, CheckCircle, Shield, Award } from 'lucide-react';
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 
 interface FooterProps {
   onNavigate: (id: string) => void;
@@ -64,20 +65,24 @@ export default function Footer({ onNavigate, onNavigatePage, isDark = false }: F
             
             {/* Social Icons */}
             <div className={`flex items-center gap-3 ${isRtl ? 'justify-end' : 'justify-start'}`}>
-              {[
-                { icon: <Twitter className="h-[18px] w-[18px]" />, href: '#' },
-                { icon: <Linkedin className="h-[18px] w-[18px]" />, href: '#' },
-                { icon: <Github className="h-[18px] w-[18px]" />, href: '#' },
-                { icon: <Youtube className="h-[18px] w-[18px]" />, href: '#' },
-              ].map((social, idx) => (
-                <a
-                  key={idx}
-                  href={social.href}
-                  className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 hover:bg-blue-50 dark:hover:bg-blue-950/40 hover:text-blue-600 dark:hover:text-blue-400 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-800 hover:border-blue-200 dark:hover:border-blue-900/40 transition-all duration-300 cursor-pointer"
-                >
-                  {social.icon}
-                </a>
-              ))}
+              <a
+                href="https://wa.me/491722970140"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 hover:bg-green-50 dark:hover:bg-green-950/40 text-slate-500 dark:text-slate-400 hover:text-[#25D366] border border-slate-200 dark:border-slate-800 hover:border-green-200 dark:hover:border-green-900/40 transition-all duration-300 cursor-pointer hover:scale-110"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp className="h-[18px] w-[18px]" />
+              </a>
+              <a
+                href="https://instagram.com/yourinstagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 hover:bg-pink-50 dark:hover:bg-pink-950/40 text-slate-500 dark:text-slate-400 hover:text-[#E4405F] border border-slate-200 dark:border-slate-800 hover:border-pink-200 dark:hover:border-pink-900/40 transition-all duration-300 cursor-pointer hover:scale-110"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="h-[18px] w-[18px]" />
+              </a>
             </div>
           </div>
 

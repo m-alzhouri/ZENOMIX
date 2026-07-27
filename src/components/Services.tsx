@@ -102,14 +102,6 @@ export default function Services() {
                           {service.shortDesc}
                         </p>
 
-                        {/* <ul className="mt-5 space-y-2">
-                          {service.features.slice(0, 2).map((feat, idx) => (
-                            <li key={idx} className={`flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 ${isRtl ? 'flex-row-reverse text-right' : 'text-left'}`}>
-                              <CheckCircle2 className="h-4 w-4 text-blue-600 dark:text-blue-400 shrink-0" />
-                              <span className="truncate font-medium">{feat}</span>
-                            </li>
-                          ))}
-                        </ul> */}
                       </div>
 
                       <div className={`mt-8 pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between ${isRtl ? 'flex-row-reverse' : ''}`}>

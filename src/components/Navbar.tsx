@@ -3,6 +3,7 @@ import Logo from './Logo';
 import { Menu, X, ArrowRight, Sun, Moon, Globe, ChevronDown, Check } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { motion, AnimatePresence } from 'motion/react';
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import syriaFlag from '../assets/syria.png';
 import americaFlag from '../assets/amrica.png';
 import germanFlag from '../assets/Germane.png';
@@ -127,6 +128,28 @@ export default function Navbar({ onNavigate, activeSection, isDark, onToggleDark
 
           {/* Action Area - Quick Track, Lang Dropdown & Theme Toggle */}
           <div className="hidden lg:flex items-center gap-3">
+            {/* Social Icons */}
+            <div className="flex items-center gap-2">
+              <a
+                href="https://wa.me/491722970140"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 hover:bg-green-50 dark:hover:bg-green-950/40 text-slate-500 dark:text-slate-400 hover:text-[#25D366] border border-slate-200 dark:border-slate-800 hover:border-green-200 dark:hover:border-green-900/40 transition-all duration-300 cursor-pointer hover:scale-110"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp className="h-[18px] w-[18px]" />
+              </a>
+              <a
+                href="https://instagram.com/yourinstagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 hover:bg-pink-50 dark:hover:bg-pink-950/40 text-slate-500 dark:text-slate-400 hover:text-[#E4405F] border border-slate-200 dark:border-slate-800 hover:border-pink-200 dark:hover:border-pink-900/40 transition-all duration-300 cursor-pointer hover:scale-110"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="h-[18px] w-[18px]" />
+              </a>
+            </div>
+
             {/* Language Dropdown */}
             <div className="relative" ref={langDropdownRef}>
               <button
@@ -282,6 +305,28 @@ export default function Navbar({ onNavigate, activeSection, isDark, onToggleDark
 
               {/* Footer with language and track button */}
               <div className={`p-6 border-t space-y-4 ${isDark ? 'border-slate-700/50 bg-slate-900/50' : 'border-slate-300/50 bg-white/50'}`}>
+                {/* Social Icons */}
+                <div className={`flex items-center gap-3 ${isRtl ? 'justify-end' : 'justify-start'}`}>
+                  <a
+                    href="https://wa.me/491722970140"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 hover:bg-green-50 dark:hover:bg-green-950/40 text-slate-500 dark:text-slate-400 hover:text-[#25D366] border border-slate-200 dark:border-slate-800 hover:border-green-200 dark:hover:border-green-900/40 transition-all duration-300 cursor-pointer hover:scale-110"
+                    aria-label="WhatsApp"
+                  >
+                    <FaWhatsapp className="h-[18px] w-[18px]" />
+                  </a>
+                  <a
+                    href="https://instagram.com/yourinstagram"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 hover:bg-pink-50 dark:hover:bg-pink-950/40 text-slate-500 dark:text-slate-400 hover:text-[#E4405F] border border-slate-200 dark:border-slate-800 hover:border-pink-200 dark:hover:border-pink-900/40 transition-all duration-300 cursor-pointer hover:scale-110"
+                    aria-label="Instagram"
+                  >
+                    <FaInstagram className="h-[18px] w-[18px]" />
+                  </a>
+                </div>
+
                 {/* Language Switch - Single button with dropdown */}
                 <div className="relative" ref={mobileLangDropdownRef}>
                   <button

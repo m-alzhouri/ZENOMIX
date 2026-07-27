@@ -2,12 +2,9 @@ import React, { useState } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { Mail, Phone, MapPin, Send, CheckCircle2, RefreshCw, AlertCircle, History, X } from 'lucide-react';
 import { ContactSubmission } from '../types';
-import emailjs from '@emailjs/browser';
 
-
-const EMAILJS_SERVICE_ID = 'service_wecrjhc';
-const EMAILJS_TEMPLATE_ID = 'template_4vvlwtv';
-const EMAILJS_PUBLIC_KEY = 'KYTYzaPBiNElEYxRO';
+// Formspree Form ID
+const FORMSPREE_FORM_ID = 'mdaqypry';
 
 export default function Contact() {
   const { t, isRtl } = useLanguage();
@@ -46,21 +43,24 @@ export default function Contact() {
     setSubmitting(true);
 
     try {
-      emailjs.init(EMAILJS_PUBLIC_KEY);
+      const formData = new FormData();
+      formData.append('name', name);
+      formData.append('email', email);
+      formData.append('subject', subjectOptions.find(opt => opt.value === subject)?.label || subject);
+      formData.append('message', message);
 
-      const templateParams = {
-        name,
-        email,
-        subject: subjectOptions.find(opt => opt.value === subject)?.label || subject,
-        message,
-        to_email: 'info@zenomix.de'
-      };
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
 
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        templateParams
-      );
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to send message');
+      }
 
       const newSubmission: ContactSubmission = {
         id: `ZN-SUB-${Math.floor(1000 + Math.random() * 9000)}`,
@@ -83,7 +83,7 @@ export default function Contact() {
           ? 'فشل إرسال الرسالة. يرجى المحاولة مرة أخرى.'
           : 'Failed to send message. Please try again.'
       );
-      console.error('EmailJS error:', err);
+      console.error('Formspree error:', err);
     } finally {
       setSubmitting(false);
     }
