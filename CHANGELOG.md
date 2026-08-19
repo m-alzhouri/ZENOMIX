@@ -2,6 +2,49 @@
 
 ## 2026-08-19
 
+### Config — Automatischer Deploy auf die eigene Domain zenomix.de
+
+**Symptom / Description**
+Die Seite war auf GitHub Pages unter dem Sub-Pfad `/ZENOMIX/` konfiguriert und musste von
+Hand mit `npm run deploy` (gh-pages) veröffentlicht werden. Ein `gh-pages`-Branch existierte
+auf dem Remote noch gar nicht. Mit der gekauften Domain `zenomix.de` soll die Seite im
+Domain-Root laufen und bei jedem Push auf `main` automatisch neu deployed werden.
+
+**Fix / Change**
+Deploy auf GitHub Actions umgestellt und den Sub-Pfad entfernt:
+
+- Neuer Workflow `.github/workflows/deploy.yml` — läuft bei Push auf `main` und per
+  `workflow_dispatch`: `npm ci` → `npm run lint` → `npm run build`, dann Upload von `dist/`
+  als Pages-Artefakt und Deploy über `actions/deploy-pages`. `npm run lint` ist damit ein
+  Release-Gate: ein Typfehler verhindert den Deploy. `concurrency: pages` mit
+  `cancel-in-progress: false` verhindert überlappende Deploys.
+- `base` von `'/ZENOMIX/'` auf `'/'` — die Assets werden jetzt absolut ab Root referenziert.
+  Das per `import.meta.env.BASE_URL` geladene Hero-Video folgt automatisch.
+- `public/CNAME` mit `zenomix.de` angelegt, wird in jeden Build kopiert.
+- `homepage` auf `https://zenomix.de` gesetzt (zeigte vorher auf
+  `MohamedFirasAlfarra.github.io/ZENOMIX`, was nicht zum Remote `m-alzhouri/ZENOMIX` passte).
+- `predeploy`/`deploy`-Skripte und die `gh-pages`-devDependency entfernt — der manuelle Pfad
+  hätte sonst mit falschem Base-Pfad gebaute Stände in einen `gh-pages`-Branch schieben können.
+
+Das hand-gerollte Routing ändert die URL nie (`pushState` behält `window.location.href`), es
+gibt also keine Deep-Links und keinen Bedarf für ein SPA-404-Fallback.
+
+Noch manuell zu erledigen: in *Settings → Pages* die Source auf **GitHub Actions** und die
+Custom Domain auf `zenomix.de` stellen, sowie die DNS-Records bei united-domains setzen
+(vier A-Records auf 185.199.108–111.153, CNAME `www` → `m-alzhouri.github.io.`).
+
+**Affected Files**
+- `.github/workflows/deploy.yml` — neu; Build- und Deploy-Pipeline für GitHub Pages
+- `vite.config.ts` — `base` auf `'/'` für den Domain-Root
+- `public/CNAME` — neu; Custom Domain für GitHub Pages
+- `package.json` — `homepage` auf die Domain, `predeploy`/`deploy` und `gh-pages` entfernt
+- `package-lock.json` — Lockfile nach Entfernen von `gh-pages`
+- `README.md` — Deployment-Abschnitt neu (Workflow, Domain-Konfiguration, Repo-Setup,
+  DNS-Tabelle), Intro-Link, Tech-Stack, Skript-Tabelle und Projektstruktur nachgezogen
+- `CLAUDE.md` — Commands, Base-Pfad-Trap, homepage/remote-Widerspruch und "kein CI" aktualisiert
+
+## 2026-08-19
+
 ### Docs — README brought in line with the repositioning
 
 **Symptom / Description**

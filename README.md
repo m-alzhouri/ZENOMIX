@@ -8,7 +8,7 @@ non-emergency patient journeys, and in-house fleet and shift management.
 Built as a React 19 + TypeScript SPA with Vite and Tailwind CSS v4, fully trilingual
 (English / German / Arabic with RTL support) and light/dark themed.
 
-> Live build target: `https://MohamedFirasAlfarra.github.io/ZENOMIX`
+> Live site: `https://zenomix.de` — deployed automatically from `main` via GitHub Actions.
 
 ---
 
@@ -54,7 +54,7 @@ Built as a React 19 + TypeScript SPA with Vite and Tailwind CSS v4, fully trilin
 - **lucide-react** and **react-icons** for icons
 - **motion** (Framer Motion) for the FAQ accordion and navbar animations
 - **Formspree** for contact form delivery
-- **gh-pages** for deployment
+- **GitHub Actions + GitHub Pages** for deployment
 
 ## Getting started
 
@@ -79,7 +79,8 @@ reachable from other devices on the same network.
 | `npm run preview` | Serve the built `dist/` locally. |
 | `npm run lint` | Run `tsc --noEmit` — type check only, no emit. |
 | `npm run clean` | Remove `dist/` (and a legacy `server.js`, if present). |
-| `npm run deploy` | Build (`predeploy`) and publish `dist/` to the `gh-pages` branch. |
+
+There is no `deploy` script any more — deployment runs in CI, see [Deployment](#deployment).
 
 ## Environment variables
 
@@ -102,7 +103,7 @@ project runs inside Google AI Studio:
 .
 ├── CHANGELOG.md               # Change log — newest entries at the top
 ├── index.html                 # Vite entry HTML
-├── vite.config.ts             # base: '/ZENOMIX/', react + tailwind plugins, HMR switch
+├── vite.config.ts             # base: '/', react + tailwind plugins, HMR switch
 ├── metadata.json              # AI Studio applet manifest
 ├── public/
 │   ├── favicon.png
@@ -223,18 +224,49 @@ placeholders — update them before going live.
 
 ## Deployment
 
-The site is configured for **GitHub Pages** under a sub-path:
+The site is served by **GitHub Pages** on the custom domain **`zenomix.de`**, and deploys
+**automatically on every push to `main`** — there is no manual deploy step.
 
-- `vite.config.ts` sets `base: '/ZENOMIX/'`
-- `package.json` sets `homepage` to the Pages URL
+### How it works
 
-```bash
-npm run deploy   # runs build, then pushes dist/ to the gh-pages branch
-```
+`.github/workflows/deploy.yml` runs on every push to `main` (and can be started by hand via
+*Actions → Deploy to GitHub Pages → Run workflow*):
 
-If you host at a different path or on a root domain, update **both** `base` and `homepage`.
-Assets referenced at runtime (e.g. the hero video) use `import.meta.env.BASE_URL`, so they
-follow `base` automatically.
+1. `npm ci` — install from the lockfile
+2. `npm run lint` — type check; **a type error fails the run and nothing is deployed**
+3. `npm run build` — production build into `dist/`
+4. Upload `dist/` as a Pages artifact and deploy it
+
+The workflow uses the official Pages deployment (`actions/deploy-pages`), so there is **no
+`gh-pages` branch** — the built site never lives in the repository.
+
+### Configuration that belongs to the domain
+
+- `vite.config.ts` sets `base: '/'` — the site lives at the domain root, not under a sub-path
+- `public/CNAME` contains `zenomix.de` and is copied into every build
+- `package.json` sets `homepage` to `https://zenomix.de`
+
+Change all three together if the domain ever changes. Assets referenced at runtime (e.g. the
+hero video) use `import.meta.env.BASE_URL`, so they follow `base` automatically.
+
+### One-time repository setup
+
+In *Settings → Pages*: set **Source** to **GitHub Actions**, and **Custom domain** to
+`zenomix.de`. Once the DNS check passes, tick **Enforce HTTPS**.
+
+### DNS records (registrar: united-domains)
+
+| Type | Name / Host | Value |
+| --- | --- | --- |
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `m-alzhouri.github.io.` |
+
+The four A records point the apex domain at GitHub's Pages servers; the `www` record lets
+`www.zenomix.de` resolve and redirect to the apex. Propagation usually takes minutes but can
+take up to 24 hours, and GitHub issues the TLS certificate only after it sees the records.
 
 ## Notes and known caveats
 
