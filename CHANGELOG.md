@@ -2,6 +2,33 @@
 
 ## 2026-08-19
 
+### Docs — README brought in line with the repositioning
+
+**Symptom / Description**
+`README.md` still described the previous positioning after the repositioning landed: a
+global freight forwarder with Express Last-Mile, Heavy Freight, Air & Ocean and Smart
+Warehousing services, a calculator in lbs/miles with a $25 minimum, fleet filters for
+heavy/medium/light+electric, and a demo-data table of intercontinental shipments. None of
+that existed in the code any more.
+
+**Root Cause**
+The repositioning commit changed the app but not its documentation.
+
+**Fix / Change**
+Rewrote every section of the README that described behaviour: intro, the Features table
+(services, calculator, route & shift overview, fleet), the demo-data table and calculator
+rules, the footer-placeholder note and the caveat about company identity data. Added
+`CHANGELOG.md` to the project-structure tree.
+
+Also added a **Mandatory: README** rule to `CLAUDE.md`, next to the existing changelog
+rule: the README is updated as part of any change that alters what the app is or how it
+works — not raised as a suggestion afterwards.
+
+**Affected Files**
+- README.md — intro, Features table, Demo data, Contact form, Notes and known caveats,
+  project structure.
+- CLAUDE.md — new "Mandatory: README" section.
+
 ### Content — Repositioning to Zenomix Services UG (light-commercial transport, up to 3.5 t)
 
 **Symptom / Description**
