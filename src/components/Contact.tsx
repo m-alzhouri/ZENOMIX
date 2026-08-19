@@ -20,11 +20,11 @@ export default function Contact() {
   const [error, setError] = useState<string | null>(null);
 
   const subjectOptions = [
-    { value: 'General Operations Inquiry', label: t('contact_topic_general') },
-    { value: 'Bespoke High-Value Cargo Transport', label: t('contact_topic_highval') },
-    { value: 'Interstate Fleet Relay Contracts', label: t('contact_topic_relay') },
-    { value: 'Carbon Neutral Consultation', label: t('contact_topic_carbon') },
-    { value: 'Other', label: isRtl ? 'غير ذلك' : 'Other' },
+    { value: 'Allgemeine Anfrage', label: t('contact_topic_general') },
+    { value: 'Kurier- & Paketdienst / Subunternehmer', label: t('contact_topic_highval') },
+    { value: 'Personenbeförderung & Fahrdienst', label: t('contact_topic_relay') },
+    { value: 'Krankenfahrten & Patiententransport', label: t('contact_topic_carbon') },
+    { value: 'Sonstiges', label: t('contact_topic_other') },
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {

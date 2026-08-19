@@ -60,13 +60,13 @@ export default function About() {
 
             <div className={`grid grid-cols-2 gap-6 pt-6 border-t border-slate-100 dark:border-slate-800 ${isRtl ? 'text-right' : 'text-left'}`}>
               <div>
-                <div className="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 dark:text-white">45,000+</div>
+                <div className="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 dark:text-white">100&nbsp;%</div>
                 <div className="text-xs font-mono text-slate-400 dark:text-slate-500 uppercase tracking-wider mt-1 font-bold">
                   {t('about_stat_assets')}
                 </div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl font-extrabold font-display text-blue-600 dark:text-blue-400">100%</div>
+                <div className="text-3xl sm:text-4xl font-extrabold font-display text-blue-600 dark:text-blue-400">24/7</div>
                 <div className="text-xs font-mono text-slate-400 dark:text-slate-500 uppercase tracking-wider mt-1 font-bold">
                   {t('about_stat_offset')}
                 </div>

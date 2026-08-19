@@ -4,7 +4,7 @@ import { Star, ChevronLeft, ChevronRight, MessageCircleQuestion } from 'lucide-r
 import Faq from './Faq';
 
 export default function ReviewsFaqPage() {
-  const { isRtl, testimonials } = useLanguage();
+  const { isRtl, testimonials, t } = useLanguage();
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   const handlePrevTest = () => {
@@ -22,11 +22,11 @@ export default function ReviewsFaqPage() {
           <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-900/40 px-4 py-1 rounded-full mb-4">
             <MessageCircleQuestion className="h-[18px] w-[18px] text-blue-600 dark:text-blue-400" />
             <span className="text-xs font-bold uppercase tracking-widest text-blue-700 dark:text-blue-400">
-              {isRtl ? 'التقييمات والأسئلة الشائعة' : 'Testimonials & FAQ'}
+              {t('reviews_badge')}
             </span>
           </div>
           <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
-            {isRtl ? 'آراء شركائنا وأجوبة سريعة' : 'Client voices and quick answers'}
+            {t('reviews_title')}
           </h1>
           <p className="text-slate-600 dark:text-slate-400 mt-4 text-base sm:text-lg font-normal">
             {isRtl

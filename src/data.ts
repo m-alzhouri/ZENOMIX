@@ -2,75 +2,75 @@ import { ServiceItem, FleetVehicle, Testimonial, TrackingData } from './types';
 
 export const servicesData: ServiceItem[] = [
   {
-    id: 'express',
-    title: 'Express Last-Mile Delivery',
-    shortDesc: 'Hyper-local rapid dispatches, on-demand courier routes, and parcel delivery with real-time location alerts.',
-    longDesc: 'Our Express Last-Mile network leverages fully digitized dispatching and our low-emission urban van fleet to ensure that critical medical supplies, documents, retail packages, and temperature-sensitive products reach their destinations within hours. All last-mile delivery routes are dynamically consolidated to minimize carbon footprints while preserving perfect ETA compliance.',
-    iconName: 'Zap',
-    features: [
-      'Same-day and next-morning guarantees',
-      'Dynamic urban multi-stop route consolidation',
-      'Contactless biometric signature verification',
-      'Cold-chain temperature logging and custody audit'
-    ],
-    specs: {
-      transitTime: '1 - 6 Hours',
-      capacity: 'Up to 2,500 lbs per van',
-      globalCoverage: 'Metro Area Zones'
-    }
-  },
-  {
-    id: 'freight',
-    title: 'Heavy Freight & Line-Haul',
-    shortDesc: 'Full Truckload (FTL) and Less-than-Truckload (LTL) ground operations running seamless interstate routes.',
-    longDesc: 'Zenomix heavy freight operations utilize our premium tractor-trailer line-haul fleet. With modern cargo tracking sensors, automated weigh-station bypass credentials, and dual-driver relays, we maintain continuous speed across major distribution arteries. Whether you need standard dry van haulage, flatbeds, or heavy-duty refrigerated freight, we deliver robust volume capacities safely.',
+    id: 'courier',
+    title: 'Courier & Parcel Services',
+    shortDesc: 'Parcel delivery, direct runs and fixed daily routes — including work as a dependable subcontractor for major B2B logistics networks.',
+    longDesc: 'We deliver parcels, documents and palletised goods within the light-commercial segment — both as an independent courier service and as a subcontractor for established B2B logistics networks. Fixed delivery routes are staffed reliably through our own shift planning, including cover for sickness and holidays. For our clients that means dependable route coverage without building up their own driver pool.',
     iconName: 'Truck',
     features: [
-      'Flexible FTL (Full) & LTL (Partial) freighting',
-      'Satellite-monitored smart locks and door-open sensors',
-      'Double-driver long-haul relays for zero idle time',
-      'Intermodal transfer options at major port nodes'
+      'Fixed delivery routes as a logistics subcontractor',
+      'Same-day direct and special runs',
+      'Predictable driver staffing including cover',
+      'Digital documentation of shifts and working hours'
     ],
     specs: {
-      transitTime: '24 - 72 Hours',
-      capacity: 'Up to 45,000 lbs per trailer',
-      globalCoverage: 'Interstate & Cross-Border'
+      transitTime: 'From 2 hrs',
+      capacity: 'Up to 1,200 kg',
+      globalCoverage: 'Regional & nationwide'
     }
   },
   {
-    id: 'air-ocean',
-    title: 'Air & Ocean Expediting',
-    shortDesc: 'Multi-modal international forwarding, custom import/export clearance, and strategic airport-to-door transit.',
-    longDesc: 'For global trade, Zenomix connects critical supply chains through major oceanic channels and express aviation lanes. We manage end-to-end documentation, custom bonded transfers, cargo manifesting, and flight-space allocations. Our global freight-forwarding desks operate 24/7/365 to handle urgent oceanic containers and air cargo charter space.',
-    iconName: 'Globe',
+    id: 'passenger',
+    title: 'Passenger Transport & Mobility',
+    shortDesc: 'Staff shuttles, group transfers and recurring driving services — general mobility solutions with vehicles under 3.5 tonnes.',
+    longDesc: 'Whether staff shuttles around shift changes, transfers or recurring driving services for institutions and companies: we organise passenger transport with a settled driver team and binding time windows. Scheduling runs through our own software, so early-morning, late-evening and weekend departures stay reliably staffed.',
+    iconName: 'Users',
     features: [
-      'Premium air charter bookings for high-value machinery',
-      'FCL (Full Container) and LCL (Loose Cargo) ocean shipping',
-      'Customs brokerage, duty bonds, and tariff calculations',
-      'IATA-certified dangerous and hazardous goods handling'
+      'Staff shuttles aligned with shift changes',
+      'Transfers and group journeys',
+      'Recurring driving services under framework agreements',
+      'Named contacts in dispatch'
     ],
     specs: {
-      transitTime: '2 - 7 Days Global',
-      capacity: 'No volume limits',
-      globalCoverage: 'Global (220+ Countries)'
+      transitTime: 'To timetable',
+      capacity: 'Up to 8 passengers',
+      globalCoverage: 'Regional'
     }
   },
   {
-    id: 'warehousing',
-    title: 'Smart Warehousing & Supply Chain',
-    shortDesc: 'Secured smart stock facilities, automated inventory replenishment, and fluid warehouse picking systems.',
-    longDesc: 'Our logistics centers serve as the storage brain of your business. Equipped with real-time barcode telemetry, automated product picking racks, and secure ambient vaults, Zenomix warehouses handle sorting, cataloging, repackaging, and cross-docking seamlessly. Integration with our order APIs provides automated shipping triggers as soon as stock levels shift.',
-    iconName: 'Shield',
+    id: 'patient',
+    title: 'Non-Emergency Patient Transport',
+    shortDesc: 'Non-qualified patient transport — seated or by wheelchair, without medical care during the journey.',
+    longDesc: 'We carry patients who do not require medical care while travelling — seated or in a wheelchair, in suitably equipped vehicles and with trained drivers. Typical journeys are trips to dialysis, radiotherapy, rehabilitation or outpatient appointments. Emergency response and qualified medical transport with clinical care on board are expressly outside our scope.',
+    iconName: 'HeartPulse',
     features: [
-      'RFID-tagged inventory shelves for instant search accuracy',
-      'Climate-controlled ambient vaults for bio-pharma/electronics',
-      'Cross-docking speeds under 45 minutes',
-      'Custom API hooks for direct retail e-commerce syncing'
+      'Seated transport or by wheelchair',
+      'Wheelchair-accessible vehicles with ramp',
+      'Trained drivers and fixed appointment slots',
+      'No medical care provided during the journey'
     ],
     specs: {
-      transitTime: 'Immediate Dispatch',
-      capacity: 'Over 4.5M sq. ft. globally',
-      globalCoverage: 'Regional Hub Centers'
+      transitTime: 'Appointment-bound',
+      capacity: 'Wheelchair & seated',
+      globalCoverage: 'Regional'
+    }
+  },
+  {
+    id: 'fleet-management',
+    title: 'Fleet & Shift Management',
+    shortDesc: 'Our own software for driver, shift and route planning — traceable personnel scheduling instead of paperwork.',
+    longDesc: 'Our operation is digital end to end. We build and run our own software, purpose-made for driver and shift management: planning shifts, assigning routes, recording availability and working hours, and evaluating how personnel are deployed. The focus is deliberately on organising drivers and shifts — not on tracking individual parcels. For clients that translates into staffed routes, documented assignments and figures they can rely on.',
+    iconName: 'LayoutDashboard',
+    features: [
+      'In-house shift and route planning software',
+      'Availability and stand-in management',
+      'Digital records of working and driving hours',
+      'Reporting on route coverage and staffing'
+    ],
+    specs: {
+      transitTime: 'Real time',
+      capacity: 'Entire fleet',
+      globalCoverage: 'All locations'
     }
   }
 ];
@@ -78,77 +78,77 @@ export const servicesData: ServiceItem[] = [
 export const fleetData: FleetVehicle[] = [
   {
     id: 'fleet-1',
-    name: 'Zenomix Line-Haul Tractor',
+    name: 'Zenomix Sprinter Maxi',
     type: 'heavy',
-    typeName: 'Heavy Long-Haul Truck',
-    payload: '44,000 lbs',
-    volume: '3,800 cu ft',
-    range: '1,200 miles',
-    propulsion: 'Ultra-Low Emission Diesel (Hybrid-Assisted)',
-    imageAlt: 'Zenomix heavy logistics trailer with sleek blue wave graphics',
-    features: ['Aerodynamic cabin fairings', 'Collision avoidance radar', 'Predictive maintenance diagnostics']
+    typeName: 'Large Panel Van (3.5 t)',
+    payload: '1,200 kg',
+    volume: '15.5 m³',
+    range: '900 km',
+    propulsion: 'Diesel (Euro 6, low emission)',
+    imageAlt: 'Zenomix large panel van in white with the blue brand wave',
+    features: ['Gross vehicle weight 3.5 t', 'Bulkhead and lashing system', 'Telematics and digital route assignment']
   },
   {
     id: 'fleet-2',
-    name: 'Zenomix Express Carrier',
+    name: 'Zenomix Cargo Van',
     type: 'medium',
-    typeName: 'Urban Delivery Van',
-    payload: '4,800 lbs',
-    volume: '460 cu ft',
-    range: '320 miles',
-    propulsion: 'All-Electric (Hydrogen Fuel Cell Option)',
-    imageAlt: 'Zenomix white delivery van featuring the signature cyan and blue graphics',
-    features: ['Short-turn radius chassis', 'Integrated lift-gate', 'Regenerative urban braking']
+    typeName: 'Medium-Wheelbase Van',
+    payload: '950 kg',
+    volume: '9.3 m³',
+    range: '750 km',
+    propulsion: 'Diesel / Mild Hybrid',
+    imageAlt: 'Zenomix medium delivery van with cyan and blue livery',
+    features: ['Manoeuvrable in inner-city traffic', 'Shelving system for parcel rounds', 'Reversing camera and driver assistance']
   },
   {
     id: 'fleet-3',
-    name: 'Zenomix Quad Dispatcher',
+    name: 'Zenomix Care Mobil',
     type: 'light',
-    typeName: 'Electric Urban Cargo Bike',
-    payload: '450 lbs',
-    volume: '55 cu ft',
-    range: '65 miles',
-    propulsion: 'Dual-Battery Pedal Assist',
-    imageAlt: 'Zenomix light electric quad dispatcher with covered freight compartment',
-    features: ['Zero-emission micro-delivery', 'Narrow lane access', 'Removable swappable battery packs']
+    typeName: 'Passenger & Patient Transport',
+    payload: '750 kg',
+    volume: 'Up to 8 seats',
+    range: '800 km',
+    propulsion: 'Diesel (Euro 6)',
+    imageAlt: 'Zenomix wheelchair-accessible passenger van with boarding ramp',
+    features: ['Wheelchair ramp and certified floor anchorage', 'Carries passengers seated or in a wheelchair', 'Low-step, barrier-reduced entry']
   },
   {
     id: 'fleet-4',
-    name: 'Zenomix Fleet Sedan',
+    name: 'Zenomix E-Kurier',
     type: 'electric',
-    typeName: 'Supervisor & Express Courier Car',
-    payload: '950 lbs',
-    volume: '18 cu ft',
-    range: '380 miles',
-    propulsion: 'Solid-State Battery EV',
-    imageAlt: 'Zenomix corporate fleet sedan in silver and blue wrapping',
-    features: ['Autonomous highway lane centering', 'Eco-routing GPS tracking', 'Immediate document security locker']
+    typeName: 'Electric Courier Vehicle',
+    payload: '540 kg',
+    volume: '3.3 m³',
+    range: '320 km',
+    propulsion: 'Fully electric',
+    imageAlt: 'Zenomix compact electric courier vehicle in silver and blue',
+    features: ['Emission-free in low-emission zones', 'Built for documents and small consignments', 'Charged overnight at our own depot']
   }
 ];
 
 export const testimonialsData: Testimonial[] = [
   {
     id: 'test-1',
-    name: 'Sarah Jenkins',
-    role: 'Global Supply Chain Director',
-    company: 'Altas Tech Corp',
-    quote: 'Zenomix transformed our regional supply routing. Their dynamic line-haul double relays cut our interstate transport cycles by 24 hours, and our stock damage rate fell to absolute zero.',
+    name: 'Andreas Keller',
+    role: 'Head of Regional Dispatch',
+    company: 'Nord-West Paketlogistik',
+    quote: 'Zenomix has been running four of our delivery routes for over a year. Absences are covered through their own shift planning before we even have to ask.',
     rating: 5
   },
   {
     id: 'test-2',
-    name: 'Marcus Vance',
-    role: 'Operations Lead',
-    company: 'Prime Retail Solutions',
-    quote: 'The real-time last-mile tracking integration is incredibly precise. Our customers love seeing exactly when the delivery van enters their commercial zone. Extremely professional team and spotless clean fleet.',
+    name: 'Miriam Sander',
+    role: 'Fleet Manager',
+    company: 'Rhein-Main Servicegruppe',
+    quote: 'Our staff shuttles needed dependable time windows around shift changes. Departures are punctual, dispatch is reachable, and the billing is easy to follow.',
     rating: 5
   },
   {
     id: 'test-3',
-    name: 'Elena Rostova',
-    role: 'Logistics Manager',
-    company: 'BioPharma Global',
-    quote: 'For temperature-controlled pharmaceutical materials, Zenomix is our only trusted carrier. Their cold-chain auditing and prompt courier service have been critical in maintaining absolute product safety.',
+    name: 'Dr. Thomas Brenner',
+    role: 'Administrative Director',
+    company: 'MVZ Gesundheitszentrum Süd',
+    quote: 'Journeys to dialysis and rehab run reliably, wheelchair included. The drivers are trained and treat our patients with genuine respect.',
     rating: 5
   }
 ];
@@ -156,69 +156,69 @@ export const testimonialsData: Testimonial[] = [
 export const mockTrackingDatabase: Record<string, TrackingData> = {
   'ZN-772-B1': {
     trackingId: 'ZN-772-B1',
-    origin: 'Munich Hub (DE)',
-    destination: 'London Sort Center (UK)',
-    sender: 'Vance Electronics AG',
-    receiver: 'Altas Logistics Ltd',
-    serviceType: 'Express Freight (FTL)',
-    estimatedDelivery: 'Tomorrow, 14:30',
+    origin: 'Cologne-Ossendorf Depot',
+    destination: 'Delivery Area Cologne North',
+    sender: 'Nord-West Paketlogistik',
+    receiver: 'Sprinter Maxi · Driver M. Keller',
+    serviceType: 'Delivery Round (Subcontracted)',
+    estimatedDelivery: 'Today, 17:30',
     currentStatus: 'In Transit',
     progressPercentage: 65,
     history: [
-      { step: 1, location: 'Munich Hub (DE)', time: '05 July, 08:00', status: 'Cargo Manifest Received', details: 'Shipment registered, loaded, and sealed at terminal.' },
-      { step: 2, location: 'Strasbourg Junction (FR)', time: '05 July, 14:15', status: 'Border Clearance OK', details: 'Passed transit checkpoint, driver relay swap complete.' },
-      { step: 3, location: 'Calais Port (FR)', time: '05 July, 19:40', status: 'Customs Passed', details: 'Intermodal freight scanned, loaded onto channel shuttle.' },
-      { step: 4, location: 'Dover Terminal (UK)', time: 'Pending', status: 'In Route to Sorting', details: 'Dispatched from port terminal via M2 line-haul.' },
+      { step: 1, location: 'Cologne-Ossendorf Depot', time: 'Today, 06:00', status: 'Shift Started', details: 'Driver checked in, vehicle handover and walkaround completed.' },
+      { step: 2, location: 'Cologne-Ossendorf Depot', time: 'Today, 07:15', status: 'Loading Confirmed', details: 'Round loaded and confirmed against the client manifest.' },
+      { step: 3, location: 'Cologne North, Block 1', time: 'Today, 11:40', status: 'Block 1 Completed', details: 'First delivery block finished, remaining stops rescheduled automatically.' },
+      { step: 4, location: 'Cologne North, Block 2', time: 'Pending', status: 'Block 2 Running', details: 'Second delivery block in progress, shift ends at 17:30.' },
     ]
   },
   'ZN-982-A3': {
     trackingId: 'ZN-982-A3',
-    origin: 'New York Air Cargo Terminal (US)',
-    destination: 'Paris Charles de Gaulle (FR)',
-    sender: 'BioPharma Laboratories NY',
-    receiver: 'Hôpital de la Pitié-Salpêtrière',
-    serviceType: 'Premium Cold-Chain Air',
-    estimatedDelivery: '05 July, 21:00 (Today)',
+    origin: 'Düsseldorf Depot',
+    destination: 'Client Site, Neuss',
+    sender: 'Vance Elektronik GmbH',
+    receiver: 'Cargo Van · Driver S. Ari',
+    serviceType: 'Direct Run (Same-Day Courier)',
+    estimatedDelivery: 'Today, 15:40',
     currentStatus: 'Out for Delivery',
     progressPercentage: 90,
     history: [
-      { step: 1, location: 'JFK Airport, NY (US)', time: '03 July, 22:30', status: 'Air Waybill Created', details: 'Temperature validated at 4.2°C, cargo locked in air-bunker.' },
-      { step: 2, location: 'Atlantic Transit Sector', time: '04 July, 11:15', status: 'In Flight CDG-941', details: 'Direct air transport flight active, temperature monitors normal.' },
-      { step: 3, location: 'Paris CDG Airport (FR)', time: '05 July, 06:45', status: 'Customs Clear', details: 'Air container discharged, temperature checked, passed to ground team.' },
-      { step: 4, location: 'Paris Central Depot', time: '05 July, 15:30', status: 'Out for Delivery', details: 'Assigned to Express Delivery Van #14. Carrier driver on route.' },
+      { step: 1, location: 'Dispatch, Düsseldorf', time: 'Today, 12:05', status: 'Order Accepted', details: 'Direct run accepted and assigned to an available shift.' },
+      { step: 2, location: 'Düsseldorf Depot', time: 'Today, 12:50', status: 'Collected', details: 'Consignment collected and secured, driver on route.' },
+      { step: 3, location: 'B7 Towards Neuss', time: 'Today, 14:20', status: 'En Route', details: 'Journey running to plan, no deviation reported.' },
+      { step: 4, location: 'Client Site, Neuss', time: 'Today, 15:20', status: 'Out for Delivery', details: 'Arrived in the delivery area, handover being prepared.' },
     ]
   },
   'ZN-104-C8': {
     trackingId: 'ZN-104-C8',
-    origin: 'Singapore Port (SG)',
-    destination: 'Rotterdam Gateway (NL)',
-    sender: 'Pacific Machinery Group',
-    receiver: 'EuroRail Assemblies BV',
-    serviceType: 'Ocean Freight (FCL)',
-    estimatedDelivery: '12 July, 09:00',
+    origin: 'Duisburg Operating Yard',
+    destination: 'Plant II, Shift Change 14:00',
+    sender: 'Rhein-Main Servicegruppe',
+    receiver: 'Care Mobil · Driver T. Öz',
+    serviceType: 'Passenger Transport (Staff Shuttle)',
+    estimatedDelivery: 'Today, 14:00',
     currentStatus: 'In Transit',
     progressPercentage: 40,
     history: [
-      { step: 1, location: 'Singapore Terminal 5 (SG)', time: '28 June, 10:30', status: 'Container Lodged', details: 'Full 40ft container weighed, locked, and stowed on vessel.' },
-      { step: 2, location: 'Indian Ocean Transit', time: '02 July, 18:00', status: 'Vessel in Transit', details: 'Continuous transit aboard MS Zenomix Star. GPS ping confirmed.' },
-      { step: 3, location: 'Suez Canal Pass', time: 'Pending', status: 'Approaching Port Sector', details: 'Scheduled channel passage slot assigned for next phase.' },
+      { step: 1, location: 'Duisburg Operating Yard', time: 'Today, 12:30', status: 'Shift Started', details: 'Vehicle checked, seating configuration confirmed for 8 passengers.' },
+      { step: 2, location: 'Pickup Point A', time: 'Today, 13:05', status: 'Passengers Boarded', details: 'First pickup point served, headcount matches the booking.' },
+      { step: 3, location: 'Pickup Point B', time: 'Pending', status: 'Approaching', details: 'Second pickup point scheduled, arrival at the plant planned for 14:00.' },
     ]
   },
   'ZN-334-D9': {
     trackingId: 'ZN-334-D9',
-    origin: 'Berlin Central Warehouse (DE)',
-    destination: 'Hamburg Distribution Hub (DE)',
-    sender: 'Zenomix Supply Centers',
-    receiver: 'TechRetail Logistics Hamburg',
-    serviceType: 'Urban Courier Dispatch',
-    estimatedDelivery: '04 July, 17:00',
+    origin: 'Home Address, Essen-Rüttenscheid',
+    destination: 'Dialysis Centre Essen-Süd',
+    sender: 'MVZ Gesundheitszentrum Süd',
+    receiver: 'Care Mobil · Driver L. Braun',
+    serviceType: 'Non-Emergency Patient Transport (Wheelchair)',
+    estimatedDelivery: 'Today, 09:15',
     currentStatus: 'Delivered',
     progressPercentage: 100,
     history: [
-      { step: 1, location: 'Berlin Warehouse (DE)', time: '04 July, 09:00', status: 'Order Dispatched', details: 'Assigned to medium-duty express carrier.' },
-      { step: 2, location: 'B5 Highway Corridor', time: '04 July, 12:30', status: 'In Transit', details: 'Routine highway transit.' },
-      { step: 3, location: 'Hamburg North sorting hub', time: '04 July, 15:45', status: 'Out for Last Mile', details: 'Transferred to electric urban delivery bike.' },
-      { step: 4, location: 'TechRetail Terminal, Hamburg', time: '04 July, 16:55', status: 'Delivered Successfully', details: 'Biometric sign-off received. Verified by recipient (J. Miller).' },
+      { step: 1, location: 'Operating Yard, Essen', time: 'Today, 07:30', status: 'Shift Started', details: 'Ramp and wheelchair anchorage checked before departure.' },
+      { step: 2, location: 'Home Address, Essen-Rüttenscheid', time: 'Today, 08:20', status: 'Patient Collected', details: 'Boarding assisted, wheelchair secured to the anchorage points.' },
+      { step: 3, location: 'En Route, Essen-Süd', time: 'Today, 08:55', status: 'En Route', details: 'Journey without medical care on board, as agreed.' },
+      { step: 4, location: 'Dialysis Centre Essen-Süd', time: 'Today, 09:10', status: 'Journey Completed', details: 'Patient handed over at reception, return journey booked for 13:00.' },
     ]
   }
 };

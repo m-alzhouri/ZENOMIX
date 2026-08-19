@@ -183,18 +183,16 @@ export default function Fleet() {
 
                     {selectedVehicle.type === 'heavy' && (
                       <g>
-                        {/* Cab */}
-                        <path d="M 140,80 L 140,40 L 175,40 L 190,65 L 190,80 Z" fill="url(#vectorGrad)" />
-                        <rect x="150" y="48" width="20" height="15" fill="#0f172a" opacity="0.9" />
-                        {/* Cargo trailer */}
-                        <rect x="20" y="25" width="115" height="55" fill="url(#vectorGrad)" />
+                        {/* High-roof panel van body (3.5 t class) */}
+                        <path d="M 20,28 H 150 L 182,58 V 85 H 20 Z" fill="url(#vectorGrad)" />
+                        {/* Cab windows */}
+                        <rect x="152" y="40" width="24" height="17" fill="#0f172a" opacity="0.9" />
+                        <rect x="128" y="36" width="18" height="20" fill="#0f172a" opacity="0.9" />
                         {/* Brand graphic wave */}
-                        <path d="M 20,65 Q 60,40 100,70 T 135,50" stroke="#38bdf8" strokeWidth="2.5" fill="none" />
-                        {/* Wheels */}
-                        <circle cx="45" cy="88" r="10" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" />
-                        <circle cx="68" cy="88" r="10" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" />
-                        <circle cx="115" cy="88" r="10" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" />
-                        <circle cx="165" cy="88" r="10" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" />
+                        <path d="M 22,70 Q 62,52 105,74 T 150,58" stroke="#38bdf8" strokeWidth="2.5" fill="none" />
+                        {/* Wheels — single rear axle, under 3.5 t */}
+                        <circle cx="55" cy="92" r="12" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" />
+                        <circle cx="150" cy="92" r="12" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" />
                       </g>
                     )}
 
@@ -213,15 +211,21 @@ export default function Fleet() {
 
                     {selectedVehicle.type === 'light' && (
                       <g>
-                        {/* Micro quad bike body */}
-                        <rect x="40" y="55" width="75" height="30" fill="url(#vectorGrad)" rx="6" />
-                        {/* Canopy */}
-                        <path d="M 30,85 L 55,40 H 115 L 125,85" stroke="#38bdf8" strokeWidth="3.5" fill="none" />
-                        {/* Cargo package inside */}
-                        <rect x="60" y="60" width="40" height="20" fill="#0f172a" opacity="0.9" />
+                        {/* Passenger / patient transport minibus body */}
+                        <path d="M 32,34 H 148 L 176,58 V 84 H 32 Z" fill="url(#vectorGrad)" />
+                        {/* Passenger windows */}
+                        <rect x="44" y="42" width="24" height="16" fill="#0f172a" opacity="0.9" />
+                        <rect x="74" y="42" width="24" height="16" fill="#0f172a" opacity="0.9" />
+                        <rect x="104" y="42" width="24" height="16" fill="#0f172a" opacity="0.9" />
+                        <rect x="150" y="44" width="22" height="14" fill="#0f172a" opacity="0.9" />
+                        {/* Boarding ramp at the rear */}
+                        <path d="M 32,84 L 12,96 H 40" stroke="#38bdf8" strokeWidth="3" fill="none" strokeLinejoin="round" />
+                        {/* Wheelchair symbol on the flank */}
+                        <circle cx="66" cy="72" r="5.5" stroke="#38bdf8" strokeWidth="2" fill="none" />
+                        <path d="M 66,63 v 5" stroke="#38bdf8" strokeWidth="2" strokeLinecap="round" />
                         {/* Wheels */}
-                        <circle cx="50" cy="92" r="11" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" />
-                        <circle cx="110" cy="92" r="11" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" />
+                        <circle cx="62" cy="90" r="11" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" />
+                        <circle cx="146" cy="90" r="11" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" />
                       </g>
                     )}
 

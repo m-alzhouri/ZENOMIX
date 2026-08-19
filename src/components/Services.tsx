@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { ServiceItem } from '../types';
-import { Zap, Truck, Globe, Shield, ArrowRight, CheckCircle2, ChevronRight, X, Box } from 'lucide-react';
+import { Zap, Truck, Globe, Shield, Users, HeartPulse, LayoutDashboard, ArrowRight, CheckCircle2, ChevronRight, X, Box } from 'lucide-react';
 
 export default function Services() {
   const { services, t, isRtl, language } = useLanguage();
@@ -33,6 +33,12 @@ export default function Services() {
         return <Globe className={className} />;
       case 'Shield':
         return <Shield className={className} />;
+      case 'Users':
+        return <Users className={className} />;
+      case 'HeartPulse':
+        return <HeartPulse className={className} />;
+      case 'LayoutDashboard':
+        return <LayoutDashboard className={className} />;
       default:
         return <Box className={className} />;
     }
@@ -55,9 +61,9 @@ export default function Services() {
             </span>
           </div>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-            {language === 'ar' ? 'عمليات لوجستية متطورة مصممة من أجل' : 'Comprehensive logistics built for'}{' '}
+            {t('services_title_1')}{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-500 dark:from-blue-400 dark:to-blue-300">
-              {language === 'ar' ? 'سلاسل إمداد انسيابية وموثوقة' : 'uncompromised supply chains'}
+              {t('services_title_2')}
             </span>
           </h2>
           <p className="text-slate-600 dark:text-slate-400 mt-4 text-base sm:text-lg font-normal">
@@ -107,12 +113,12 @@ export default function Services() {
                       <div className={`mt-8 pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between ${isRtl ? 'flex-row-reverse' : ''}`}>
                         <div className={`flex gap-4 ${isRtl ? 'flex-row-reverse text-right' : 'text-left'}`}>
                           <div>
-                            <div className="text-[10px] font-mono text-slate-400 uppercase">{isRtl ? 'التغطية' : 'Coverage'}</div>
+                            <div className="text-[10px] font-mono text-slate-400 uppercase">{t('services_card_coverage')}</div>
                             <div className="text-xs font-bold text-slate-800 dark:text-slate-200">{service.specs.globalCoverage}</div>
                           </div>
                         </div>
                         <div className={`flex items-center gap-1 text-xs font-bold text-blue-600 dark:text-blue-400 ${isRtl ? 'flex-row-reverse group-hover:-translate-x-1.5' : 'group-hover:translate-x-1.5'} transition-transform duration-300`}>
-                          <span>{isRtl ? 'استكمل التفاصيل' : 'Explore Details'}</span>
+                          <span>{t('services_btn_view')}</span>
                           <ChevronRight className={`h-4 w-4 ${isRtl ? 'rotate-180' : ''}`} />
                         </div>
                       </div>
@@ -138,7 +144,7 @@ export default function Services() {
                 onClick={() => setSelectedService(null)}
                 className={`absolute top-4 ${isRtl ? 'left-4' : 'right-4'} sm:top-6 ${isRtl ? 'sm:left-6' : 'sm:right-6'} p-2 rounded-xl bg-slate-50 hover:bg-slate-100 dark:bg-slate-950 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-900 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors cursor-pointer z-20 shadow-sm`}
                 id="close-service-modal"
-                aria-label={isRtl ? 'إغلاق تفاصيل الخدمة' : 'Close service details'}
+                aria-label={t('services_modal_close')}
               >
                 <X className="h-5 w-5" />
               </button>
@@ -153,7 +159,7 @@ export default function Services() {
                     {selectedService.title}
                   </h3>
                   <p className="text-xs font-mono text-blue-600 dark:text-blue-400 mt-1 font-semibold">
-                    {isRtl ? 'فئة الخدمة: ممتازة وعالية الدقة' : 'SERVICE CLASS: PREMIUM'}
+                    {t('services_modal_class')}
                   </p>
                 </div>
               </div>
@@ -184,7 +190,7 @@ export default function Services() {
               {/* Complete Features List */}
               <div className="mt-8">
                 <h4 className={`text-sm font-bold uppercase tracking-wider text-slate-800 dark:text-slate-200 mb-4 ${isRtl ? 'text-right' : 'text-left'}`}>
-                  {isRtl ? 'أنظمة القياس المتكاملة والميزات التشغيلية' : 'Integrated Telemetry & Operational Features'}
+                  {t('services_modal_features')}
                 </h4>
                 <div className="grid sm:grid-cols-2 gap-3.5">
                   {selectedService.features.map((feat, idx) => (
@@ -199,7 +205,7 @@ export default function Services() {
               {/* Footer CTA */}
               <div className={`mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col items-stretch justify-between gap-4 sm:flex-row sm:items-center ${isRtl ? 'sm:flex-row-reverse' : ''}`}>
                 <span className="text-xs text-slate-400 dark:text-slate-500 font-mono">
-                  {isRtl ? 'تتضمن جميع العقود تأميناً برياً وبحرياً قياسياً (بحد مسؤولية ٢٥٠ ألف دولار).' : 'All contracts include standard transit insurance ($250k liability limit).'}
+                  {t('services_modal_insurance')}
                 </span>
                 <button
                   onClick={() => {
@@ -212,7 +218,7 @@ export default function Services() {
                   }}
                   className="w-full sm:w-auto flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 text-white font-bold text-xs uppercase tracking-widest px-6 py-3 rounded-full shadow-md shadow-blue-500/10 cursor-pointer whitespace-nowrap"
                 >
-                  <span>{isRtl ? 'احسب تسعيرة الشحن الفورية' : 'Generate Custom Quote'}</span>
+                  <span>{t('services_modal_quote')}</span>
                   <ArrowRight className={`h-4 w-4 ${isRtl ? 'rotate-180' : ''}`} />
                 </button>
               </div>

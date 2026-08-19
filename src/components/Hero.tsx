@@ -68,8 +68,8 @@ export default function Hero({ onNavigate }: HeroProps) {
                   <ShieldCheck className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-white dark:text-slate-200">{isRtl ? 'أمان مضمون' : 'Guaranteed Safe'}</h4>
-                  <p className="text-xs text-white/80 dark:text-slate-400">{isRtl ? 'مؤمن ومحمي' : 'Locked & Insured'}</p>
+                  <h4 className="text-sm font-bold text-white dark:text-slate-200">{t('hero_feat1_title')}</h4>
+                  <p className="text-xs text-white/80 dark:text-slate-400">{t('hero_feat1_desc')}</p>
                 </div>
               </div>
 
@@ -78,8 +78,8 @@ export default function Hero({ onNavigate }: HeroProps) {
                   <Zap className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-white dark:text-slate-200">{isRtl ? 'سرعة فائقة' : 'Hyper Fast'}</h4>
-                  <p className="text-xs text-white/80 dark:text-slate-400">{isRtl ? 'توجيه فوري' : 'On-Demand Dispatch'}</p>
+                  <h4 className="text-sm font-bold text-white dark:text-slate-200">{t('hero_feat2_title')}</h4>
+                  <p className="text-xs text-white/80 dark:text-slate-400">{t('hero_feat2_desc')}</p>
                 </div>
               </div>
 
@@ -88,8 +88,8 @@ export default function Hero({ onNavigate }: HeroProps) {
                   <Globe className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-white dark:text-slate-200">{isRtl ? 'تغطية كاملة' : 'Full Coverage'}</h4>
-                  <p className="text-xs text-white/80 dark:text-slate-400">{isRtl ? '٢٢٠+ دولة' : '220+ Countries'}</p>
+                  <h4 className="text-sm font-bold text-white dark:text-slate-200">{t('hero_feat3_title')}</h4>
+                  <p className="text-xs text-white/80 dark:text-slate-400">{t('hero_feat3_desc')}</p>
                 </div>
               </div>
             </div>
