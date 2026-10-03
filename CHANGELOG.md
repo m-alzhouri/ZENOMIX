@@ -2,6 +2,29 @@
 
 ## 2026-10-03
 
+### Content — Erreichbarkeit 24/7
+
+**Symptom / Description**
+Die Seite nannte als Erreichbarkeit „Mo – Sa“. Das Unternehmen ist aber rund um die Uhr
+erreichbar (24/7).
+
+**Fix / Change**
+In EN/DE/AR angepasst:
+- Kontaktbereich, Hinweis unter der Telefonnummer: „24/7 – Disposition rund um die Uhr
+  erreichbar“.
+- Footer, „Erreichbarkeit“ (Desktop und Mobil): „24/7, Disposition rund um die Uhr“.
+- Hero, zweites Merkmal: Titel „24/7 erreichbar“ statt „Kurzfristig“. Die Beschreibung
+  „Disposition binnen Stunden“ bleibt.
+- FAQ „Wie schnell können Sie einen Auftrag übernehmen?“: Hinweis auf die 24/7-Disposition
+  ergänzt, also Direktfahrten auch nachts, am Wochenende und an Feiertagen.
+
+Unverändert geblieben ist die Antwortzeit auf Anfragen über das Formular („innerhalb von
+24 Stunden“).
+
+**Affected Files**
+- `src/translations.ts` — `hero_feat2_title`, `contact_hotline_hours`, `footer_ops_hours_val`,
+  `faq_a5` in EN/AR/DE
+
 ### Config — Deutsch als Standardsprache
 
 **Symptom / Description**
