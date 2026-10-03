@@ -13,17 +13,15 @@ export default function Impressum({ onBack }: ImpressumProps) {
     en: {
       title: 'Imprint',
       subtitle: 'Legal disclosures and company credentials.',
-      tmg: 'Information according to § 5 TMG (German Telemedia Act)',
+      tmg: 'Information according to § 5 DDG (German Digital Services Act)',
       operator: 'Operator of the website:',
-      company: 'Zenomix Services UG (haftungsbeschränkt)',
-      address: '[Street and number], [Postcode and town], Germany',
-      represented: 'Represented by:',
-      directors: '[Name of the managing director]',
+      company: 'Zenomix GbR',
+      address: 'Dithmarscher Straße 19\n26723 Emden, Germany',
+      represented: 'Represented by the partners:',
+      directors: 'Alan Abbas, Mounzer Annouz',
       contact: 'Contact:',
-      phone: 'Phone: [telephone number]',
-      email: 'Email: Zenomix.de',
-      registry: 'Register entry:',
-      registryDesc: 'Registry Court: [competent local court]\nRegister number: [HRB number]',
+      phone: 'Phone: +49 1577 7268389',
+      email: 'Email: info@zenomix.de',
       vat: 'VAT ID:',
       vatDesc: 'Sales tax identification number according to § 27 a Umsatzsteuergesetz:\n[USt-IdNr. / VAT ID]',
       disclaimer: 'Disclaimer / Legal Notice',
@@ -33,17 +31,16 @@ export default function Impressum({ onBack }: ImpressumProps) {
     ar: {
       title: 'بيانات الشركة (Impressum)',
       subtitle: 'الإفصاحات القانونية والمستندات الرسمية للشركة.',
-      tmg: 'معلومات بموجب الفقرة 5 من قانون وسائل الإعلام الألماني (TMG)',
+      tmg: 'معلومات بموجب الفقرة 5 من قانون الخدمات الرقمية الألماني (DDG)',
       operator: 'الجهة المشغلة للموقع الإلكتروني:',
-      company: 'Zenomix Services UG (haftungsbeschränkt)',
-      address: '[الشارع ورقم المبنى]، [الرمز البريدي والمدينة]، ألمانيا',
-      represented: 'يمثلها قانونياً:',
-      directors: '[اسم المدير المفوّض]',
+      company: 'Zenomix GbR',
+      // ⁦…⁩ isolates the Latin address/number so RTL layout keeps it readable
+      address: '⁦Dithmarscher Straße 19⁩\n⁦26723 Emden⁩، ألمانيا',
+      represented: 'يمثلها الشركاء:',
+      directors: 'Alan Abbas، Mounzer Annouz',
       contact: 'الاتصال والاتصالات:',
-      phone: 'الهاتف: [رقم الهاتف]',
-      email: 'البريد الإلكتروني: Zenomix.de',
-      registry: 'بيانات السجل التجاري:',
-      registryDesc: 'محكمة السجل: [المحكمة المختصة]\nرقم السجل: [رقم السجل التجاري]',
+      phone: 'الهاتف: ⁦+49 1577 7268389⁩',
+      email: 'البريد الإلكتروني: ⁦info@zenomix.de⁩',
       vat: 'الرقم الضريبي المضاف:',
       vatDesc: 'الرقم التعريفي لضريبة القيمة المضافة بموجب المادة 27 أ من قانون ضريبة المبيعات الألماني:\n[USt-IdNr. / VAT ID]',
       disclaimer: 'تسوية النزاعات وإشعار إخلاء المسؤولية',
@@ -53,17 +50,15 @@ export default function Impressum({ onBack }: ImpressumProps) {
     de: {
       title: 'Impressum',
       subtitle: 'Gesetzliche Pflichtangaben und Unternehmensdaten.',
-      tmg: 'Angaben gemäß § 5 TMG',
+      tmg: 'Angaben gemäß § 5 DDG',
       operator: 'Betreiber der Website:',
-      company: 'Zenomix Services UG (haftungsbeschränkt)',
-      address: '[Straße und Hausnummer], [PLZ und Ort], Deutschland',
-      represented: 'Vertreten durch:',
-      directors: '[Name der Geschäftsführung]',
+      company: 'Zenomix GbR',
+      address: 'Dithmarscher Straße 19\n26723 Emden, Deutschland',
+      represented: 'Vertreten durch die Gesellschafter:',
+      directors: 'Alan Abbas, Mounzer Annouz',
       contact: 'Kontakt:',
-      phone: 'Telefon: [Telefonnummer]',
-      email: 'E-Mail: Zenomix.de',
-      registry: 'Registereintrag:',
-      registryDesc: 'Registergericht: [zuständiges Amtsgericht]\nRegisternummer: [HRB-Nummer]',
+      phone: 'Telefon: +49 1577 7268389',
+      email: 'E-Mail: info@zenomix.de',
       vat: 'Umsatzsteuer-ID:',
       vatDesc: 'Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:\n[USt-IdNr. / VAT ID]',
       disclaimer: 'Streitschlichtung',
@@ -115,7 +110,7 @@ export default function Impressum({ onBack }: ImpressumProps) {
           {/* Legal Content Grid */}
           <div className={`space-y-8 ${isRtl ? 'text-right' : 'text-left'}`}>
             
-            {/* TMG Disclaimer */}
+            {/* § 5 DDG notice */}
             <div className="p-4 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-900 rounded-2xl">
               <p className="text-xs font-semibold text-slate-400 dark:text-slate-550 uppercase tracking-wider font-mono">
                 {tLocal.tmg}
@@ -164,17 +159,8 @@ export default function Impressum({ onBack }: ImpressumProps) {
               </div>
             </div>
 
-            {/* Registry and Tax */}
+            {/* Tax — no register entry: the GbR is not registered in the Gesellschaftsregister */}
             <div className="grid sm:grid-cols-2 gap-8 pt-6 border-t border-slate-100 dark:border-slate-800/60">
-              <div>
-                <h3 className="text-sm font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-3">
-                  {tLocal.registry}
-                </h3>
-                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed whitespace-pre-line">
-                  {tLocal.registryDesc}
-                </p>
-              </div>
-
               <div>
                 <h3 className="text-sm font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-3">
                   {tLocal.vat}

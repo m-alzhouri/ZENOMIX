@@ -21,9 +21,10 @@ export default function Contact() {
 
   const subjectOptions = [
     { value: 'Allgemeine Anfrage', label: t('contact_topic_general') },
-    { value: 'Kurier- & Paketdienst / Subunternehmer', label: t('contact_topic_highval') },
-    { value: 'Personenbeförderung & Fahrdienst', label: t('contact_topic_relay') },
-    { value: 'Krankenfahrten & Patiententransport', label: t('contact_topic_carbon') },
+    { value: 'Logistik / Subunternehmer', label: t('contact_topic_logistics') },
+    { value: 'Flotten- & Schichtmanagement', label: t('contact_topic_fleet') },
+    { value: 'Kurier- & Paketdienst', label: t('contact_topic_courier') },
+    { value: 'Umzugshilfe', label: t('contact_topic_moving') },
     { value: 'Sonstiges', label: t('contact_topic_other') },
   ];
 
@@ -154,7 +155,9 @@ export default function Contact() {
                       {t('contact_inquiries')}
                     </h4>
                     <p className="text-sm font-semibold text-slate-800 dark:text-slate-200 mt-1">
-                      Zenomix.de
+                      <a href="mailto:info@zenomix.de" dir="ltr" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        info@zenomix.de
+                      </a>
                     </p>
                     <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium">
                       {t('contact_reply_time')}
@@ -171,7 +174,9 @@ export default function Contact() {
                       {t('contact_hotline')}
                     </h4>
                     <p className="text-sm font-semibold text-slate-800 dark:text-slate-200 mt-1 font-mono font-bold">
-                      {t('contact_hotline_val')}
+                      <a href="tel:+4915777268389" dir="ltr" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        {t('contact_hotline_val')}
+                      </a>
                     </p>
                     <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium font-sans">
                       {t('contact_hotline_hours')}
@@ -181,20 +186,20 @@ export default function Contact() {
 
               </div>
 
-              {/* Verified ISO stamps mock */}
+              {/* Key facts */}
               <div className={`mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center gap-4 justify-between ${isRtl ? 'flex-row-reverse' : ''}`}>
                 <div className={isRtl ? 'text-right' : 'text-left'}>
                   <div className="text-[10px] font-mono text-slate-400 dark:text-slate-500 uppercase tracking-widest font-bold">
                     {t('contact_iso_rating')}
                   </div>
-                  <div className="text-xs font-bold text-slate-800 dark:text-slate-200 mt-1">ISO 9001:2015</div>
+                  <div className="text-xs font-bold text-slate-800 dark:text-slate-200 mt-1">{t('contact_iso_rating_val')}</div>
                 </div>
                 <div className="h-8 w-px bg-slate-200 dark:bg-slate-800" />
                 <div className={isRtl ? 'text-right' : 'text-left'}>
                   <div className="text-[10px] font-mono text-slate-400 dark:text-slate-500 uppercase tracking-widest font-bold">
                     {t('contact_eco_license')}
                   </div>
-                  <div className="text-xs font-bold text-slate-800 dark:text-slate-200 mt-1">SCS-GREEN-902</div>
+                  <div className="text-xs font-bold text-slate-800 dark:text-slate-200 mt-1">{t('contact_eco_license_val')}</div>
                 </div>
                 <div className="h-8 w-px bg-slate-200 dark:bg-slate-800" />
                 <div className={isRtl ? 'text-right' : 'text-left'}>

@@ -14,10 +14,10 @@ export const enTranslations = {
   nav_track_btn: 'Check Route',
 
   // hero
-  hero_badge: 'TRANSPORT & MOBILITY UP TO 3.5 T',
+  hero_badge: 'TRANSPORT & LOGISTICS UP TO 3.5 T',
   hero_title_1: 'We handle every transport need in the',
   hero_title_2: 'light-commercial sector',
-  hero_subtitle: 'Zenomix Services UG is your partner for courier and parcel logistics, passenger transport and non-emergency patient journeys. We operate exclusively with vehicles under 3.5 tonnes — dispatched through our own driver and shift planning software.',
+  hero_subtitle: 'Zenomix GbR is your partner for logistics, courier and parcel services and moving help. We operate exclusively with vehicles under 3.5 tonnes — dispatched through our own fleet and shift management software.',
   hero_btn_calc: 'Calculate Transport Costs',
   hero_btn_track: 'View Route Status',
   hero_feat1_title: 'Dependable',
@@ -31,7 +31,7 @@ export const enTranslations = {
   services_badge: 'OUR SERVICE RANGE',
   services_title_1: 'One partner for the entire',
   services_title_2: 'light-commercial sector',
-  services_subtitle: 'From parcel rounds inside the networks of major logistics providers to passenger transport and wheelchair-accessible patient journeys — all from a single source and fully digitally scheduled.',
+  services_subtitle: 'From fixed rounds inside the networks of major logistics providers and same-day courier runs through to a complete move — all from a single source and fully digitally scheduled.',
   services_transit_time: 'Availability',
   services_capacity: 'Vehicle Class',
   services_coverage: 'Service Area',
@@ -39,7 +39,7 @@ export const enTranslations = {
   services_card_coverage: 'Service Area',
   services_modal_class: 'SERVICE AREA',
   services_modal_features: 'Scope of Service & Operational Features',
-  services_modal_insurance: 'Every assignment is carried out with valid goods or passenger transport insurance in place.',
+  services_modal_insurance: 'Every assignment is carried out with valid goods-in-transit insurance in place.',
   services_modal_quote: 'Request a Quote',
   services_modal_close: 'Close service details',
 
@@ -130,11 +130,11 @@ export const enTranslations = {
   // fleet
   fleet_badge: 'FLEET UP TO 3.5 T',
   fleet_title: 'A fleet that matches the assignment',
-  fleet_subtitle: 'From a large panel van to a wheelchair-accessible vehicle: we run exclusively vehicles under 3.5 tonnes — regularly serviced, telematics-connected and dispatched through our own shift planning.',
+  fleet_subtitle: 'From the electric courier vehicle to the box van with tail lift: we run exclusively vehicles under 3.5 tonnes — regularly serviced, telematics-connected and dispatched through our own shift planning.',
   fleet_tab_all: 'All Vehicles',
   fleet_tab_heavy: 'Large Van 3.5 t',
   fleet_tab_medium: 'Panel Van',
-  fleet_tab_light: 'Passenger & Patient',
+  fleet_tab_light: 'Box Van & Electric',
   fleet_active_assets: 'Vehicles in Service',
   fleet_diag_console: 'Vehicle Details',
   fleet_class: 'CLASS',
@@ -147,10 +147,10 @@ export const enTranslations = {
   fleet_btn_request: 'Request This Vehicle',
 
   // about
-  about_badge: 'ABOUT ZENOMIX SERVICES UG',
+  about_badge: 'ABOUT ZENOMIX',
   about_title_1: 'One partner for everything',
   about_title_2: 'up to 3.5 tonnes',
-  about_subtitle_1: 'Zenomix Services UG is a transport and mobility provider that deliberately concentrates on the light-commercial sector. We operate exclusively with vehicles under 3.5 tonnes — from the courier car and the panel van through to the large Sprinter. Whatever fits that class, we take on: parcels, direct runs, passenger transport and non-emergency patient journeys.',
+  about_subtitle_1: 'Zenomix GbR is a transport and logistics provider that deliberately concentrates on the light-commercial sector. We operate exclusively with vehicles under 3.5 tonnes — from the courier car and the panel van through to the large Sprinter. Whatever fits that class, we take on: logistics rounds, parcels and direct runs, and moving help.',
   about_subtitle_2: 'For major B2B logistics networks we are a dependable subcontractor with reliably staffed rounds. What makes that possible is our own software: it drives driver, shift and route planning, records working hours, and keeps personnel scheduling transparent for our clients at any time.',
   about_stat_assets: 'Vehicles under 3.5 t',
   about_stat_offset: 'Digital shift & route planning',
@@ -160,22 +160,24 @@ export const enTranslations = {
   about_pillar2_title: 'Digital Dispatch',
   about_pillar2_desc: 'Our own software plans shifts, assigns routes and records working hours. That reduces gaps in coverage and makes every assignment traceable.',
   about_pillar3_title: 'Trained Drivers',
-  about_pillar3_desc: 'Trained drivers, inspected vehicles and clear procedures — from the parcel round to a wheelchair-accessible journey.',
+  about_pillar3_desc: 'Trained drivers, inspected vehicles and clear procedures — from the parcel round to a complete move.',
 
   // contact
   contact_badge: 'CONTACT',
   contact_title: 'Let us talk about your transport needs',
-  contact_subtitle: 'Whether a fixed round inside your logistics network, a driving service or recurring patient journeys — tell us what you need and we will come back to you with a quote.',
+  contact_subtitle: 'Whether a fixed round inside your logistics network, a same-day courier run or your next move — tell us what you need and we will come back to you with a quote.',
   contact_hq: 'Registered Office',
   contact_office_loc: 'Address',
-  contact_office_val: '[Street and number], [Postcode and town]',
+  contact_office_val: 'Dithmarscher Straße 19, 26723 Emden',
   contact_inquiries: 'Enquiries',
   contact_reply_time: 'Typical response time: within 24 hours',
   contact_hotline: 'Telephone',
-  contact_hotline_val: '[Telephone number]',
+  contact_hotline_val: '+49 1577 7268389',
   contact_hotline_hours: 'Mon – Sat, dispatch available',
   contact_iso_rating: 'MAX. WEIGHT',
+  contact_iso_rating_val: '3.5 t',
   contact_eco_license: 'SERVICE AREA',
+  contact_eco_license_val: 'Germany-wide',
   contact_fleet_status: 'FLEET STATUS',
   contact_fleet_status_val: 'INSPECTED',
   contact_form_title: 'Send an Enquiry',
@@ -184,9 +186,10 @@ export const enTranslations = {
   contact_topic: 'Subject',
   contact_msg: 'Your Message',
   contact_topic_general: 'General enquiry',
-  contact_topic_highval: 'Courier & parcel services / subcontracting',
-  contact_topic_relay: 'Passenger transport & driving services',
-  contact_topic_carbon: 'Non-emergency patient transport',
+  contact_topic_logistics: 'Logistics / subcontracting',
+  contact_topic_fleet: 'Fleet & shift management',
+  contact_topic_courier: 'Courier & parcel services',
+  contact_topic_moving: 'Moving help',
   contact_topic_other: 'Other',
   contact_placeholder_name: 'Jane Doe',
   contact_placeholder_email: 'name@company.com',
@@ -202,24 +205,24 @@ export const enTranslations = {
   // faq
   faq_badge: 'COMMON QUESTIONS',
   faq_title: 'Frequently Asked Questions',
-  faq_subtitle: 'Answers on vehicle classes, subcontracted rounds, patient journeys and our digital shift planning.',
+  faq_subtitle: 'Answers on vehicle classes, subcontracted rounds, moving help and our digital shift planning.',
   faq_q1: 'Which vehicles does Zenomix operate?',
   faq_a1: 'We work exclusively with vehicles up to 3.5 tonnes gross vehicle weight — from the courier car and the panel van through to the large Sprinter. Heavy freight and truck haulage above 3.5 tonnes are deliberately not part of our service range.',
   faq_q2: 'Do you run rounds as a subcontractor for logistics networks?',
   faq_a2: 'Yes. We run fixed delivery rounds as a subcontractor for larger B2B logistics providers — with predictable driver staffing, our own shift planning and a defined stand-in procedure when someone is unavailable.',
-  faq_q3: 'What does your passenger and patient transport cover?',
-  faq_a3: 'We offer general passenger transport as well as non-emergency patient journeys — seated or by wheelchair, without medical care during the journey. Emergency response and qualified medical transport with clinical care on board are expressly not part of our services.',
+  faq_q3: 'What does your moving help include?',
+  faq_a3: 'We provide a van up to 3.5 tonnes including driver, helpers for carrying, loading and unloading, and on request the dismantling and reassembly of furniture. We handle private moves as well as office and business relocations — you book exactly the parts you need.',
   faq_q4: 'How does your digital shift and route planning work?',
   faq_a4: 'We use software we developed ourselves for driver and shift management. It plans shifts, assigns routes, records working and driving hours, and shows dispatch at any moment which vehicle is out with which driver. It exists to steer personnel and routes — not to track individual parcels.',
   faq_q5: 'How quickly can you take on an assignment?',
-  faq_a5: 'Direct runs are usually dispatched within a few hours. For recurring rounds and fixed driving services we agree capacity and shift models in advance, normally within a few working days of your enquiry.',
+  faq_a5: 'Direct runs are usually dispatched within a few hours. For recurring rounds and moves we agree capacity, dates and shift models in advance, normally within a few working days of your enquiry.',
 
   footer_legal_title: 'Legal',
   footer_imprint: 'Imprint',
   footer_privacy: 'Privacy Policy',
 
   // footer
-  footer_slogan: 'Zenomix Services UG — your partner for transport and mobility up to 3.5 tonnes. Courier and parcel services, passenger transport, non-emergency patient journeys and digital shift planning from a single source.',
+  footer_slogan: 'Zenomix GbR — your partner for transport and logistics up to 3.5 tonnes. Logistics, fleet and shift management, courier and parcel services and moving help from a single source.',
   footer_map_title: 'Service Area',
   footer_ops_title: 'Contact & Dispatch',
   footer_ops_email: 'Email',
@@ -230,8 +233,8 @@ export const enTranslations = {
   footer_digest_desc: 'Updates on available capacity, service areas and partnerships in light-commercial transport.',
   footer_digest_placeholder: 'name@company.com',
   footer_digest_success: 'Subscription recorded.',
-  footer_copy: '© 2026 Zenomix Services UG (haftungsbeschränkt). All rights reserved.',
-  footer_cert: 'TRANSPORT & MOBILITY UP TO 3.5 T | COURIER · PASSENGER TRANSPORT · PATIENT JOURNEYS',
+  footer_copy: '© 2026 Zenomix GbR. All rights reserved.',
+  footer_cert: 'TRANSPORT & LOGISTICS UP TO 3.5 T | LOGISTICS · COURIER · MOVING HELP',
   footer_secured: 'FULLY INSURED',
   footer_green: 'DIGITALLY DISPATCHED',
 
@@ -254,10 +257,10 @@ export const arTranslations: typeof enTranslations = {
   nav_track_btn: 'تتبع المهمة',
 
   // hero
-  hero_badge: 'نقل وتنقل حتى ٣٫٥ طن',
+  hero_badge: 'نقل وخدمات لوجستية حتى ٣٫٥ طن',
   hero_title_1: 'ننفّذ جميع مهام النقل في',
   hero_title_2: 'قطاع المركبات التجارية الخفيفة',
-  hero_subtitle: 'شركة Zenomix Services UG شريككم في خدمات البريد والطرود، ونقل الأشخاص، ونقل المرضى غير الطارئ. نعمل حصراً بمركبات لا يتجاوز وزنها ٣٫٥ طن، وتُدار عملياتنا عبر برنامجنا الخاص لتخطيط السائقين والورديات.',
+  hero_subtitle: 'شركة Zenomix GbR شريككم في الخدمات اللوجستية، وخدمات البريد والطرود، والمساعدة في نقل الأثاث. نعمل حصراً بمركبات لا يتجاوز وزنها ٣٫٥ طن، وتُدار عملياتنا عبر برنامجنا الخاص لإدارة الأسطول والورديات.',
   hero_btn_calc: 'احسب تكلفة النقل',
   hero_btn_track: 'عرض حالة المهمة',
   hero_feat1_title: 'موثوقية',
@@ -271,7 +274,7 @@ export const arTranslations: typeof enTranslations = {
   services_badge: 'نطاق خدماتنا',
   services_title_1: 'شريك واحد لكامل',
   services_title_2: 'قطاع المركبات الخفيفة',
-  services_subtitle: 'من توصيل الطرود ضمن شبكات كبار مزوّدي الخدمات اللوجستية إلى نقل الأشخاص ونقل المرضى بالكرسي المتحرك — كل ذلك من مصدر واحد وبتخطيط رقمي كامل.',
+  services_subtitle: 'من الجولات الثابتة ضمن شبكات كبار مزوّدي الخدمات اللوجستية ورحلات البريد في نفس اليوم وصولاً إلى نقل الأثاث بالكامل — كل ذلك من مصدر واحد وبتخطيط رقمي كامل.',
   services_transit_time: 'التوافر',
   services_capacity: 'فئة المركبة',
   services_coverage: 'نطاق الخدمة',
@@ -279,7 +282,7 @@ export const arTranslations: typeof enTranslations = {
   services_card_coverage: 'نطاق الخدمة',
   services_modal_class: 'مجال الخدمة',
   services_modal_features: 'نطاق الخدمة والمزايا التشغيلية',
-  services_modal_insurance: 'تُنفَّذ جميع المهام بوجود تأمين ساري على نقل البضائع أو الأشخاص.',
+  services_modal_insurance: 'تُنفَّذ جميع المهام بوجود تأمين ساري على البضائع المنقولة.',
   services_modal_quote: 'اطلب عرض سعر',
   services_modal_close: 'إغلاق تفاصيل الخدمة',
 
@@ -370,11 +373,11 @@ export const arTranslations: typeof enTranslations = {
   // fleet
   fleet_badge: 'أسطول حتى ٣٫٥ طن',
   fleet_title: 'أسطول يناسب طبيعة المهمة',
-  fleet_subtitle: 'من المركبة كبيرة الحجم إلى المركبة المجهّزة للكراسي المتحركة: نعمل حصراً بمركبات تحت ٣٫٥ طن، تخضع للصيانة الدورية وترتبط بأنظمة التتبع وبتخطيط الورديات لدينا.',
+  fleet_subtitle: 'من مركبة البريد الكهربائية إلى الشاحنة الصندوقية المزوّدة برافعة خلفية: نعمل حصراً بمركبات تحت ٣٫٥ طن، تخضع للصيانة الدورية وترتبط بأنظمة التتبع وبتخطيط الورديات لدينا.',
   fleet_tab_all: 'كل المركبات',
   fleet_tab_heavy: 'مركبة كبيرة ٣٫٥ طن',
   fleet_tab_medium: 'مركبة مغلقة',
-  fleet_tab_light: 'أشخاص ومرضى',
+  fleet_tab_light: 'صندوقية وكهربائية',
   fleet_active_assets: 'المركبات في الخدمة',
   fleet_diag_console: 'تفاصيل المركبة',
   fleet_class: 'الفئة',
@@ -387,10 +390,10 @@ export const arTranslations: typeof enTranslations = {
   fleet_btn_request: 'اطلب هذه المركبة',
 
   // about
-  about_badge: 'عن Zenomix Services UG',
+  about_badge: 'عن Zenomix',
   about_title_1: 'شريك واحد لكل ما هو',
   about_title_2: 'حتى ٣٫٥ طن',
-  about_subtitle_1: 'شركة Zenomix Services UG مزوّد لخدمات النقل والتنقل يركّز عن قصد على قطاع المركبات التجارية الخفيفة. نعمل حصراً بمركبات تحت ٣٫٥ طن — من سيارة البريد إلى المركبة المغلقة وصولاً إلى المركبة الكبيرة. وكل ما يندرج ضمن هذه الفئة ننفّذه: الطرود، والرحلات المباشرة، ونقل الأشخاص، ونقل المرضى غير الطارئ.',
+  about_subtitle_1: 'شركة Zenomix GbR مزوّد لخدمات النقل والخدمات اللوجستية يركّز عن قصد على قطاع المركبات التجارية الخفيفة. نعمل حصراً بمركبات تحت ٣٫٥ طن — من سيارة البريد إلى المركبة المغلقة وصولاً إلى المركبة الكبيرة. وكل ما يندرج ضمن هذه الفئة ننفّذه: الجولات اللوجستية، والطرود والرحلات المباشرة، والمساعدة في نقل الأثاث.',
   about_subtitle_2: 'نعمل كمقاول من الباطن موثوق لشبكات لوجستية كبرى بين الشركات، مع تغطية ثابتة للجولات. ويقوم ذلك على برنامجنا الخاص الذي يدير تخطيط السائقين والورديات والمهام، ويوثّق أوقات العمل، ويجعل توزيع الكوادر واضحاً لعملائنا في أي وقت.',
   about_stat_assets: 'مركبات تحت ٣٫٥ طن',
   about_stat_offset: 'تخطيط رقمي للورديات والمهام',
@@ -400,22 +403,24 @@ export const arTranslations: typeof enTranslations = {
   about_pillar2_title: 'تشغيل رقمي',
   about_pillar2_desc: 'يخطّط برنامجنا الخاص الورديات ويوزّع المهام ويوثّق أوقات العمل، ما يقلّل الانقطاعات ويجعل كل مهمة قابلة للتتبع.',
   about_pillar3_title: 'كوادر مؤهلة',
-  about_pillar3_desc: 'سائقون مدرَّبون ومركبات مفحوصة وإجراءات واضحة — من جولة الطرود إلى الرحلة المجهّزة للكرسي المتحرك.',
+  about_pillar3_desc: 'سائقون مدرَّبون ومركبات مفحوصة وإجراءات واضحة — من جولة الطرود إلى نقل الأثاث بالكامل.',
 
   // contact
   contact_badge: 'تواصل معنا',
   contact_title: 'لنتحدث عن احتياجات النقل لديكم',
-  contact_subtitle: 'سواء كانت جولة ثابتة ضمن شبكتكم اللوجستية أو خدمة نقل أشخاص أو رحلات مرضى منتظمة — أخبرونا باحتياجكم وسنعود إليكم بعرض سعر.',
+  contact_subtitle: 'سواء كانت جولة ثابتة ضمن شبكتكم اللوجستية أو رحلة بريد في نفس اليوم أو انتقالكم القادم — أخبرونا باحتياجكم وسنعود إليكم بعرض سعر.',
   contact_hq: 'المقر الرئيسي',
   contact_office_loc: 'العنوان',
-  contact_office_val: '[الشارع ورقم المبنى]، [الرمز البريدي والمدينة]',
+  contact_office_val: 'Dithmarscher Straße 19, 26723 Emden',
   contact_inquiries: 'الاستفسارات',
   contact_reply_time: 'زمن الرد المعتاد: خلال ٢٤ ساعة',
   contact_hotline: 'الهاتف',
-  contact_hotline_val: '[رقم الهاتف]',
+  contact_hotline_val: '+49 1577 7268389',
   contact_hotline_hours: 'الاثنين – السبت، قسم التشغيل متاح',
   contact_iso_rating: 'الحد الأقصى للوزن',
+  contact_iso_rating_val: '٣٫٥ طن',
   contact_eco_license: 'نطاق الخدمة',
+  contact_eco_license_val: 'جميع أنحاء ألمانيا',
   contact_fleet_status: 'حالة الأسطول',
   contact_fleet_status_val: 'مفحوص',
   contact_form_title: 'إرسال استفسار',
@@ -424,9 +429,10 @@ export const arTranslations: typeof enTranslations = {
   contact_topic: 'الموضوع',
   contact_msg: 'نص الرسالة',
   contact_topic_general: 'استفسار عام',
-  contact_topic_highval: 'خدمات البريد والطرود / التعاقد من الباطن',
-  contact_topic_relay: 'نقل الأشخاص وخدمات القيادة',
-  contact_topic_carbon: 'نقل المرضى غير الطارئ',
+  contact_topic_logistics: 'الخدمات اللوجستية / التعاقد من الباطن',
+  contact_topic_fleet: 'إدارة الأسطول والورديات',
+  contact_topic_courier: 'خدمات البريد والطرود',
+  contact_topic_moving: 'المساعدة في نقل الأثاث',
   contact_topic_other: 'غير ذلك',
   contact_placeholder_name: 'محمد أحمد',
   contact_placeholder_email: 'name@company.com',
@@ -442,24 +448,24 @@ export const arTranslations: typeof enTranslations = {
   // faq
   faq_badge: 'أسئلة متكررة',
   faq_title: 'الأسئلة الشائعة',
-  faq_subtitle: 'إجابات حول فئات المركبات، والجولات بالتعاقد من الباطن، ورحلات المرضى، وتخطيط الورديات الرقمي لدينا.',
+  faq_subtitle: 'إجابات حول فئات المركبات، والجولات بالتعاقد من الباطن، والمساعدة في نقل الأثاث، وتخطيط الورديات الرقمي لدينا.',
   faq_q1: 'ما المركبات التي تشغّلها Zenomix؟',
   faq_a1: 'نعمل حصراً بمركبات لا يتجاوز وزنها الإجمالي المسموح ٣٫٥ طن — من سيارة البريد إلى المركبة المغلقة وصولاً إلى المركبة الكبيرة. أما النقل الثقيل والشاحنات فوق ٣٫٥ طن فهي عن قصد خارج نطاق خدماتنا.',
   faq_q2: 'هل تنفّذون جولات كمقاول من الباطن للشبكات اللوجستية؟',
   faq_a2: 'نعم. ننفّذ جولات توصيل ثابتة كمقاول من الباطن لمزوّدي خدمات لوجستية كبار بين الشركات — بتغطية سائقين قابلة للتخطيط، وتخطيط ورديات خاص بنا، ونظام واضح للبدائل عند الغياب.',
-  faq_q3: 'ماذا يشمل نقل الأشخاص والمرضى لديكم؟',
-  faq_a3: 'نقدّم نقل الأشخاص بشكل عام إضافة إلى رحلات المرضى غير الطارئة — جلوساً أو بالكرسي المتحرك، دون رعاية طبية أثناء الرحلة. أما الإسعاف والنقل الطبي المؤهل مع رعاية طبية على متن المركبة فليسا جزءاً من خدماتنا.',
+  faq_q3: 'ماذا تشمل خدمة المساعدة في نقل الأثاث؟',
+  faq_a3: 'نوفّر مركبة حتى ٣٫٥ طن مع السائق، وعمّالاً للحمل والتحميل والتفريغ، وعند الطلب فكّ الأثاث وإعادة تركيبه. وننفّذ نقل المنازل وكذلك نقل المكاتب والشركات — وتحجزون فقط ما تحتاجونه من هذه الخدمات.',
   faq_q4: 'كيف يعمل تخطيط الورديات والمهام الرقمي لديكم؟',
   faq_a4: 'نستخدم برنامجاً طوّرناه بأنفسنا لإدارة السائقين والورديات. يخطّط الورديات، ويوزّع المهام، ويوثّق أوقات العمل والقيادة، ويُظهر لقسم التشغيل في أي لحظة أي مركبة تعمل مع أي سائق. الغرض منه توجيه الكوادر والمهام، لا تتبع الطرود الفردية.',
   faq_q5: 'ما السرعة التي يمكنكم بها تولّي مهمة جديدة؟',
-  faq_a5: 'الرحلات المباشرة تُنظَّم عادةً خلال ساعات قليلة. أما الجولات المتكررة وخدمات القيادة الثابتة فنتفق على الطاقة الاستيعابية ونماذج الورديات مسبقاً، وغالباً خلال أيام عمل قليلة من تاريخ الاستفسار.',
+  faq_a5: 'الرحلات المباشرة تُنظَّم عادةً خلال ساعات قليلة. أما الجولات المتكررة وعمليات نقل الأثاث فنتفق على الطاقة الاستيعابية والمواعيد ونماذج الورديات مسبقاً، وغالباً خلال أيام عمل قليلة من تاريخ الاستفسار.',
 
   footer_legal_title: 'الشؤون القانونية',
   footer_imprint: 'بيانات الناشر',
   footer_privacy: 'سياسة الخصوصية',
 
   // footer
-  footer_slogan: 'Zenomix Services UG — شريككم في النقل والتنقل حتى ٣٫٥ طن. خدمات البريد والطرود، ونقل الأشخاص، ورحلات المرضى، وتخطيط الورديات الرقمي من مصدر واحد.',
+  footer_slogan: 'Zenomix GbR — شريككم في النقل والخدمات اللوجستية حتى ٣٫٥ طن. الخدمات اللوجستية، وإدارة الأسطول والورديات، وخدمات البريد والطرود، والمساعدة في نقل الأثاث من مصدر واحد.',
   footer_map_title: 'نطاق الخدمة',
   footer_ops_title: 'الاتصال والتشغيل',
   footer_ops_email: 'البريد الإلكتروني',
@@ -470,8 +476,8 @@ export const arTranslations: typeof enTranslations = {
   footer_digest_desc: 'مستجدات حول الطاقة المتاحة ونطاقات الخدمة والشراكات في مجال النقل الخفيف.',
   footer_digest_placeholder: 'name@company.com',
   footer_digest_success: 'تم تسجيل الاشتراك.',
-  footer_copy: '© 2026 Zenomix Services UG (haftungsbeschränkt). جميع الحقوق محفوظة.',
-  footer_cert: 'نقل وتنقل حتى ٣٫٥ طن | بريد · نقل أشخاص · رحلات مرضى',
+  footer_copy: '© 2026 Zenomix GbR. جميع الحقوق محفوظة.',
+  footer_cert: 'نقل وخدمات لوجستية حتى ٣٫٥ طن | لوجستيات · بريد · نقل أثاث',
   footer_secured: 'مؤمَّن بالكامل',
   footer_green: 'تشغيل رقمي',
 
@@ -482,57 +488,21 @@ export const arTranslations: typeof enTranslations = {
 
 export const servicesData_ar: ServiceItem[] = [
   {
-    id: 'courier',
-    title: 'خدمات البريد والطرود',
-    shortDesc: 'توصيل الطرود والرحلات المباشرة والجولات الثابتة — بما في ذلك العمل كمقاول من الباطن موثوق لشبكات لوجستية كبرى بين الشركات.',
-    longDesc: 'نوصّل الطرود والمستندات والبضائع المرصوصة ضمن فئة المركبات الخفيفة، سواء كخدمة بريد مستقلة أو كمقاول من الباطن لشبكات لوجستية راسخة بين الشركات. ونغطّي الجولات الثابتة بشكل موثوق عبر تخطيط الورديات الخاص بنا، بما في ذلك البدائل في حالات المرض والإجازات. وهذا يعني لعملائنا تغطية مضمونة للجولات دون الحاجة إلى بناء فريق سائقين خاص بهم.',
-    iconName: 'Truck',
+    id: 'logistics',
+    title: 'الخدمات اللوجستية',
+    shortDesc: 'جولات توصيل ثابتة وحمولات جزئية حتى ٣٫٥ طن — كمقاول من الباطن موثوق لشبكات لوجستية كبرى بين الشركات.',
+    longDesc: 'ننفّذ جولات توصيل ثابتة كمقاول من الباطن لشبكات لوجستية راسخة بين الشركات، وننقل الحمولات الجزئية والبضائع على منصات ضمن فئة المركبات حتى ٣٫٥ طن. ونغطّي الجولات بشكل موثوق عبر تخطيط الورديات الخاص بنا، بما في ذلك البدائل في حالات المرض والإجازات، ونرفع الطاقة الاستيعابية في مواسم الذروة. وهذا يعني لعملائنا تغطية مضمونة للجولات دون الحاجة إلى بناء فريق سائقين خاص بهم.',
+    iconName: 'Route',
     features: [
       'جولات توصيل ثابتة بالتعاقد من الباطن',
-      'رحلات مباشرة وخاصة في نفس اليوم',
+      'حمولات جزئية وبضائع على منصات حتى ١٢٠٠ كجم',
       'تغطية سائقين قابلة للتخطيط مع بدائل',
-      'توثيق رقمي للورديات وأوقات العمل'
+      'طاقة استيعابية إضافية في مواسم الذروة'
     ],
     specs: {
-      transitTime: 'من ساعتين',
+      transitTime: 'جولات ثابتة',
       capacity: 'حتى ١٢٠٠ كجم',
       globalCoverage: 'إقليمي وعلى مستوى البلاد'
-    }
-  },
-  {
-    id: 'passenger',
-    title: 'نقل الأشخاص والتنقل',
-    shortDesc: 'نقل الموظفين والرحلات الجماعية وخدمات القيادة المتكررة — حلول تنقل عامة بمركبات تحت ٣٫٥ طن.',
-    longDesc: 'سواء كانت رحلات موظفين مرتبطة بتبديل الورديات أو رحلات نقل أو خدمات قيادة متكررة لمؤسسات وشركات، ننظّم نقل الأشخاص بفريق سائقين ثابت وبنوافذ زمنية ملزمة. ويتم تخطيط الورديات عبر برنامجنا الخاص، بحيث تبقى الرحلات الصباحية الباكرة والمسائية وفي عطلة نهاية الأسبوع مغطاة بشكل موثوق.',
-    iconName: 'Users',
-    features: [
-      'رحلات موظفين متوافقة مع تبديل الورديات',
-      'رحلات نقل وجولات جماعية',
-      'خدمات قيادة متكررة ضمن عقود إطارية',
-      'مسؤولو تواصل ثابتون في قسم التشغيل'
-    ],
-    specs: {
-      transitTime: 'حسب الجدول',
-      capacity: 'حتى ٨ أشخاص',
-      globalCoverage: 'إقليمي'
-    }
-  },
-  {
-    id: 'patient',
-    title: 'نقل المرضى غير الطارئ',
-    shortDesc: 'نقل مرضى غير مؤهَّل طبياً — جلوساً أو بالكرسي المتحرك، دون رعاية طبية أثناء الرحلة.',
-    longDesc: 'ننقل المرضى الذين لا يحتاجون إلى رعاية طبية أثناء الرحلة — جلوساً أو بالكرسي المتحرك، بمركبات مجهّزة لهذا الغرض وبسائقين مدرَّبين. ومن الحالات المعتادة الرحلات إلى جلسات الغسيل الكلوي أو العلاج الإشعاعي أو التأهيل أو المواعيد الخارجية. أما الإسعاف والنقل الطبي المؤهل مع رعاية طبية على متن المركبة فهما صراحةً خارج نطاق خدماتنا.',
-    iconName: 'HeartPulse',
-    features: [
-      'النقل جلوساً أو بالكرسي المتحرك',
-      'مركبات مجهّزة بمنحدر للكراسي المتحركة',
-      'سائقون مدرَّبون ومواعيد ثابتة',
-      'دون تقديم رعاية طبية أثناء الرحلة'
-    ],
-    specs: {
-      transitTime: 'مرتبط بالموعد',
-      capacity: 'كرسي متحرك وجلوس',
-      globalCoverage: 'إقليمي'
     }
   },
   {
@@ -551,6 +521,42 @@ export const servicesData_ar: ServiceItem[] = [
       transitTime: 'لحظي',
       capacity: 'كامل الأسطول',
       globalCoverage: 'كل المواقع'
+    }
+  },
+  {
+    id: 'courier',
+    title: 'خدمات البريد والطرود',
+    shortDesc: 'رحلات مباشرة في نفس اليوم وتوصيل الطرود والمستندات — بسرعة وبتأمين كامل وتنظيم خلال ساعات.',
+    longDesc: 'عندما يجب أن تصل الشحنة اليوم، نستلمها وننقلها مباشرة إلى وجهتها — مستندات أو طرود أو قطع غيار أو منصات منفردة. ننظّم الرحلات المباشرة والخاصة خلال ساعات قليلة، ويمكن حجز رحلات البريد المتكررة في نوافذ زمنية ثابتة. ونؤكّد لكم الاستلام والتسليم، لتعرفوا دائماً متى وصلت شحنتكم.',
+    iconName: 'Package',
+    features: [
+      'رحلات مباشرة وخاصة في نفس اليوم',
+      'طرود ومستندات ومنصات منفردة',
+      'رحلات بريد متكررة في أوقات ثابتة',
+      'تأكيد الاستلام والتسليم'
+    ],
+    specs: {
+      transitTime: 'من ساعتين',
+      capacity: 'حتى ١٢٠٠ كجم',
+      globalCoverage: 'إقليمي وعلى مستوى البلاد'
+    }
+  },
+  {
+    id: 'moving',
+    title: 'المساعدة في نقل الأثاث',
+    shortDesc: 'مركبة مع سائق وعمّال للحمل وفكّ الأثاث وتركيبه — لنقل المنازل وكذلك لنقل المكاتب والشركات.',
+    longDesc: 'نساعدكم في الانتقال بمركبات حتى ٣٫٥ طن: شاحنة صندوقية أو مركبة كبيرة مع سائق متمرّس، ومعها عند الحاجة عمّال يتولّون الحمل والتحميل والتفريغ. وبناءً على طلبكم نفكّ الأثاث في العنوان القديم ونعيد تركيبه في المنزل أو المكتب الجديد. وإلى جانب نقل المنازل ننفّذ نقل المكاتب والشركات — بتخطيط يضمن عودة عملكم إلى سيره الطبيعي بأسرع وقت.',
+    iconName: 'Sofa',
+    features: [
+      'مركبة حتى ٣٫٥ طن مع السائق',
+      'عمّال للحمل والتحميل والتفريغ',
+      'فكّ الأثاث وإعادة تركيبه',
+      'نقل المنازل والمكاتب والشركات'
+    ],
+    specs: {
+      transitTime: 'حسب الموعد',
+      capacity: 'مركبة حتى ٣٫٥ طن',
+      globalCoverage: 'إقليمي وعلى مستوى البلاد'
     }
   }
 ];
@@ -582,15 +588,15 @@ export const fleetData_ar: FleetVehicle[] = [
   },
   {
     id: 'fleet-3',
-    name: 'Zenomix Care Mobil',
+    name: 'Zenomix Box Van',
     type: 'light',
-    typeName: 'نقل الأشخاص والمرضى',
-    payload: '٧٥٠ كجم',
-    volume: 'حتى ٨ مقاعد',
-    range: '٨٠٠ كم',
+    typeName: 'شاحنة صندوقية برافعة خلفية',
+    payload: '١٠٠٠ كجم',
+    volume: '٢٠ م³',
+    range: '٧٠٠ كم',
     propulsion: 'ديزل (يورو ٦)',
-    imageAlt: 'مركبة Zenomix لنقل الأشخاص مجهّزة بمنحدر للكراسي المتحركة',
-    features: ['منحدر ونقاط تثبيت معتمدة للكرسي المتحرك', 'النقل جلوساً أو بالكرسي المتحرك', 'مدخل منخفض وخالٍ من العوائق']
+    imageAlt: 'شاحنة Zenomix الصندوقية برافعة خلفية لنقل الأثاث والبضائع الضخمة',
+    features: ['رافعة خلفية للأثاث الثقيل', 'بطانيات وأحزمة وعربات نقل على متن المركبة', 'صندوق تحميل مزوّد بقضبان تثبيت']
   },
   {
     id: 'fleet-4',
@@ -618,17 +624,17 @@ export const testimonialsData_ar: Testimonial[] = [
   {
     id: 'test-2',
     name: 'ميريام زاندر',
-    role: 'مسؤولة إدارة الأسطول',
+    role: 'مديرة المكتب',
     company: 'Rhein-Main Servicegruppe',
-    quote: 'كنا بحاجة إلى نوافذ زمنية موثوقة لرحلات الموظفين عند تبديل الورديات. الرحلات دقيقة في مواعيدها، وقسم التشغيل متاح دائماً، والفوترة واضحة.',
+    quote: 'نقلت Zenomix مكتبنا بالكامل خلال عطلة نهاية أسبوع واحدة، بما في ذلك الفكّ والنقل وإعادة التركيب. وصباح يوم الاثنين كانت كل محطات العمل جاهزة.',
     rating: 5
   },
   {
     id: 'test-3',
-    name: 'د. توماس برينر',
-    role: 'مدير الشؤون الإدارية',
-    company: 'MVZ Gesundheitszentrum Süd',
-    quote: 'رحلات الغسيل الكلوي والتأهيل تسير بموثوقية، بما في ذلك حالات الكرسي المتحرك. السائقون مدرَّبون ويتعاملون مع مرضانا باحترام حقيقي.',
+    name: 'توماس برينر',
+    role: 'مدير الخدمات اللوجستية',
+    company: 'Vance Elektronik GmbH',
+    quote: 'تصل قطع الغيار العاجلة إلى عملائنا في نفس اليوم. تُنظَّم الرحلات المباشرة خلال ساعات، ونتلقى تأكيداً فور إتمام التسليم.',
     rating: 5
   }
 ];
@@ -670,35 +676,36 @@ export const mockTrackingDatabase_ar: Record<string, TrackingData> = {
   },
   'ZN-104-C8': {
     trackingId: 'ZN-104-C8',
-    origin: 'مرآب دويسبورغ',
-    destination: 'المصنع الثاني، تبديل الوردية ١٤:٠٠',
-    sender: 'Rhein-Main Servicegruppe',
-    receiver: 'Care Mobil · السائق ت. أوز',
-    serviceType: 'نقل أشخاص (رحلة ورديات)',
-    estimatedDelivery: 'اليوم، ١٤:٠٠',
+    origin: 'العنوان القديم، دويسبورغ - نويدورف',
+    destination: 'العنوان الجديد، دوسلدورف - بيلك',
+    sender: 'عميل خاص',
+    receiver: 'Box Van · السائق ت. أوز + عاملان',
+    serviceType: 'مساعدة في نقل الأثاث (نقل منزل)',
+    estimatedDelivery: 'اليوم، ١٦:٠٠',
     currentStatus: 'In Transit',
-    progressPercentage: 40,
+    progressPercentage: 50,
     history: [
-      { step: 1, location: 'مرآب دويسبورغ', time: 'اليوم، ١٢:٣٠', status: 'بداية الوردية', details: 'فحص المركبة وتأكيد ترتيب المقاعد لثمانية ركاب.' },
-      { step: 2, location: 'نقطة الالتقاط أ', time: 'اليوم، ١٣:٠٥', status: 'صعود الركاب', details: 'تمت خدمة نقطة الالتقاط الأولى وعدد الركاب مطابق للحجز.' },
-      { step: 3, location: 'نقطة الالتقاط ب', time: 'قيد الانتظار', status: 'اقتراب', details: 'نقطة الالتقاط الثانية مجدولة، والوصول إلى المصنع مخطط الساعة ١٤:٠٠.' },
+      { step: 1, location: 'مرآب دويسبورغ', time: 'اليوم، ٠٧:٣٠', status: 'بداية الوردية', details: 'فحص الشاحنة الصندوقية وتحميل البطانيات والأحزمة وعربات النقل، وتسجيل حضور فريق من ثلاثة أشخاص.' },
+      { step: 2, location: 'العنوان القديم، دويسبورغ - نويدورف', time: 'اليوم، ٠٨:١٥', status: 'فكّ الأثاث', details: 'تم فكّ الخزائن والأسرّة، والصناديق جاهزة للتحميل.' },
+      { step: 3, location: 'العنوان القديم، دويسبورغ - نويدورف', time: 'اليوم، ١١:٣٠', status: 'اكتمال التحميل', details: 'تم تحميل جميع القطع وتثبيتها، والانطلاق نحو دوسلدورف.' },
+      { step: 4, location: 'العنوان الجديد، دوسلدورف - بيلك', time: 'قيد الانتظار', status: 'التفريغ والتركيب', details: 'التفريغ وإعادة تركيب الأثاث مجدولان، والانتهاء مخطط الساعة ١٦:٠٠.' },
     ]
   },
   'ZN-334-D9': {
     trackingId: 'ZN-334-D9',
-    origin: 'عنوان السكن، إيسن - روتنشايد',
-    destination: 'مركز الغسيل الكلوي جنوب إيسن',
-    sender: 'MVZ Gesundheitszentrum Süd',
-    receiver: 'Care Mobil · السائقة ل. براون',
-    serviceType: 'نقل مريض غير طارئ (كرسي متحرك)',
-    estimatedDelivery: 'اليوم، ٠٩:١٥',
+    origin: 'المكتب، إيسن - روتنشايد',
+    destination: 'المكتب الجديد، جنوب إيسن',
+    sender: 'Steuerbüro Lindner',
+    receiver: 'Box Van · السائقة ل. براون + ٣ عمّال',
+    serviceType: 'مساعدة في نقل الأثاث (نقل مكتب)',
+    estimatedDelivery: 'اليوم، ١٥:٠٠',
     currentStatus: 'Delivered',
     progressPercentage: 100,
     history: [
-      { step: 1, location: 'المرآب، إيسن', time: 'اليوم، ٠٧:٣٠', status: 'بداية الوردية', details: 'فحص المنحدر ونقاط تثبيت الكرسي المتحرك قبل الانطلاق.' },
-      { step: 2, location: 'عنوان السكن، إيسن - روتنشايد', time: 'اليوم، ٠٨:٢٠', status: 'استلام المريض', details: 'تمت المساعدة على الصعود وتثبيت الكرسي المتحرك بنقاط التثبيت.' },
-      { step: 3, location: 'في الطريق، جنوب إيسن', time: 'اليوم، ٠٨:٥٥', status: 'في الطريق', details: 'رحلة دون رعاية طبية على متن المركبة، حسب الاتفاق.' },
-      { step: 4, location: 'مركز الغسيل الكلوي جنوب إيسن', time: 'اليوم، ٠٩:١٠', status: 'اكتملت الرحلة', details: 'تم تسليم المريض عند الاستقبال، ورحلة العودة محجوزة الساعة ١٣:٠٠.' },
+      { step: 1, location: 'المرآب، إيسن', time: 'اليوم، ٠٦:٣٠', status: 'بداية الوردية', details: 'فحص الرافعة الخلفية وتسجيل حضور فريق النقل المكوّن من أربعة أشخاص.' },
+      { step: 2, location: 'المكتب، إيسن - روتنشايد', time: 'اليوم، ٠٧:١٥', status: 'فكّ محطات العمل', details: 'تم فكّ المكاتب والخزائن، وتغليف الأجهزة التقنية وترقيمها.' },
+      { step: 3, location: 'في الطريق، جنوب إيسن', time: 'اليوم، ١٠:٤٠', status: 'في الطريق', details: 'الحمولة الثانية في الطريق، والرحلة تسير وفق الخطة.' },
+      { step: 4, location: 'المكتب الجديد، جنوب إيسن', time: 'اليوم، ١٤:٥٠', status: 'اكتمل النقل', details: 'أُعيد تركيب الأثاث وتجهيز محطات العمل، ووقّع العميل على محضر التسليم.' },
     ]
   }
 };
@@ -717,10 +724,10 @@ export const deTranslations: typeof enTranslations = {
   nav_track_btn: 'Tour prüfen',
 
   // hero
-  hero_badge: 'TRANSPORT & MOBILITÄT BIS 3,5 T',
+  hero_badge: 'TRANSPORT & LOGISTIK BIS 3,5 T',
   hero_title_1: 'Wir übernehmen alle Transportaufgaben im',
   hero_title_2: 'leichten Nutzfahrzeugbereich',
-  hero_subtitle: 'Die Zenomix Services UG ist Ihr Partner für Kurier- und Paketlogistik, Personenbeförderung und Krankenfahrten. Wir fahren ausschließlich mit Fahrzeugen unter 3,5 t – disponiert über unsere eigene Software für Fahrer- und Schichtplanung.',
+  hero_subtitle: 'Die Zenomix GbR ist Ihr Partner für Logistik, Kurier- und Paketdienst sowie Umzugshilfe. Wir fahren ausschließlich mit Fahrzeugen unter 3,5 t – disponiert über unsere eigene Software für Flotten- und Schichtmanagement.',
   hero_btn_calc: 'Transportkosten berechnen',
   hero_btn_track: 'Tourenstatus ansehen',
   hero_feat1_title: 'Verlässlich',
@@ -734,7 +741,7 @@ export const deTranslations: typeof enTranslations = {
   services_badge: 'UNSER LEISTUNGSSPEKTRUM',
   services_title_1: 'Ein Partner für den gesamten',
   services_title_2: 'leichten Nutzfahrzeugbereich',
-  services_subtitle: 'Von der Paketzustellung im Netzwerk großer Logistikdienstleister über die Personenbeförderung bis zur rollstuhlgerechten Krankenfahrt – alles aus einer Hand und vollständig digital disponiert.',
+  services_subtitle: 'Von festen Touren im Netzwerk großer Logistikdienstleister über die Kurierfahrt am selben Tag bis zum kompletten Umzug – alles aus einer Hand und vollständig digital disponiert.',
   services_transit_time: 'Verfügbarkeit',
   services_capacity: 'Fahrzeugklasse',
   services_coverage: 'Einsatzgebiet',
@@ -742,7 +749,7 @@ export const deTranslations: typeof enTranslations = {
   services_card_coverage: 'Einsatzgebiet',
   services_modal_class: 'LEISTUNGSBEREICH',
   services_modal_features: 'Leistungsumfang & operative Merkmale',
-  services_modal_insurance: 'Alle Aufträge werden mit gültiger Güter- bzw. Personenbeförderungsversicherung ausgeführt.',
+  services_modal_insurance: 'Alle Aufträge werden mit gültiger Transportversicherung ausgeführt.',
   services_modal_quote: 'Angebot anfragen',
   services_modal_close: 'Servicedetails schließen',
 
@@ -833,11 +840,11 @@ export const deTranslations: typeof enTranslations = {
   // fleet
   fleet_badge: 'FUHRPARK BIS 3,5 T',
   fleet_title: 'Ein Fuhrpark, der zum Auftrag passt',
-  fleet_subtitle: 'Vom Großraum-Transporter bis zum rollstuhlgerechten Fahrzeug: Wir setzen ausschließlich Fahrzeuge unter 3,5 t ein – regelmäßig gewartet, telematisch angebunden und über unsere eigene Schichtplanung disponiert.',
+  fleet_subtitle: 'Vom Elektro-Kurierfahrzeug bis zum Koffer-Transporter mit Ladebordwand: Wir setzen ausschließlich Fahrzeuge unter 3,5 t ein – regelmäßig gewartet, telematisch angebunden und über unsere eigene Schichtplanung disponiert.',
   fleet_tab_all: 'Alle Fahrzeuge',
   fleet_tab_heavy: 'Großraum 3,5 t',
   fleet_tab_medium: 'Kastenwagen',
-  fleet_tab_light: 'Personen & Patienten',
+  fleet_tab_light: 'Koffer & Elektro',
   fleet_active_assets: 'Fahrzeuge im Einsatz',
   fleet_diag_console: 'Fahrzeugdetails',
   fleet_class: 'KLASSE',
@@ -850,10 +857,10 @@ export const deTranslations: typeof enTranslations = {
   fleet_btn_request: 'Fahrzeug anfragen',
 
   // about
-  about_badge: 'ÜBER DIE ZENOMIX SERVICES UG',
+  about_badge: 'ÜBER ZENOMIX',
   about_title_1: 'Ein Partner für alles',
   about_title_2: 'bis 3,5 Tonnen',
-  about_subtitle_1: 'Die Zenomix Services UG ist ein Transport- und Mobilitätsdienstleister, der sich bewusst auf den leichten Nutzfahrzeugbereich konzentriert. Wir fahren ausschließlich mit Fahrzeugen unter 3,5 t – vom Kurier-Pkw über den Kastenwagen bis zum Großraum-Sprinter. Was in diese Klasse passt, übernehmen wir: Pakete, Direktfahrten, Personenbeförderung und Krankenfahrten.',
+  about_subtitle_1: 'Die Zenomix GbR ist ein Transport- und Logistikdienstleister, der sich bewusst auf den leichten Nutzfahrzeugbereich konzentriert. Wir fahren ausschließlich mit Fahrzeugen unter 3,5 t – vom Kurier-Pkw über den Kastenwagen bis zum Großraum-Sprinter. Was in diese Klasse passt, übernehmen wir: Logistiktouren, Pakete und Direktfahrten sowie Umzugshilfe.',
   about_subtitle_2: 'Für große B2B-Logistiknetzwerke sind wir ein verlässlicher Subunternehmer mit planbar besetzten Touren. Möglich macht das unsere eigene Software: Sie steuert Fahrer-, Schicht- und Tourenplanung, dokumentiert Einsatzzeiten und hält die Personaldisposition für unsere Auftraggeber jederzeit nachvollziehbar.',
   about_stat_assets: 'Fahrzeuge unter 3,5 t',
   about_stat_offset: 'Digitale Schicht- & Tourenplanung',
@@ -863,22 +870,24 @@ export const deTranslations: typeof enTranslations = {
   about_pillar2_title: 'Digitale Disposition',
   about_pillar2_desc: 'Unsere eigene Software plant Schichten, weist Touren zu und dokumentiert Einsatzzeiten. Das reduziert Ausfälle und macht jeden Einsatz nachvollziehbar.',
   about_pillar3_title: 'Qualifiziertes Fahrpersonal',
-  about_pillar3_desc: 'Geschulte Fahrerinnen und Fahrer, geprüfte Fahrzeuge und klare Abläufe – von der Paketzustellung bis zur rollstuhlgerechten Fahrt.',
+  about_pillar3_desc: 'Geschulte Fahrerinnen und Fahrer, geprüfte Fahrzeuge und klare Abläufe – von der Paketzustellung bis zum kompletten Umzug.',
 
   // contact
   contact_badge: 'KONTAKT',
   contact_title: 'Sprechen wir über Ihren Transportbedarf',
-  contact_subtitle: 'Ob feste Tour in Ihrem Logistiknetzwerk, Fahrdienst oder regelmäßige Krankenfahrten – schildern Sie uns Ihren Bedarf, wir melden uns mit einem Angebot.',
+  contact_subtitle: 'Ob feste Tour in Ihrem Logistiknetzwerk, Kurierfahrt am selben Tag oder Ihr nächster Umzug – schildern Sie uns Ihren Bedarf, wir melden uns mit einem Angebot.',
   contact_hq: 'Firmensitz',
   contact_office_loc: 'Adresse',
-  contact_office_val: '[Straße und Hausnummer], [PLZ und Ort]',
+  contact_office_val: 'Dithmarscher Straße 19, 26723 Emden',
   contact_inquiries: 'Anfragen',
   contact_reply_time: 'Antwort in der Regel innerhalb von 24 Stunden',
   contact_hotline: 'Telefon',
-  contact_hotline_val: '[Telefonnummer eintragen]',
+  contact_hotline_val: '+49 1577 7268389',
   contact_hotline_hours: 'Mo – Sa, Disposition erreichbar',
   contact_iso_rating: 'MAX. GEWICHT',
+  contact_iso_rating_val: '3,5 t',
   contact_eco_license: 'EINSATZGEBIET',
+  contact_eco_license_val: 'Deutschlandweit',
   contact_fleet_status: 'FUHRPARK',
   contact_fleet_status_val: 'GEPRÜFT',
   contact_form_title: 'Anfrage senden',
@@ -887,9 +896,10 @@ export const deTranslations: typeof enTranslations = {
   contact_topic: 'Betreff',
   contact_msg: 'Ihre Nachricht',
   contact_topic_general: 'Allgemeine Anfrage',
-  contact_topic_highval: 'Kurier- & Paketdienst / Subunternehmer',
-  contact_topic_relay: 'Personenbeförderung & Fahrdienst',
-  contact_topic_carbon: 'Krankenfahrten & Patiententransport',
+  contact_topic_logistics: 'Logistik / Subunternehmer',
+  contact_topic_fleet: 'Flotten- & Schichtmanagement',
+  contact_topic_courier: 'Kurier- & Paketdienst',
+  contact_topic_moving: 'Umzugshilfe',
   contact_topic_other: 'Sonstiges',
   contact_placeholder_name: 'Max Mustermann',
   contact_placeholder_email: 'name@unternehmen.de',
@@ -905,24 +915,24 @@ export const deTranslations: typeof enTranslations = {
   // faq
   faq_badge: 'HÄUFIGE FRAGEN',
   faq_title: 'Häufig gestellte Fragen',
-  faq_subtitle: 'Antworten zu Fahrzeugklassen, Subunternehmer-Touren, Krankenfahrten und unserer digitalen Schichtplanung.',
+  faq_subtitle: 'Antworten zu Fahrzeugklassen, Subunternehmer-Touren, Umzugshilfe und unserer digitalen Schichtplanung.',
   faq_q1: 'Welche Fahrzeuge setzt Zenomix ein?',
   faq_a1: 'Wir arbeiten ausschließlich mit Fahrzeugen bis 3,5 t zulässigem Gesamtgewicht – vom Kurier-Pkw über den Kastenwagen bis zum Großraum-Sprinter. Schwerlastverkehre und Lkw-Transporte über 3,5 t gehören bewusst nicht zu unserem Leistungsspektrum.',
   faq_q2: 'Übernehmen Sie Touren als Subunternehmer für Logistiknetzwerke?',
   faq_a2: 'Ja. Wir fahren als Subunternehmer für größere B2B-Logistikdienstleister feste Zustelltouren – mit planbarer Fahrerbesetzung, eigener Schichtplanung und klar geregelter Vertretung bei Ausfällen.',
-  faq_q3: 'Was umfasst Ihr Personen- und Patiententransport?',
-  faq_a3: 'Wir bieten allgemeine Personenbeförderung sowie Krankenfahrten, also nicht-qualifizierten Patiententransport – sitzend oder im Rollstuhl, ohne medizinische Betreuung während der Fahrt. Notfallrettung und qualifizierter Krankentransport mit medizinischer Betreuung an Bord gehören ausdrücklich nicht dazu.',
+  faq_q3: 'Was umfasst Ihre Umzugshilfe?',
+  faq_a3: 'Wir stellen einen Transporter bis 3,5 t inklusive Fahrer, Tragehelfer für Be- und Entladen und auf Wunsch den Ab- und Aufbau von Möbeln. Wir übernehmen Privatumzüge ebenso wie Büro- und Firmenumzüge – Sie buchen genau die Bausteine, die Sie brauchen.',
   faq_q4: 'Wie funktioniert Ihre digitale Schicht- und Tourenplanung?',
   faq_a4: 'Wir setzen eine selbst entwickelte Software für das Fahrer- und Schichtmanagement ein. Sie plant Schichten, weist Touren zu, dokumentiert Einsatz- und Lenkzeiten und zeigt der Disposition jederzeit, welches Fahrzeug mit welchem Fahrer unterwegs ist. Sie dient der Personal- und Tourensteuerung, nicht der Sendungsverfolgung einzelner Pakete.',
   faq_q5: 'Wie schnell können Sie einen Auftrag übernehmen?',
-  faq_a5: 'Direktfahrten disponieren wir in der Regel innerhalb weniger Stunden. Für wiederkehrende Touren und feste Fahrdienste stimmen wir Kapazitäten und Schichtmodelle vorab ab – meist innerhalb weniger Werktage nach Ihrer Anfrage.',
+  faq_a5: 'Direktfahrten disponieren wir in der Regel innerhalb weniger Stunden. Für wiederkehrende Touren und Umzüge stimmen wir Kapazitäten, Termine und Schichtmodelle vorab ab – meist innerhalb weniger Werktage nach Ihrer Anfrage.',
 
   footer_legal_title: 'Rechtliches',
   footer_imprint: 'Impressum',
   footer_privacy: 'Datenschutz',
 
   // footer
-  footer_slogan: 'Zenomix Services UG – Ihr Partner für Transport und Mobilität bis 3,5 t. Kurier- und Paketdienst, Personenbeförderung, Krankenfahrten und digitale Schichtplanung aus einer Hand.',
+  footer_slogan: 'Zenomix GbR – Ihr Partner für Transport und Logistik bis 3,5 t. Logistik, Flotten- und Schichtmanagement, Kurier- und Paketdienst sowie Umzugshilfe aus einer Hand.',
   footer_map_title: 'Einsatzgebiet',
   footer_ops_title: 'Kontakt & Disposition',
   footer_ops_email: 'E-Mail',
@@ -933,8 +943,8 @@ export const deTranslations: typeof enTranslations = {
   footer_digest_desc: 'Neuigkeiten zu freien Kapazitäten, Einsatzgebieten und Partnerschaften im Leichttransport.',
   footer_digest_placeholder: 'name@unternehmen.de',
   footer_digest_success: 'Anmeldung wurde erfasst.',
-  footer_copy: '© 2026 Zenomix Services UG (haftungsbeschränkt). Alle Rechte vorbehalten.',
-  footer_cert: 'TRANSPORT & MOBILITÄT BIS 3,5 T | KURIER · PERSONENBEFÖRDERUNG · KRANKENFAHRTEN',
+  footer_copy: '© 2026 Zenomix GbR. Alle Rechte vorbehalten.',
+  footer_cert: 'TRANSPORT & LOGISTIK BIS 3,5 T | LOGISTIK · KURIER · UMZUGSHILFE',
   footer_secured: 'VOLL VERSICHERT',
   footer_green: 'DIGITAL DISPONIERT',
 
@@ -945,57 +955,21 @@ export const deTranslations: typeof enTranslations = {
 
 export const servicesData_de: ServiceItem[] = [
   {
-    id: 'courier',
-    title: 'Kurier- & Paketdienst',
-    shortDesc: 'Paketzustellung, Direktfahrten und feste Touren – auch als zuverlässiger Subunternehmer für große B2B-Logistiknetzwerke.',
-    longDesc: 'Wir stellen Pakete, Dokumente und palettierte Ware im Segment bis 3,5 t zu – als eigenständiger Kurierdienst und als Subunternehmer für etablierte B2B-Logistiknetzwerke. Feste Zustelltouren besetzen wir planbar über unsere eigene Schichtplanung, inklusive Vertretung bei Krankheit und Urlaub. Für unsere Auftraggeber heißt das: verlässliche Tourenabdeckung, ohne selbst einen Fahrerpool aufbauen zu müssen.',
-    iconName: 'Truck',
+    id: 'logistics',
+    title: 'Logistik',
+    shortDesc: 'Feste Zustelltouren und Teilladungen bis 3,5 t – als zuverlässiger Subunternehmer für große B2B-Logistiknetzwerke.',
+    longDesc: 'Wir fahren feste Zustelltouren als Subunternehmer für etablierte B2B-Logistiknetzwerke und transportieren Teilladungen und palettierte Ware im Segment bis 3,5 t. Die Touren besetzen wir planbar über unsere eigene Schichtplanung, inklusive Vertretung bei Krankheit und Urlaub – und stocken die Kapazität in Spitzenzeiten auf. Für unsere Auftraggeber heißt das: verlässliche Tourenabdeckung, ohne selbst einen Fahrerpool aufbauen zu müssen.',
+    iconName: 'Route',
     features: [
       'Feste Zustelltouren als Subunternehmer',
-      'Direkt- und Sonderfahrten am selben Tag',
+      'Teilladungen und palettierte Ware bis 1.200 kg',
       'Planbare Fahrerbesetzung inklusive Vertretung',
-      'Digitale Dokumentation von Schichten und Einsatzzeiten'
+      'Zusätzliche Kapazität in Spitzenzeiten'
     ],
     specs: {
-      transitTime: 'Ab 2 Std.',
+      transitTime: 'Feste Touren',
       capacity: 'Bis 1.200 kg',
       globalCoverage: 'Regional & bundesweit'
-    }
-  },
-  {
-    id: 'passenger',
-    title: 'Personenbeförderung & Mobilität',
-    shortDesc: 'Mitarbeiterfahrten, Gruppentransfers und wiederkehrende Fahrdienste – allgemeine Mobilitätslösungen mit Fahrzeugen unter 3,5 t.',
-    longDesc: 'Ob Mitarbeiterfahrten rund um den Schichtwechsel, Transfers oder wiederkehrende Fahrdienste für Einrichtungen und Unternehmen: Wir organisieren Personenbeförderung mit festem Fahrpersonal und verbindlichen Zeitfenstern. Die Schichtplanung übernimmt unsere eigene Software – so bleiben auch Fahrten früh am Morgen, spät am Abend und am Wochenende zuverlässig besetzt.',
-    iconName: 'Users',
-    features: [
-      'Mitarbeiterfahrten passend zum Schichtwechsel',
-      'Transfers und Gruppenfahrten',
-      'Wiederkehrende Fahrdienste im Rahmenvertrag',
-      'Feste Ansprechpartner in der Disposition'
-    ],
-    specs: {
-      transitTime: 'Nach Fahrplan',
-      capacity: 'Bis 8 Personen',
-      globalCoverage: 'Regional'
-    }
-  },
-  {
-    id: 'patient',
-    title: 'Krankenfahrten & Patiententransport',
-    shortDesc: 'Nicht-qualifizierter Patiententransport – sitzend oder im Rollstuhl, ohne medizinische Betreuung während der Fahrt.',
-    longDesc: 'Wir übernehmen Krankenfahrten für Patientinnen und Patienten, die während der Fahrt keine medizinische Betreuung benötigen – sitzend oder im Rollstuhl, mit entsprechend ausgestatteten Fahrzeugen und geschultem Fahrpersonal. Typische Anlässe sind Fahrten zur Dialyse, Bestrahlung, Reha oder zu ambulanten Terminen. Notfallrettung und qualifizierter Krankentransport mit medizinischer Betreuung an Bord gehören ausdrücklich nicht zu unserem Leistungsspektrum.',
-    iconName: 'HeartPulse',
-    features: [
-      'Beförderung sitzend oder im Rollstuhl',
-      'Rollstuhlgerechte Fahrzeuge mit Rampe',
-      'Geschultes Fahrpersonal und feste Termine',
-      'Ohne medizinische Betreuung während der Fahrt'
-    ],
-    specs: {
-      transitTime: 'Termingebunden',
-      capacity: 'Rollstuhl & sitzend',
-      globalCoverage: 'Regional'
     }
   },
   {
@@ -1014,6 +988,42 @@ export const servicesData_de: ServiceItem[] = [
       transitTime: 'Echtzeit',
       capacity: 'Gesamter Fuhrpark',
       globalCoverage: 'Alle Standorte'
+    }
+  },
+  {
+    id: 'courier',
+    title: 'Kurier- & Paketdienst',
+    shortDesc: 'Direktfahrten am selben Tag, Paket- und Dokumentenzustellung – schnell, versichert und binnen Stunden disponiert.',
+    longDesc: 'Wenn eine Sendung heute ankommen muss, holen wir sie ab und fahren sie direkt ans Ziel – Dokumente, Pakete, Ersatzteile oder einzelne Paletten. Direkt- und Sonderfahrten disponieren wir innerhalb weniger Stunden, wiederkehrende Kurierfahrten lassen sich als feste Zeitfenster buchen. Abholung und Übergabe bestätigen wir Ihnen, damit Sie jederzeit wissen, wann Ihre Sendung angekommen ist.',
+    iconName: 'Package',
+    features: [
+      'Direkt- und Sonderfahrten am selben Tag',
+      'Pakete, Dokumente und einzelne Paletten',
+      'Wiederkehrende Kurierfahrten zu festen Zeiten',
+      'Bestätigung von Abholung und Übergabe'
+    ],
+    specs: {
+      transitTime: 'Ab 2 Std.',
+      capacity: 'Bis 1.200 kg',
+      globalCoverage: 'Regional & bundesweit'
+    }
+  },
+  {
+    id: 'moving',
+    title: 'Umzugshilfe',
+    shortDesc: 'Transporter mit Fahrer, Tragehelfer und Möbelmontage – für Privatumzüge ebenso wie für Büro- und Firmenumzüge.',
+    longDesc: 'Wir unterstützen Ihren Umzug mit Fahrzeugen bis 3,5 t: Koffer- oder Großraumtransporter mit erfahrenem Fahrer, dazu nach Bedarf Helfer, die tragen sowie be- und entladen. Auf Wunsch bauen wir Möbel an der alten Adresse ab und in der neuen Wohnung oder im neuen Büro wieder auf. Neben Privatumzügen übernehmen wir Büro- und Firmenumzüge – so geplant, dass Ihr Betrieb schnell wieder arbeitsfähig ist.',
+    iconName: 'Sofa',
+    features: [
+      'Transporter bis 3,5 t inklusive Fahrer',
+      'Tragehelfer für Be- und Entladen',
+      'Ab- und Aufbau von Möbeln',
+      'Privat-, Büro- und Firmenumzüge'
+    ],
+    specs: {
+      transitTime: 'Nach Termin',
+      capacity: 'Transporter bis 3,5 t',
+      globalCoverage: 'Regional & bundesweit'
     }
   }
 ];
@@ -1045,15 +1055,15 @@ export const fleetData_de: FleetVehicle[] = [
   },
   {
     id: 'fleet-3',
-    name: 'Zenomix Care Mobil',
+    name: 'Zenomix Koffer-Transporter',
     type: 'light',
-    typeName: 'Personen- & Patiententransport',
-    payload: '750 kg',
-    volume: 'Bis 8 Sitzplätze',
-    range: '800 km',
+    typeName: 'Koffer mit Ladebordwand',
+    payload: '1.000 kg',
+    volume: '20 m³',
+    range: '700 km',
     propulsion: 'Diesel (Euro 6)',
-    imageAlt: 'Rollstuhlgerechtes Personenfahrzeug von Zenomix mit Einstiegsrampe',
-    features: ['Rollstuhlrampe und geprüfte Bodenverankerung', 'Beförderung sitzend oder im Rollstuhl', 'Niedriger, barrierearmer Einstieg']
+    imageAlt: 'Koffer-Transporter von Zenomix mit Ladebordwand für Umzüge und sperrige Güter',
+    features: ['Ladebordwand für schwere Möbel', 'Umzugsdecken, Gurte und Rollbretter an Bord', 'Kofferaufbau mit Zurrschienen']
   },
   {
     id: 'fleet-4',
@@ -1081,17 +1091,17 @@ export const testimonialsData_de: Testimonial[] = [
   {
     id: 'test-2',
     name: 'Miriam Sander',
-    role: 'Fuhrparkleitung',
+    role: 'Büroleitung',
     company: 'Rhein-Main Servicegruppe',
-    quote: 'Für unsere Mitarbeiterfahrten rund um den Schichtwechsel brauchten wir verlässliche Zeitfenster. Die Fahrten sind pünktlich, die Disposition ist erreichbar und die Abrechnung nachvollziehbar.',
+    quote: 'Zenomix hat unser komplettes Büro an einem Wochenende umgezogen – mit Abbau, Transport und Wiederaufbau. Am Montagmorgen war jeder Arbeitsplatz einsatzbereit.',
     rating: 5
   },
   {
     id: 'test-3',
-    name: 'Dr. Thomas Brenner',
-    role: 'Verwaltungsleitung',
-    company: 'MVZ Gesundheitszentrum Süd',
-    quote: 'Fahrten zur Dialyse und zur Reha laufen zuverlässig, auch im Rollstuhl. Das Fahrpersonal ist geschult und geht mit unseren Patientinnen und Patienten respektvoll um.',
+    name: 'Thomas Brenner',
+    role: 'Leitung Logistik',
+    company: 'Vance Elektronik GmbH',
+    quote: 'Dringende Ersatzteile sind noch am selben Tag bei unseren Kunden. Direktfahrten werden binnen Stunden disponiert, und nach der Übergabe kommt sofort die Bestätigung.',
     rating: 5
   }
 ];
@@ -1133,35 +1143,36 @@ export const mockTrackingDatabase_de: Record<string, TrackingData> = {
   },
   'ZN-104-C8': {
     trackingId: 'ZN-104-C8',
-    origin: 'Betriebshof Duisburg',
-    destination: 'Werk II, Schichtwechsel 14:00',
-    sender: 'Rhein-Main Servicegruppe',
-    receiver: 'Care Mobil · Fahrer T. Öz',
-    serviceType: 'Personenbeförderung (Schichtfahrt)',
-    estimatedDelivery: 'Heute, 14:00 Uhr',
+    origin: 'Alte Adresse, Duisburg-Neudorf',
+    destination: 'Neue Adresse, Düsseldorf-Bilk',
+    sender: 'Privatkunde',
+    receiver: 'Koffer-Transporter · Fahrer T. Öz + 2 Helfer',
+    serviceType: 'Umzugshilfe (Privatumzug)',
+    estimatedDelivery: 'Heute, 16:00 Uhr',
     currentStatus: 'In Transit',
-    progressPercentage: 40,
+    progressPercentage: 50,
     history: [
-      { step: 1, location: 'Betriebshof Duisburg', time: 'Heute, 12:30', status: 'Schichtbeginn', details: 'Fahrzeug geprüft, Bestuhlung für 8 Personen bestätigt.' },
-      { step: 2, location: 'Sammelpunkt A', time: 'Heute, 13:05', status: 'Fahrgäste zugestiegen', details: 'Erster Sammelpunkt bedient, Personenzahl stimmt mit der Buchung überein.' },
-      { step: 3, location: 'Sammelpunkt B', time: 'Ausstehend', status: 'Anfahrt', details: 'Zweiter Sammelpunkt eingeplant, Ankunft am Werk vorgesehen für 14:00 Uhr.' },
+      { step: 1, location: 'Betriebshof Duisburg', time: 'Heute, 07:30', status: 'Schichtbeginn', details: 'Koffer-Transporter geprüft, Decken, Gurte und Rollbretter geladen, Umzugsteam zu dritt eingecheckt.' },
+      { step: 2, location: 'Alte Adresse, Duisburg-Neudorf', time: 'Heute, 08:15', status: 'Möbel abgebaut', details: 'Schränke und Betten abgebaut, Kartons zum Verladen bereit.' },
+      { step: 3, location: 'Alte Adresse, Duisburg-Neudorf', time: 'Heute, 11:30', status: 'Beladung abgeschlossen', details: 'Alles verladen und gesichert, Abfahrt Richtung Düsseldorf.' },
+      { step: 4, location: 'Neue Adresse, Düsseldorf-Bilk', time: 'Ausstehend', status: 'Entladen & Aufbau', details: 'Entladen und Möbelaufbau eingeplant, Abschluss vorgesehen für 16:00 Uhr.' },
     ]
   },
   'ZN-334-D9': {
     trackingId: 'ZN-334-D9',
-    origin: 'Wohnadresse Essen-Rüttenscheid',
-    destination: 'Dialysezentrum Essen-Süd',
-    sender: 'MVZ Gesundheitszentrum Süd',
-    receiver: 'Care Mobil · Fahrerin L. Braun',
-    serviceType: 'Krankenfahrt (Rollstuhl)',
-    estimatedDelivery: 'Heute, 09:15 Uhr',
+    origin: 'Büro Essen-Rüttenscheid',
+    destination: 'Neues Büro Essen-Süd',
+    sender: 'Steuerbüro Lindner',
+    receiver: 'Koffer-Transporter · Fahrerin L. Braun + 3 Helfer',
+    serviceType: 'Umzugshilfe (Büroumzug)',
+    estimatedDelivery: 'Heute, 15:00 Uhr',
     currentStatus: 'Delivered',
     progressPercentage: 100,
     history: [
-      { step: 1, location: 'Betriebshof Essen', time: 'Heute, 07:30', status: 'Schichtbeginn', details: 'Rampe und Rollstuhlverankerung vor Abfahrt geprüft.' },
-      { step: 2, location: 'Wohnadresse Essen-Rüttenscheid', time: 'Heute, 08:20', status: 'Patient aufgenommen', details: 'Einstieg begleitet, Rollstuhl an den Verankerungspunkten gesichert.' },
-      { step: 3, location: 'Unterwegs, Essen-Süd', time: 'Heute, 08:55', status: 'Unterwegs', details: 'Fahrt ohne medizinische Betreuung an Bord, wie vereinbart.' },
-      { step: 4, location: 'Dialysezentrum Essen-Süd', time: 'Heute, 09:10', status: 'Fahrt abgeschlossen', details: 'Übergabe an der Anmeldung erfolgt, Rückfahrt für 13:00 Uhr gebucht.' },
+      { step: 1, location: 'Betriebshof Essen', time: 'Heute, 06:30', status: 'Schichtbeginn', details: 'Ladebordwand geprüft, Umzugsteam zu viert eingecheckt.' },
+      { step: 2, location: 'Büro Essen-Rüttenscheid', time: 'Heute, 07:15', status: 'Arbeitsplätze abgebaut', details: 'Schreibtische und Schränke abgebaut, IT-Geräte verpackt und beschriftet.' },
+      { step: 3, location: 'Unterwegs, Essen-Süd', time: 'Heute, 10:40', status: 'Unterwegs', details: 'Zweite Ladung unterwegs, Fahrt verläuft planmäßig.' },
+      { step: 4, location: 'Neues Büro Essen-Süd', time: 'Heute, 14:50', status: 'Umzug abgeschlossen', details: 'Möbel aufgebaut und Arbeitsplätze eingerichtet, Übergabe vom Auftraggeber abgezeichnet.' },
     ]
   }
 };

@@ -2,57 +2,21 @@ import { ServiceItem, FleetVehicle, Testimonial, TrackingData } from './types';
 
 export const servicesData: ServiceItem[] = [
   {
-    id: 'courier',
-    title: 'Courier & Parcel Services',
-    shortDesc: 'Parcel delivery, direct runs and fixed daily routes — including work as a dependable subcontractor for major B2B logistics networks.',
-    longDesc: 'We deliver parcels, documents and palletised goods within the light-commercial segment — both as an independent courier service and as a subcontractor for established B2B logistics networks. Fixed delivery routes are staffed reliably through our own shift planning, including cover for sickness and holidays. For our clients that means dependable route coverage without building up their own driver pool.',
-    iconName: 'Truck',
+    id: 'logistics',
+    title: 'Logistics',
+    shortDesc: 'Fixed delivery routes and part loads up to 3.5 t — as a dependable subcontractor for major B2B logistics networks.',
+    longDesc: 'We run fixed delivery routes as a subcontractor for established B2B logistics networks and move part loads and palletised goods within the segment up to 3.5 tonnes. Routes are staffed reliably through our own shift planning, including cover for sickness and holidays, and we add capacity in peak season. For our clients that means dependable route coverage without building up their own driver pool.',
+    iconName: 'Route',
     features: [
       'Fixed delivery routes as a logistics subcontractor',
-      'Same-day direct and special runs',
+      'Part loads and palletised goods up to 1,200 kg',
       'Predictable driver staffing including cover',
-      'Digital documentation of shifts and working hours'
+      'Extra capacity in peak season'
     ],
     specs: {
-      transitTime: 'From 2 hrs',
+      transitTime: 'Scheduled routes',
       capacity: 'Up to 1,200 kg',
       globalCoverage: 'Regional & nationwide'
-    }
-  },
-  {
-    id: 'passenger',
-    title: 'Passenger Transport & Mobility',
-    shortDesc: 'Staff shuttles, group transfers and recurring driving services — general mobility solutions with vehicles under 3.5 tonnes.',
-    longDesc: 'Whether staff shuttles around shift changes, transfers or recurring driving services for institutions and companies: we organise passenger transport with a settled driver team and binding time windows. Scheduling runs through our own software, so early-morning, late-evening and weekend departures stay reliably staffed.',
-    iconName: 'Users',
-    features: [
-      'Staff shuttles aligned with shift changes',
-      'Transfers and group journeys',
-      'Recurring driving services under framework agreements',
-      'Named contacts in dispatch'
-    ],
-    specs: {
-      transitTime: 'To timetable',
-      capacity: 'Up to 8 passengers',
-      globalCoverage: 'Regional'
-    }
-  },
-  {
-    id: 'patient',
-    title: 'Non-Emergency Patient Transport',
-    shortDesc: 'Non-qualified patient transport — seated or by wheelchair, without medical care during the journey.',
-    longDesc: 'We carry patients who do not require medical care while travelling — seated or in a wheelchair, in suitably equipped vehicles and with trained drivers. Typical journeys are trips to dialysis, radiotherapy, rehabilitation or outpatient appointments. Emergency response and qualified medical transport with clinical care on board are expressly outside our scope.',
-    iconName: 'HeartPulse',
-    features: [
-      'Seated transport or by wheelchair',
-      'Wheelchair-accessible vehicles with ramp',
-      'Trained drivers and fixed appointment slots',
-      'No medical care provided during the journey'
-    ],
-    specs: {
-      transitTime: 'Appointment-bound',
-      capacity: 'Wheelchair & seated',
-      globalCoverage: 'Regional'
     }
   },
   {
@@ -71,6 +35,42 @@ export const servicesData: ServiceItem[] = [
       transitTime: 'Real time',
       capacity: 'Entire fleet',
       globalCoverage: 'All locations'
+    }
+  },
+  {
+    id: 'courier',
+    title: 'Courier & Parcel Services',
+    shortDesc: 'Same-day direct runs, parcel and document delivery — fast, insured and dispatched within hours.',
+    longDesc: 'When a consignment has to arrive today, we collect it and drive it straight to its destination — documents, parcels, spare parts or single pallets. Direct and special runs are dispatched within a few hours, and recurring courier runs can be booked as fixed time slots. We confirm collection and handover to you, so you always know when your consignment has arrived.',
+    iconName: 'Package',
+    features: [
+      'Same-day direct and special runs',
+      'Parcels, documents and single pallets',
+      'Recurring courier runs at fixed times',
+      'Confirmation of collection and handover'
+    ],
+    specs: {
+      transitTime: 'From 2 hrs',
+      capacity: 'Up to 1,200 kg',
+      globalCoverage: 'Regional & nationwide'
+    }
+  },
+  {
+    id: 'moving',
+    title: 'Moving Help',
+    shortDesc: 'Van with driver, helpers for carrying and furniture assembly — for private moves as well as office and business relocations.',
+    longDesc: 'We support your move with vehicles up to 3.5 tonnes: a box van or large van with an experienced driver, plus helpers who carry, load and unload as needed. On request we dismantle furniture at the old address and reassemble it in the new home or office. Alongside private moves we handle office and business relocations — planned so that your operation is back up and running as quickly as possible.',
+    iconName: 'Sofa',
+    features: [
+      'Van up to 3.5 t including driver',
+      'Helpers for carrying, loading and unloading',
+      'Dismantling and reassembly of furniture',
+      'Private, office and business moves'
+    ],
+    specs: {
+      transitTime: 'By appointment',
+      capacity: 'Van up to 3.5 t',
+      globalCoverage: 'Regional & nationwide'
     }
   }
 ];
@@ -102,15 +102,15 @@ export const fleetData: FleetVehicle[] = [
   },
   {
     id: 'fleet-3',
-    name: 'Zenomix Care Mobil',
+    name: 'Zenomix Box Van',
     type: 'light',
-    typeName: 'Passenger & Patient Transport',
-    payload: '750 kg',
-    volume: 'Up to 8 seats',
-    range: '800 km',
+    typeName: 'Box Van with Tail Lift',
+    payload: '1,000 kg',
+    volume: '20 m³',
+    range: '700 km',
     propulsion: 'Diesel (Euro 6)',
-    imageAlt: 'Zenomix wheelchair-accessible passenger van with boarding ramp',
-    features: ['Wheelchair ramp and certified floor anchorage', 'Carries passengers seated or in a wheelchair', 'Low-step, barrier-reduced entry']
+    imageAlt: 'Zenomix box van with tail lift for moves and bulky goods',
+    features: ['Tail lift for heavy furniture', 'Moving blankets, straps and dollies on board', 'Box body with lashing rails']
   },
   {
     id: 'fleet-4',
@@ -138,17 +138,17 @@ export const testimonialsData: Testimonial[] = [
   {
     id: 'test-2',
     name: 'Miriam Sander',
-    role: 'Fleet Manager',
+    role: 'Office Manager',
     company: 'Rhein-Main Servicegruppe',
-    quote: 'Our staff shuttles needed dependable time windows around shift changes. Departures are punctual, dispatch is reachable, and the billing is easy to follow.',
+    quote: 'Zenomix moved our entire office over one weekend — dismantling, transport and reassembly included. By Monday morning every workstation was ready to use.',
     rating: 5
   },
   {
     id: 'test-3',
-    name: 'Dr. Thomas Brenner',
-    role: 'Administrative Director',
-    company: 'MVZ Gesundheitszentrum Süd',
-    quote: 'Journeys to dialysis and rehab run reliably, wheelchair included. The drivers are trained and treat our patients with genuine respect.',
+    name: 'Thomas Brenner',
+    role: 'Head of Logistics',
+    company: 'Vance Elektronik GmbH',
+    quote: 'Urgent spare parts reach our customers the same day. Direct runs are dispatched within hours, and we get a confirmation as soon as the handover is done.',
     rating: 5
   }
 ];
@@ -190,35 +190,36 @@ export const mockTrackingDatabase: Record<string, TrackingData> = {
   },
   'ZN-104-C8': {
     trackingId: 'ZN-104-C8',
-    origin: 'Duisburg Operating Yard',
-    destination: 'Plant II, Shift Change 14:00',
-    sender: 'Rhein-Main Servicegruppe',
-    receiver: 'Care Mobil · Driver T. Öz',
-    serviceType: 'Passenger Transport (Staff Shuttle)',
-    estimatedDelivery: 'Today, 14:00',
+    origin: 'Old Address, Duisburg-Neudorf',
+    destination: 'New Address, Düsseldorf-Bilk',
+    sender: 'Private Client',
+    receiver: 'Box Van · Driver T. Öz + 2 Helpers',
+    serviceType: 'Moving Help (Private Move)',
+    estimatedDelivery: 'Today, 16:00',
     currentStatus: 'In Transit',
-    progressPercentage: 40,
+    progressPercentage: 50,
     history: [
-      { step: 1, location: 'Duisburg Operating Yard', time: 'Today, 12:30', status: 'Shift Started', details: 'Vehicle checked, seating configuration confirmed for 8 passengers.' },
-      { step: 2, location: 'Pickup Point A', time: 'Today, 13:05', status: 'Passengers Boarded', details: 'First pickup point served, headcount matches the booking.' },
-      { step: 3, location: 'Pickup Point B', time: 'Pending', status: 'Approaching', details: 'Second pickup point scheduled, arrival at the plant planned for 14:00.' },
+      { step: 1, location: 'Duisburg Operating Yard', time: 'Today, 07:30', status: 'Shift Started', details: 'Box van checked, blankets, straps and dollies loaded, moving team of three checked in.' },
+      { step: 2, location: 'Old Address, Duisburg-Neudorf', time: 'Today, 08:15', status: 'Furniture Dismantled', details: 'Wardrobes and beds dismantled, boxes ready for loading.' },
+      { step: 3, location: 'Old Address, Duisburg-Neudorf', time: 'Today, 11:30', status: 'Loading Completed', details: 'All items loaded and secured, departing for Düsseldorf.' },
+      { step: 4, location: 'New Address, Düsseldorf-Bilk', time: 'Pending', status: 'Unloading & Assembly', details: 'Unloading and furniture reassembly scheduled, completion planned for 16:00.' },
     ]
   },
   'ZN-334-D9': {
     trackingId: 'ZN-334-D9',
-    origin: 'Home Address, Essen-Rüttenscheid',
-    destination: 'Dialysis Centre Essen-Süd',
-    sender: 'MVZ Gesundheitszentrum Süd',
-    receiver: 'Care Mobil · Driver L. Braun',
-    serviceType: 'Non-Emergency Patient Transport (Wheelchair)',
-    estimatedDelivery: 'Today, 09:15',
+    origin: 'Office, Essen-Rüttenscheid',
+    destination: 'New Office, Essen-Süd',
+    sender: 'Steuerbüro Lindner',
+    receiver: 'Box Van · Driver L. Braun + 3 Helpers',
+    serviceType: 'Moving Help (Office Move)',
+    estimatedDelivery: 'Today, 15:00',
     currentStatus: 'Delivered',
     progressPercentage: 100,
     history: [
-      { step: 1, location: 'Operating Yard, Essen', time: 'Today, 07:30', status: 'Shift Started', details: 'Ramp and wheelchair anchorage checked before departure.' },
-      { step: 2, location: 'Home Address, Essen-Rüttenscheid', time: 'Today, 08:20', status: 'Patient Collected', details: 'Boarding assisted, wheelchair secured to the anchorage points.' },
-      { step: 3, location: 'En Route, Essen-Süd', time: 'Today, 08:55', status: 'En Route', details: 'Journey without medical care on board, as agreed.' },
-      { step: 4, location: 'Dialysis Centre Essen-Süd', time: 'Today, 09:10', status: 'Journey Completed', details: 'Patient handed over at reception, return journey booked for 13:00.' },
+      { step: 1, location: 'Operating Yard, Essen', time: 'Today, 06:30', status: 'Shift Started', details: 'Tail lift checked, moving team of four checked in.' },
+      { step: 2, location: 'Office, Essen-Rüttenscheid', time: 'Today, 07:15', status: 'Workstations Dismantled', details: 'Desks and cabinets dismantled, IT equipment packed and labelled.' },
+      { step: 3, location: 'En Route, Essen-Süd', time: 'Today, 10:40', status: 'En Route', details: 'Second load on its way, journey running to plan.' },
+      { step: 4, location: 'New Office, Essen-Süd', time: 'Today, 14:50', status: 'Move Completed', details: 'Furniture reassembled and workstations set up, handover signed off by the client.' },
     ]
   }
 };

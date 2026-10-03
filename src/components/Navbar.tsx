@@ -131,7 +131,7 @@ export default function Navbar({ onNavigate, activeSection, isDark, onToggleDark
             {/* Social Icons */}
             <div className="flex items-center gap-2">
               <a
-                href="https://wa.me/491722970140"
+                href="https://wa.me/4915777268389"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 hover:bg-green-50 dark:hover:bg-green-950/40 text-slate-500 dark:text-slate-400 hover:text-[#25D366] border border-slate-200 dark:border-slate-800 hover:border-green-200 dark:hover:border-green-900/40 transition-all duration-300 cursor-pointer hover:scale-110"
@@ -139,15 +139,15 @@ export default function Navbar({ onNavigate, activeSection, isDark, onToggleDark
               >
                 <FaWhatsapp className="h-[18px] w-[18px]" />
               </a>
-              <a
-                href="https://instagram.com/yourinstagram"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 hover:bg-pink-50 dark:hover:bg-pink-950/40 text-slate-500 dark:text-slate-400 hover:text-[#E4405F] border border-slate-200 dark:border-slate-800 hover:border-pink-200 dark:hover:border-pink-900/40 transition-all duration-300 cursor-pointer hover:scale-110"
+              {/* No Instagram account linked yet — icon only */}
+              <span
+                className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-800"
+                role="img"
                 aria-label="Instagram"
+                title="Instagram"
               >
                 <FaInstagram className="h-[18px] w-[18px]" />
-              </a>
+              </span>
             </div>
 
             {/* Language Dropdown */}
@@ -308,7 +308,7 @@ export default function Navbar({ onNavigate, activeSection, isDark, onToggleDark
                 {/* Social Icons */}
                 <div className={`flex items-center gap-3 ${isRtl ? 'justify-end' : 'justify-start'}`}>
                   <a
-                    href="https://wa.me/491722970140"
+                    href="https://wa.me/4915777268389"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 hover:bg-green-50 dark:hover:bg-green-950/40 text-slate-500 dark:text-slate-400 hover:text-[#25D366] border border-slate-200 dark:border-slate-800 hover:border-green-200 dark:hover:border-green-900/40 transition-all duration-300 cursor-pointer hover:scale-110"
@@ -316,15 +316,15 @@ export default function Navbar({ onNavigate, activeSection, isDark, onToggleDark
                   >
                     <FaWhatsapp className="h-[18px] w-[18px]" />
                   </a>
-                  <a
-                    href="https://instagram.com/yourinstagram"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 hover:bg-pink-50 dark:hover:bg-pink-950/40 text-slate-500 dark:text-slate-400 hover:text-[#E4405F] border border-slate-200 dark:border-slate-800 hover:border-pink-200 dark:hover:border-pink-900/40 transition-all duration-300 cursor-pointer hover:scale-110"
+                  {/* No Instagram account linked yet — icon only */}
+                  <span
+                    className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-800"
+                    role="img"
                     aria-label="Instagram"
+                    title="Instagram"
                   >
                     <FaInstagram className="h-[18px] w-[18px]" />
-                  </a>
+                  </span>
                 </div>
 
                 {/* Language Switch - Single button with dropdown */}

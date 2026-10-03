@@ -1,9 +1,9 @@
 # ZENOMIX
 
-**Zenomix Services UG** — a single-page marketing and demo site for a transport and
-mobility provider working exclusively with vehicles under 3.5 tonnes: courier and parcel
-work (including subcontracting for B2B logistics networks), passenger transport,
-non-emergency patient journeys, and in-house fleet and shift management.
+**Zenomix GbR** — a single-page marketing and demo site for a transport and
+logistics provider working exclusively with vehicles under 3.5 tonnes: logistics
+(fixed rounds as a subcontractor for B2B logistics networks), in-house fleet and shift
+management, courier and parcel services, and moving help.
 
 Built as a React 19 + TypeScript SPA with Vite and Tailwind CSS v4, fully trilingual
 (English / German / Arabic with RTL support) and light/dark themed.
@@ -36,13 +36,13 @@ Built as a React 19 + TypeScript SPA with Vite and Tailwind CSS v4, fully trilin
 | --- | --- |
 | **Hero** | Full-screen section with a looping background video (`public/videos/hero-background.mp4`) and CTAs into the tracking/tech page. |
 | **About** | Company story plus three pillars: dependability inside logistics networks, digital dispatch, trained drivers. |
-| **Services** | Four service cards (Courier & Parcel, Passenger Transport, Non-Emergency Patient Transport, Fleet & Shift Management) with a detail modal that locks body scroll while open. |
+| **Services** | Four service cards in a 2×2 grid (Logistics, Fleet & Shift Management, Courier & Parcel, Moving Help) with a detail modal that locks body scroll while open. |
 | **Transport cost calculator** | Interactive quote estimator for the light-commercial segment: assignment type (direct run / standard round / overnight / groupage), weight in kg and distance in km, plus temperature-control, high-value and carbon-contribution add-ons. Produces a cost breakdown in EUR, a lead-time estimate, a CO₂ saving and a generated reference ID. |
 | **Route & shift overview** | Search by route number against a mock in-memory database, with preset routes, status badges, a progress bar and a full shift log. Reflects what the in-house software actually does — organising drivers, shifts and routes, not tracking individual parcels. |
-| **Fleet** | Filterable catalogue of vehicles under 3.5 t (all / large van 3.5 t / panel van / passenger+patient) with a metric spec panel for the selected vehicle. |
+| **Fleet** | Filterable catalogue of vehicles under 3.5 t (all / large van 3.5 t / panel van / box van + electric) with a metric spec panel for the selected vehicle. |
 | **Reviews & FAQ page** | Testimonial carousel plus an animated accordion FAQ. |
 | **Contact** | Validated contact form posting to Formspree, with a local session list of submissions. |
-| **Legal pages** | Imprint (Impressum, § 5 TMG) and Privacy policy (Datenschutz), each translated in all three languages. |
+| **Legal pages** | Imprint (Impressum, § 5 DDG) and Privacy policy (Datenschutz), each translated in all three languages. |
 | **Navbar / Footer** | Sticky navbar with scroll-spy highlighting, language dropdown with flag icons, dark-mode toggle, WhatsApp/Instagram links, mobile drawer. Footer adds a sitemap, ops contact details, legal links and a newsletter signup. |
 | **Global UX** | Smooth scrolling with header offset, browser back/forward support via the History API, and a floating "back to top" button after 400 px of scroll. |
 
@@ -204,8 +204,8 @@ these route numbers in the route & shift overview:
 | --- | --- | --- |
 | `ZN-772-B1` | Delivery round (subcontracted), Cologne-Ossendorf depot → Cologne North | In Transit |
 | `ZN-982-A3` | Direct run (same-day courier), Düsseldorf depot → Neuss | Out for Delivery |
-| `ZN-104-C8` | Passenger transport (staff shuttle), Duisburg yard → Plant II | In Transit |
-| `ZN-334-D9` | Non-emergency patient transport (wheelchair), Essen → dialysis centre | Delivered |
+| `ZN-104-C8` | Moving help (private move), Duisburg-Neudorf → Düsseldorf-Bilk | In Transit |
+| `ZN-334-D9` | Moving help (office move), Essen-Rüttenscheid → Essen-Süd | Delivered |
 
 The calculator is likewise a client-side estimate: per-tier rates on kg and km, surcharges for
 temperature control (+25 %) and high-value securing (+15 %), a flat carbon contribution with a
@@ -219,8 +219,8 @@ constant at the top of the file — replace it with your own Formspree endpoint.
 submissions are also appended to an in-memory session list shown under the form; it is not
 persisted.
 
-The footer newsletter field and the Instagram link (`instagram.com/yourinstagram`) are
-placeholders — update them before going live.
+The footer newsletter field is a placeholder — update it before going live. The Instagram
+icon in the navbar and footer is shown without a link until an account exists.
 
 ## Deployment
 
@@ -274,8 +274,15 @@ take up to 24 hours, and GitHub issues the TLS certificate only after it sees th
   be dropped once you're sure no server-side piece is coming back.
 - `npm run lint` is a type check only — there is no ESLint/Prettier config in the repo.
 - There are no tests.
-- Company identity data is deliberately left as visible placeholders — `[HRB-Nummer]`,
-  `[Straße und Hausnummer]`, `[Telefonnummer eintragen]` and so on — in `Impressum.tsx` and
-  in the contact section. Earlier fabricated values were removed. **Fill these in with the
-  real, legally accurate details of Zenomix Services UG before publishing.**
+- Address (Dithmarscher Straße 19, 26723 Emden), phone (+49 1577 7268389) and email
+  (info@zenomix.de) are real and filled in. The email is hard-coded in `Contact.tsx`,
+  `Footer.tsx` and `Impressum.tsx`. The phone number is hard-coded in several places — `contact_hotline_val` in
+  `translations.ts`, the `tel:` links in `Contact.tsx`/`Footer.tsx`, the `wa.me` links in
+  `Navbar.tsx`/`Footer.tsx`, and `Impressum.tsx` — so change them together.
+- The operator is **Zenomix GbR**, represented by its partners Alan Abbas and Mounzer
+  Annouz. The GbR is not registered in the Gesellschaftsregister, so the imprint has no
+  register court or register number. If it is ever registered (eGbR), add the register
+  court (Amtsgericht Aurich covers Emden) and the GsR number to `Impressum.tsx`.
+- The VAT ID is still a visible placeholder (`[USt-IdNr. / VAT ID]`) in `Impressum.tsx` —
+  **fill it in before publishing**.
 - The `package.json` `name` field is still the scaffold default (`react-example`).

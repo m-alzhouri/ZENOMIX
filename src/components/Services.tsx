@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { ServiceItem } from '../types';
-import { Zap, Truck, Globe, Shield, Users, HeartPulse, LayoutDashboard, ArrowRight, CheckCircle2, ChevronRight, X, Box } from 'lucide-react';
+import { Zap, Truck, Globe, Shield, Route, Package, Sofa, LayoutDashboard, ArrowRight, CheckCircle2, ChevronRight, X, Box } from 'lucide-react';
 
 export default function Services() {
   const { services, t, isRtl, language } = useLanguage();
@@ -33,10 +33,12 @@ export default function Services() {
         return <Globe className={className} />;
       case 'Shield':
         return <Shield className={className} />;
-      case 'Users':
-        return <Users className={className} />;
-      case 'HeartPulse':
-        return <HeartPulse className={className} />;
+      case 'Route':
+        return <Route className={className} />;
+      case 'Package':
+        return <Package className={className} />;
+      case 'Sofa':
+        return <Sofa className={className} />;
       case 'LayoutDashboard':
         return <LayoutDashboard className={className} />;
       default:

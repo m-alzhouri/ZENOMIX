@@ -66,7 +66,7 @@ export default function Footer({ onNavigate, onNavigatePage, isDark = false }: F
             {/* Social Icons */}
             <div className={`flex items-center gap-3 ${isRtl ? 'justify-end' : 'justify-start'}`}>
               <a
-                href="https://wa.me/491722970140"
+                href="https://wa.me/4915777268389"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 hover:bg-green-50 dark:hover:bg-green-950/40 text-slate-500 dark:text-slate-400 hover:text-[#25D366] border border-slate-200 dark:border-slate-800 hover:border-green-200 dark:hover:border-green-900/40 transition-all duration-300 cursor-pointer hover:scale-110"
@@ -74,15 +74,15 @@ export default function Footer({ onNavigate, onNavigatePage, isDark = false }: F
               >
                 <FaWhatsapp className="h-[18px] w-[18px]" />
               </a>
-              <a
-                href="https://instagram.com/yourinstagram"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 hover:bg-pink-50 dark:hover:bg-pink-950/40 text-slate-500 dark:text-slate-400 hover:text-[#E4405F] border border-slate-200 dark:border-slate-800 hover:border-pink-200 dark:hover:border-pink-900/40 transition-all duration-300 cursor-pointer hover:scale-110"
+              {/* No Instagram account linked yet — icon only */}
+              <span
+                className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-800"
+                role="img"
                 aria-label="Instagram"
+                title="Instagram"
               >
                 <FaInstagram className="h-[18px] w-[18px]" />
-              </a>
+              </span>
             </div>
           </div>
 
@@ -152,11 +152,15 @@ export default function Footer({ onNavigate, onNavigatePage, isDark = false }: F
               <div className="space-y-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-950/50 px-4 py-3 text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
                 <p>
                   <strong className="text-slate-800 dark:text-slate-200 font-bold block">{t('footer_ops_email')}:</strong>
-                  Zenomix.de
+                  <a href="mailto:info@zenomix.de" dir="ltr" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    info@zenomix.de
+                  </a>
                 </p>
                 <p>
                   <strong className="text-slate-800 dark:text-slate-200 font-bold block">{t('footer_ops_hotline')}:</strong>
-                  {t('contact_hotline_val')}
+                  <a href="tel:+4915777268389" dir="ltr" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    {t('contact_hotline_val')}
+                  </a>
                 </p>
                 <p>
                   <strong className="text-slate-800 dark:text-slate-200 font-bold block">{t('footer_ops_hours')}:</strong>
@@ -216,11 +220,15 @@ export default function Footer({ onNavigate, onNavigatePage, isDark = false }: F
             <div className="space-y-3 text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
               <p>
                 <strong className="text-slate-800 dark:text-slate-200 font-bold block">{t('footer_ops_email')}:</strong>
-                Zenomix.de
+                <a href="mailto:info@zenomix.de" dir="ltr" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  info@zenomix.de
+                </a>
               </p>
               <p>
                 <strong className="text-slate-800 dark:text-slate-200 font-bold block">{t('footer_ops_hotline')}:</strong>
-                {t('contact_hotline_val')}
+                <a href="tel:+4915777268389" dir="ltr" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  {t('contact_hotline_val')}
+                </a>
               </p>
               <p>
                 <strong className="text-slate-800 dark:text-slate-200 font-bold block">{t('footer_ops_hours')}:</strong>

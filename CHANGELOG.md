@@ -1,5 +1,114 @@
 # Changelog
 
+## 2026-10-03
+
+### Content — Rechtsform GbR, Impressum mit Gesellschaftern, keine erfundenen Zertifikate
+
+**Symptom / Description**
+Die Seite firmierte als „Zenomix Services UG (haftungsbeschränkt)“. Das Unternehmen ist aber
+eine **nicht eingetragene GbR** namens **Zenomix GbR**, vertreten durch die Gesellschafter
+Alan Abbas und Mounzer Annouz. Im Kontaktbereich standen „ISO 9001:2015“ und
+„SCS-GREEN-902“, beides hat das Unternehmen nicht, und beides stand unter falschen
+Überschriften („Max. Gewicht“, „Einsatzgebiet“). Der Instagram-Link zeigte auf
+`instagram.com/yourinstagram`.
+
+**Fix / Change**
+- Firmenname in EN/DE/AR auf „Zenomix GbR“ umgestellt: Hero, Über uns, Footer-Slogan,
+  Copyright und Impressum. Das Über-uns-Badge lautet jetzt nur „Über Zenomix“.
+- Impressum:
+  - Gesellschafter als Vertretungsberechtigte eingetragen.
+  - Registerabschnitt entfernt, weil eine nicht eingetragene GbR kein Registergericht und
+    keine Registernummer hat. Hinweis: Für Emden wäre das Registergericht ohnehin das
+    Amtsgericht Aurich, nicht das Amtsgericht Emden.
+  - „§ 5 TMG“ auf „§ 5 DDG“ aktualisiert. Das Digitale-Dienste-Gesetz hat das TMG im Mai 2024
+    abgelöst.
+  - Der Platzhalter für die USt-IdNr. bleibt, bis die Nummer nachgereicht wird.
+- Kontaktbereich: „ISO 9001:2015“ und „SCS-GREEN-902“ durch echte Angaben ersetzt, nämlich
+  max. Gewicht 3,5 t und Einsatzgebiet „Deutschlandweit“. Dafür gibt es die neuen Keys
+  `contact_iso_rating_val` und `contact_eco_license_val` in EN/DE/AR.
+- Instagram-Icon in Navbar (Desktop und Mobil) und Footer ohne Link, nur noch als Icon. Hover-
+  und Klick-Optik entfernt.
+
+**Affected Files**
+- `src/translations.ts` — Firmenname, Über-uns-Badge, neue Werte für den Kontaktbereich
+- `src/components/Impressum.tsx` — GbR, Gesellschafter, Registerabschnitt entfernt, § 5 DDG
+- `src/components/Contact.tsx` — echte Werte statt ISO-/SCS-Angaben
+- `src/components/Navbar.tsx` — Instagram ohne Link (2×)
+- `src/components/Footer.tsx` — Instagram ohne Link
+- `README.md` — Firmenname, Impressum-/GbR-Hinweise, Instagram-Hinweis, § 5 DDG
+
+### Content — Neue Kontaktdaten: Telefon, E-Mail, Adresse in Emden und WhatsApp-Link
+
+**Symptom / Description**
+Telefonnummer und Anschrift standen auf der Seite nur als Platzhalter
+(`[Telefonnummer eintragen]`, `[Straße und Hausnummer]` …). Statt einer E-Mail-Adresse stand
+nur „Zenomix.de“ da. Der WhatsApp-Link führte auf eine alte Nummer (`+49 172 2970140`).
+Aktuell gelten: **+49 1577 7268389**, **info@zenomix.de** und
+**Dithmarscher Straße 19, 26723 Emden**.
+
+**Fix / Change**
+- Telefonnummer, E-Mail und Adresse in EN/DE/AR eingetragen: Kontaktbereich
+  (Firmensitz/Anfragen/Telefon), Footer („Kontakt & Disposition“, Desktop und Mobil) und
+  Impressum.
+- WhatsApp-Links in Navbar (Desktop und Mobil) und Footer auf `wa.me/4915777268389` umgestellt.
+- Telefonnummer und E-Mail im Kontaktbereich und im Footer als `tel:`- bzw. `mailto:`-Link
+  anklickbar gemacht, mit `dir="ltr"`. Sonst würde das RTL-Layout auf Arabisch die
+  Ziffernblöcke umdrehen („7268389 1577 49+“).
+- Im arabischen Impressum Nummer, E-Mail und Adresse mit Unicode-Isolates (`⁦…⁩`)
+  eingefasst, weil sie dort mitten im arabischen Fließtext stehen.
+
+**Affected Files**
+- `src/translations.ts` — `contact_office_val` und `contact_hotline_val` in EN/AR/DE
+- `src/components/Impressum.tsx` — Anschrift, Telefon und E-Mail in EN/AR/DE
+- `src/components/Contact.tsx` — Telefon als `tel:`-Link, E-Mail als `mailto:`-Link
+- `src/components/Footer.tsx` — WhatsApp-Link, Telefon als `tel:`- und E-Mail als `mailto:`-Link
+- `src/components/Navbar.tsx` — beide WhatsApp-Links auf die neue Nummer
+- `README.md` — Hinweis zu Platzhaltern aktualisiert, Fundstellen von Telefonnummer und
+  E-Mail aufgelistet
+
+### Content — Neues Leistungsspektrum: Logistik, Flotten- & Schichtmanagement, Kurier- & Paketdienst, Umzugshilfe
+
+**Symptom / Description**
+Das Service-Grid auf der Startseite zeigte Kurier- & Paketdienst, Personenbeförderung,
+Krankenfahrten und Flotten- & Schichtmanagement. Personenbeförderung und Krankenfahrten werden
+nicht mehr angeboten. Neu sind Logistik und Umzugshilfe. Das Grid soll von oben links nach
+unten rechts lauten: Logistik · Flotten- & Schichtmanagement · Kurier- & Paketdienst ·
+Umzugshilfe. Die gesamte Seite soll in allen drei Sprachen (EN/DE/AR) dazu passen.
+
+**Fix / Change**
+- Service-Karten in der neuen Reihenfolge (`logistics`, `fleet-management`, `courier`,
+  `moving`) in EN/DE/AR, jeweils mit Kurz- und Langtext, vier Leistungsmerkmalen und Specs:
+  - **Logistik**: feste Zustelltouren als Subunternehmer für B2B-Netzwerke, Teilladungen bis
+    1.200 kg, Vertretung und Spitzenkapazität. Der Subunternehmer-Teil wurde aus der alten
+    Kurier-Karte hierher verschoben.
+  - **Kurier- & Paketdienst**: jetzt klar abgegrenzt auf Direktfahrten am selben Tag, Pakete,
+    Dokumente und einzelne Paletten.
+  - **Umzugshilfe**: Transporter bis 3,5 t mit Fahrer, Tragehelfer, Möbel-Ab- und -Aufbau,
+    Privat-, Büro- und Firmenumzüge.
+- Neue Icons `Route`, `Package` und `Sofa` im Service-Renderer, die nicht mehr genutzten
+  `Users` und `HeartPulse` entfernt.
+- Alle Erwähnungen von Personenbeförderung und Krankenfahrten ersetzt: Hero-Badge und
+  -Untertitel („Transport & Logistik“ statt „Mobilität“), Services-Untertitel,
+  Versicherungshinweis, Über uns, Kontakt-Untertitel, FAQ (Frage 3 jetzt zur Umzugshilfe,
+  Antwort 5 angepasst), Footer-Slogan und -Zeile.
+- Kontaktformular: Betreff-Optionen entsprechen jetzt den vier Services. Die Keys heißen jetzt
+  `contact_topic_logistics`, `contact_topic_fleet`, `contact_topic_courier` und
+  `contact_topic_moving` (vorher `highval`, `relay`, `carbon`).
+- Fuhrpark: „Care Mobil“ (rollstuhlgerecht) durch einen Koffer-Transporter mit Ladebordwand
+  ersetzt, inklusive neuer SVG-Silhouette. Der Filter-Tab heißt jetzt „Koffer & Elektro“.
+- Kundenstimmen 2 und 3 auf Büroumzug und Kurier-Direktfahrt umgestellt.
+- Tracking-Demos `ZN-104-C8` und `ZN-334-D9` zeigen jetzt einen Privat- bzw. Büroumzug statt
+  einer Schichtfahrt und einer Krankenfahrt.
+
+**Affected Files**
+- `src/data.ts` — EN-Services, Fuhrpark, Kundenstimmen, Tracking-Demos
+- `src/translations.ts` — EN/AR/DE-UI-Texte sowie AR/DE-Services, Fuhrpark, Kundenstimmen
+  und Tracking-Demos
+- `src/components/Services.tsx` — Icon-Mapping für die neuen Services
+- `src/components/Contact.tsx` — Betreff-Optionen und neue Translation-Keys
+- `src/components/Fleet.tsx` — SVG für den Koffer-Transporter statt des Patientenfahrzeugs
+- `README.md` — Intro, Feature-Tabelle und Demo-Daten nachgezogen
+
 ## 2026-08-19
 
 ### Config — Automatischer Deploy auf die eigene Domain zenomix.de

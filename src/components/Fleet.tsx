@@ -211,21 +211,18 @@ export default function Fleet() {
 
                     {selectedVehicle.type === 'light' && (
                       <g>
-                        {/* Passenger / patient transport minibus body */}
-                        <path d="M 32,34 H 148 L 176,58 V 84 H 32 Z" fill="url(#vectorGrad)" />
-                        {/* Passenger windows */}
-                        <rect x="44" y="42" width="24" height="16" fill="#0f172a" opacity="0.9" />
-                        <rect x="74" y="42" width="24" height="16" fill="#0f172a" opacity="0.9" />
-                        <rect x="104" y="42" width="24" height="16" fill="#0f172a" opacity="0.9" />
-                        <rect x="150" y="44" width="22" height="14" fill="#0f172a" opacity="0.9" />
-                        {/* Boarding ramp at the rear */}
-                        <path d="M 32,84 L 12,96 H 40" stroke="#38bdf8" strokeWidth="3" fill="none" strokeLinejoin="round" />
-                        {/* Wheelchair symbol on the flank */}
-                        <circle cx="66" cy="72" r="5.5" stroke="#38bdf8" strokeWidth="2" fill="none" />
-                        <path d="M 66,63 v 5" stroke="#38bdf8" strokeWidth="2" strokeLinecap="round" />
+                        {/* Box body for moves and bulky goods */}
+                        <rect x="24" y="24" width="112" height="60" fill="url(#vectorGrad)" />
+                        {/* Cab */}
+                        <path d="M 138,44 H 160 L 182,64 V 84 H 138 Z" fill="url(#vectorGrad)" />
+                        <path d="M 144,50 H 158 L 172,63 H 144 Z" fill="#0f172a" opacity="0.9" />
+                        {/* Brand wave stripe */}
+                        <path d="M 26,68 Q 60,52 96,70 T 136,58" stroke="#38bdf8" strokeWidth="2.5" fill="none" />
+                        {/* Tail lift folded down at the rear */}
+                        <path d="M 24,84 V 94 H 6" stroke="#38bdf8" strokeWidth="3" fill="none" strokeLinejoin="round" />
                         {/* Wheels */}
-                        <circle cx="62" cy="90" r="11" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" />
-                        <circle cx="146" cy="90" r="11" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" />
+                        <circle cx="56" cy="90" r="11" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" />
+                        <circle cx="156" cy="90" r="11" fill="#0f172a" stroke="#38bdf8" strokeWidth="2" />
                       </g>
                     )}
 
