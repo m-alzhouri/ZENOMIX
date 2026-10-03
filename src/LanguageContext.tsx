@@ -23,10 +23,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('language');
       if (saved === 'ar' || saved === 'en' || saved === 'de') return saved;
-      // Default to English
-      return 'en';
+      // First visit: default to German
+      return 'de';
     }
-    return 'en';
+    return 'de';
   });
 
   const isRtl = language === 'ar';

@@ -2,6 +2,25 @@
 
 ## 2026-10-03
 
+### Config — Deutsch als Standardsprache
+
+**Symptom / Description**
+Beim ersten Besuch (noch keine Sprache im `localStorage`) startete die Seite auf Englisch.
+Ziel: Erstbesucher sehen die Seite auf Deutsch.
+
+**Fix / Change**
+- Fallback-Sprache in `LanguageProvider` von `'en'` auf `'de'` gestellt. Eine bereits
+  gespeicherte Sprachwahl bleibt erhalten. Wer schon einmal eine Sprache gewählt hat, sieht
+  also weiterhin diese.
+- `<html lang>` in `index.html` auf `de` gesetzt. So stimmt das Attribut schon vor dem Laden
+  von React, was Suchmaschinen und Screenreadern hilft.
+- Die Fallback-Kette für einzelne fehlende Übersetzungen bleibt Englisch (`t()`).
+
+**Affected Files**
+- `src/LanguageContext.tsx` — Standardsprache `de`
+- `index.html` — `lang="de"`
+- `README.md` — Abschnitt Internationalisierung angepasst
+
 ### Content — Rechtsform GbR, Impressum mit Gesellschaftern, keine erfundenen Zertifikate
 
 **Symptom / Description**

@@ -161,7 +161,7 @@ const { language, changeLanguage, t, isRtl, services, fleet, testimonials, track
   = useLanguage();
 ```
 
-- **Languages:** `en` (default), `de`, `ar`.
+- **Languages:** `de` (default on first visit), `en`, `ar`.
 - **Persistence:** stored in `localStorage` under `language`; also sets
   `document.documentElement.lang` and `dir`.
 - **RTL:** `isRtl` is true for Arabic; components use it to mirror layout, flip icons and
