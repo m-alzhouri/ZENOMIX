@@ -6,7 +6,11 @@ import { ContactSubmission } from '../types';
 // Formspree Form ID
 const FORMSPREE_FORM_ID = 'mdaqypry';
 
-export default function Contact() {
+interface ContactProps {
+  onOpenPrivacy: () => void;
+}
+
+export default function Contact({ onOpenPrivacy }: ContactProps) {
   const { t, isRtl } = useLanguage();
   
   const [name, setName] = useState('');
@@ -314,6 +318,19 @@ export default function Contact() {
                     </span>
                   )}
                 </button>
+
+                {/* Art. 13 GDPR notice at the point of collection */}
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
+                  {t('contact_privacy_note')}{' '}
+                  <button
+                    type="button"
+                    onClick={onOpenPrivacy}
+                    className="underline underline-offset-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 cursor-pointer"
+                  >
+                    {t('contact_privacy_link')}
+                  </button>
+                  .
+                </p>
 
               </form>
 

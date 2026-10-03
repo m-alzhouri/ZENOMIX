@@ -217,7 +217,7 @@ export default function App() {
             <Hero onNavigate={handleNavigate} />
             <About />
             <Services />
-            <Contact />
+            <Contact onOpenPrivacy={() => navigatePage('datenschutz')} />
           </>
         )}
 

@@ -25,7 +25,7 @@ export default function Impressum({ onBack }: ImpressumProps) {
       vat: 'VAT ID:',
       vatDesc: 'Sales tax identification number according to § 27 a Umsatzsteuergesetz:\n[USt-IdNr. / VAT ID]',
       disclaimer: 'Disclaimer / Legal Notice',
-      disclaimerDesc: 'The European Commission provides a platform for online dispute resolution (ODR): https://ec.europa.eu/consumers/odr. We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.',
+      disclaimerDesc: 'We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.',
       back: 'Back to Home'
     },
     ar: {
@@ -44,7 +44,7 @@ export default function Impressum({ onBack }: ImpressumProps) {
       vat: 'الرقم الضريبي المضاف:',
       vatDesc: 'الرقم التعريفي لضريبة القيمة المضافة بموجب المادة 27 أ من قانون ضريبة المبيعات الألماني:\n[USt-IdNr. / VAT ID]',
       disclaimer: 'تسوية النزاعات وإشعار إخلاء المسؤولية',
-      disclaimerDesc: 'توفر المفوضية الأوروبية منصة لتسوية النزاعات عبر الإنترنت (ODR): https://ec.europa.eu/consumers/odr. نحن لسنا مستعدين ولا ملزمين بالمشاركة في إجراءات تسوية المنازعات أمام هيئة تحكيم المستهلك.',
+      disclaimerDesc: 'نحن لسنا مستعدين ولا ملزمين بالمشاركة في إجراءات تسوية المنازعات أمام هيئة تحكيم المستهلك.',
       back: 'العودة للرئيسية'
     },
     de: {
@@ -62,7 +62,7 @@ export default function Impressum({ onBack }: ImpressumProps) {
       vat: 'Umsatzsteuer-ID:',
       vatDesc: 'Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:\n[USt-IdNr. / VAT ID]',
       disclaimer: 'Streitschlichtung',
-      disclaimerDesc: 'Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr. Zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle sind wir nicht verpflichtet und nicht bereit.',
+      disclaimerDesc: 'Zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle sind wir nicht verpflichtet und nicht bereit.',
       back: 'Zurück zur Startseite'
     }
   };

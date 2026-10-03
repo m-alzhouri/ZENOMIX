@@ -2,6 +2,51 @@
 
 ## 2026-10-03
 
+### Fix — DSGVO: Schriften lokal, Datenschutzerklärung neu, OS-Link entfernt
+
+**Symptom / Description**
+Die Seite sollte abmahnsicher werden. Drei Punkte waren problematisch:
+- Die Schriften wurden von `fonts.googleapis.com` geladen. Dadurch ging bei jedem Besuch die
+  IP-Adresse an Google, ohne Einwilligung. Das LG München hat das 2022 als DSGVO-Verstoß
+  gewertet, und es wird häufig abgemahnt.
+- Die Datenschutzerklärung war unvollständig und teils falsch: Sie behauptete Cookies und eine
+  „Nutzerverhaltensanalyse“, die es nicht gibt. Es fehlten Verantwortlicher, Hosting
+  (GitHub Pages), Formspree samt US-Übermittlung, WhatsApp-Links, Rechtsgrundlagen,
+  Widerspruchsrecht nach Art. 21 und die zuständige Aufsichtsbehörde.
+- Das Impressum verlinkte noch die EU-Plattform zur Online-Streitbeilegung (OS). Sie wurde am
+  20.07.2025 eingestellt.
+
+**Root Cause**
+Google-Fonts-Einbindung und Datenschutztext stammten aus der ursprünglichen Vorlage und wurden
+nie an die tatsächliche Datenverarbeitung angepasst.
+
+**Fix / Change**
+- Schriften Cairo, Inter, Space Grotesk und JetBrains Mono jetzt über `@fontsource-variable/*`
+  selbst gehostet. Vite bündelt sie nach `dist/assets`, es gibt keine Anfrage an Google mehr.
+- Datenschutzerklärung in DE/EN/AR komplett neu, mit 13 Abschnitten: Verantwortlicher,
+  Überblick (keine Cookies, kein Tracking), Hosting/Server-Logs (GitHub, DPF), TLS,
+  LocalStorage (`language`, `theme`, § 25 Abs. 2 Nr. 2 TDDDG), lokale Schriften,
+  Kontaktformular/Formspree (Art. 28, SCC), E-Mail/Telefon/WhatsApp, Rechner/Demo, Rechte,
+  hervorgehobenes Widerspruchsrecht, Beschwerderecht (LfD Niedersachsen), weitere Hinweise und
+  Stand. URLs und E-Mail-Adressen werden als Links dargestellt. EN/AR tragen den Hinweis, dass
+  die deutsche Fassung verbindlich ist.
+- Kontaktformular: Datenschutzhinweis unter dem Absende-Button mit Link zur
+  Datenschutzerklärung (Informationspflicht nach Art. 13 DSGVO bei der Erhebung).
+- Impressum: Link zur eingestellten OS-Plattform entfernt. Die Erklärung zur
+  Verbraucherschlichtung (VSBG) bleibt.
+
+**Affected Files**
+- `package.json`, `package-lock.json`: vier `@fontsource-variable/*`-Pakete hinzugefügt
+- `src/main.tsx`: Font-Pakete importiert
+- `src/index.css`: Google-Fonts-`@import` entfernt, Font-Familien auf die „… Variable“-Namen
+  umgestellt
+- `src/components/Datenschutz.tsx`: Inhalt neu geschrieben, Rendering über Abschnittsliste
+  mit Linkify
+- `src/components/Contact.tsx`: Prop `onOpenPrivacy` und Datenschutzhinweis unter dem Formular
+- `src/App.tsx`: `onOpenPrivacy` an `Contact` übergeben
+- `src/translations.ts`: Keys `contact_privacy_note` und `contact_privacy_link` (EN/AR/DE)
+- `src/components/Impressum.tsx`: OS-Plattform-Link entfernt (EN/AR/DE)
+
 ### Content — Erreichbarkeit 24/7
 
 **Symptom / Description**
