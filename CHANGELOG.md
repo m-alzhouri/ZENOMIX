@@ -2,6 +2,46 @@
 
 ## 2026-10-03
 
+### Fix — Wettbewerbsrecht: Bewertungen ausgeblendet, CO2-Aussagen entfernt, Bruttopreise im Rechner
+
+**Symptom / Description**
+Mehrere Werbeaussagen waren nach UWG bzw. Preisangabenverordnung abmahngefährdet:
+- Auf der Seite „Referenzen & FAQ“ standen Kundenbewertungen, die nicht belegt sind.
+  Erfundene Bewertungen sind irreführende Werbung (§ 5 UWG, Anhang Nr. 23b/c).
+- Der Kostenrechner warb mit „Nachgewiesener CO2-Einsparung“ dank „elektrischer und
+  emissionsarmer Fahrzeuge“ und einem „CO2-Ausgleich“ mit Rabatt. Unbelegte Umweltaussagen
+  sind seit dem BGH-Urteil zu „klimaneutral“ (2024) ein Schwerpunkt von Abmahnungen.
+- Der Rechner zeigte den Endpreis netto („zzgl. MwSt.“). Gegenüber Verbrauchern (Umzugshilfe,
+  Kurier) verlangt die PAngV den Gesamtpreis inklusive Umsatzsteuer. Außerdem widersprach sich
+  „Unverbindliche Schätzung“ mit „Preisbindung 48 Stunden gültig“, und die Angabe „inkl.
+  Transportversicherung“ war nicht belegt.
+- Im Kontaktbereich stand „Fuhrpark: GEPRÜFT“, ohne belegte Prüfung.
+
+**Root Cause**
+Die Texte stammten aus der ursprünglichen Vorlage und wurden nie mit den tatsächlichen
+Leistungen abgeglichen.
+
+**Fix / Change**
+- `ReviewsFaqPage`: Schalter `SHOW_TESTIMONIALS = false`. Solange er aus ist, zeigt die Seite
+  nur die FAQ. Die Bewertungsdaten bleiben für echte Bewertungen (mit Einwilligung) erhalten.
+- Kostenrechner:
+  - CO2-Option, CO2-Posten, Umweltrabatt und CO2-Einspar-Box entfernt.
+  - Das Ergebnis zeigt jetzt die Einzelposten, die Zwischensumme netto, „MwSt. 19 %“ und den
+    „Richtpreis gesamt, inkl. 19 % MwSt.“.
+  - „Preisbindung 48 Stunden“ ersetzt durch „Preisart: Unverbindlicher Richtpreis“.
+  - „inkl. Transportversicherung“ entfernt.
+  - MwSt.-Satz und Mindestpreis (25 € netto) als Konstanten.
+- Kontaktbereich: „Fuhrpark: GEPRÜFT“ ersetzt durch „Erreichbar: 24/7“.
+- Alle Texte in EN/AR/DE angepasst, ungenutzte CO2-Keys entfernt.
+
+**Affected Files**
+- `src/components/ReviewsFaqPage.tsx`: Bewertungen per Schalter ausgeblendet
+- `src/components/Calculator.tsx`: CO2-Logik und -UI entfernt, Netto-/MwSt.-/Brutto-Ausweis,
+  Konstanten `VAT_RATE` und `MIN_NET_RATE`
+- `src/translations.ts`: Rechner-Texte (Untertitel, Zusatzleistungen, Preisart, Gesamtpreis),
+  neue Keys `calc_line_net` und `calc_line_vat`, CO2-Keys entfernt, Kontakt-Kennzahl „24/7“
+  (EN/AR/DE)
+
 ### Fix — DSGVO: Schriften lokal, Datenschutzerklärung neu, OS-Link entfernt
 
 **Symptom / Description**

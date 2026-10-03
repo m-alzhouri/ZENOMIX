@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
-import { Calculator as CalcIcon, RefreshCw, Check, ArrowRight, Calendar, Truck, Trees } from 'lucide-react';
+import { Calculator as CalcIcon, RefreshCw, ArrowRight, Calendar, Truck } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
+
+// Rates below are net; consumers must be shown the final price incl. VAT (PAngV)
+const VAT_RATE = 0.19;
+const MIN_NET_RATE = 25; // minimum dispatch rate in € (net)
+
+const roundCents = (value: number) => Math.round(value * 100) / 100;
 
 export default function Calculator() {
   const { t, isRtl, language } = useLanguage();
@@ -11,7 +17,6 @@ export default function Calculator() {
   const [serviceType, setServiceType] = useState<string>('standard');
   const [isColdChain, setIsColdChain] = useState<boolean>(false);
   const [isHighSecurity, setIsHighSecurity] = useState<boolean>(false);
-  const [isCarbonOffset, setIsCarbonOffset] = useState<boolean>(true);
 
   const [calculating, setCalculating] = useState<boolean>(false);
   const [results, setResults] = useState<any | null>(null);
@@ -25,59 +30,46 @@ export default function Calculator() {
       let baseRatePerKg = 0.35;
       let multiplier = 1.0;
       let durationDays = t('calc_dur_standard');
-      let carbonOutputKg = 0;
 
       switch (serviceType) {
         case 'direct':
           baseRatePerKg = 1.2;
           multiplier = 1.4;
           durationDays = t('calc_dur_direct');
-          carbonOutputKg = Math.round(distance * 0.18);
           break;
         case 'standard':
           baseRatePerKg = 0.35;
           multiplier = 1.0;
           durationDays = t('calc_dur_standard');
-          carbonOutputKg = Math.round(distance * 0.15);
           break;
         case 'overnight':
           baseRatePerKg = 0.75;
           multiplier = 1.25;
           durationDays = t('calc_dur_overnight');
-          carbonOutputKg = Math.round(distance * 0.2);
           break;
         case 'pool':
           baseRatePerKg = 0.2;
           multiplier = 0.7;
           durationDays = t('calc_dur_pool');
-          carbonOutputKg = Math.round(distance * 0.09);
           break;
       }
 
-      // Calculations
-      let baseCost = weight * baseRatePerKg + distance * 0.55 * multiplier;
-      let coldChainCost = isColdChain ? baseCost * 0.25 : 0;
-      let highSecurityCost = isHighSecurity ? baseCost * 0.15 : 0;
-      let carbonOffsetCost = isCarbonOffset ? 12.50 : 0;
+      // Calculations (net)
+      const baseCost = weight * baseRatePerKg + distance * 0.55 * multiplier;
+      const coldChainCost = isColdChain ? baseCost * 0.25 : 0;
+      const highSecurityCost = isHighSecurity ? baseCost * 0.15 : 0;
 
-      let subtotal = baseCost + coldChainCost + highSecurityCost + carbonOffsetCost;
-      let totalDiscount = isCarbonOffset ? 5.00 : 0; // standard environmental discount incentive
-      let total = subtotal - totalDiscount;
-
-      // Zenomix green savings (due to hybrid/EV fleet specs)
-      let standardFleetCarbonKg = Math.round(carbonOutputKg * 1.65);
-      let carbonSavedKg = Math.max(0, standardFleetCarbonKg - carbonOutputKg);
+      const net = roundCents(Math.max(MIN_NET_RATE, baseCost + coldChainCost + highSecurityCost));
+      const vat = roundCents(net * VAT_RATE);
 
       setResults({
-        baseCost: Math.round(baseCost * 100) / 100,
-        coldChainCost: Math.round(coldChainCost * 100) / 100,
-        highSecurityCost: Math.round(highSecurityCost * 100) / 100,
-        carbonOffsetCost: Math.round(carbonOffsetCost * 100) / 100,
-        subtotal: Math.round(subtotal * 100) / 100,
-        discount: totalDiscount,
-        total: Math.round(Math.max(25, total) * 100) / 100, // minimum dispatch rate is €25
+        baseCost: roundCents(baseCost),
+        coldChainCost: roundCents(coldChainCost),
+        highSecurityCost: roundCents(highSecurityCost),
+        net,
+        vat,
+        total: roundCents(net + vat),
         durationDays,
-        carbonSavedKg,
         referenceId: `ZN-EST-${Math.floor(100000 + Math.random() * 900000)}`
       });
 
@@ -91,7 +83,6 @@ export default function Calculator() {
     setServiceType('standard');
     setIsColdChain(false);
     setIsHighSecurity(false);
-    setIsCarbonOffset(true);
     setResults(null);
   };
 
@@ -214,7 +205,7 @@ export default function Calculator() {
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-3">
                   {t('calc_addons')}
                 </label>
-                <div className="grid sm:grid-cols-3 gap-4">
+                <div className="grid sm:grid-cols-2 gap-4">
                   {/* Cold chain */}
                   <label className={`flex items-start gap-3 p-4 rounded-2xl border cursor-pointer transition-all ${
                     isColdChain 
@@ -248,24 +239,6 @@ export default function Calculator() {
                     <div>
                       <span className="block text-xs font-bold uppercase tracking-wide">{t('calc_addon_secure')}</span>
                       <span className="block text-[10px] text-slate-500 dark:text-slate-400 mt-0.5 font-medium">{t('calc_addon_secure_desc')}</span>
-                    </div>
-                  </label>
-
-                  {/* Carbon Offset */}
-                  <label className={`flex items-start gap-3 p-4 rounded-2xl border cursor-pointer transition-all ${
-                    isCarbonOffset 
-                      ? 'bg-blue-50/50 dark:bg-blue-950/30 border-blue-400 dark:border-blue-900/50 text-slate-950 dark:text-slate-200' 
-                      : 'bg-slate-50 dark:bg-slate-950 border-slate-200/60 dark:border-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-100/50 dark:hover:bg-slate-900/50'
-                  } ${isRtl ? 'flex-row-reverse text-right' : 'text-left'}`}>
-                    <input
-                      type="checkbox"
-                      checked={isCarbonOffset}
-                      onChange={(e) => setIsCarbonOffset(e.target.checked)}
-                      className="mt-0.5 rounded border-slate-300 dark:border-slate-800 text-blue-600 focus:ring-blue-500 bg-white dark:bg-slate-900 animate-none"
-                    />
-                    <div>
-                      <span className="block text-xs font-bold uppercase tracking-wide">{t('calc_addon_carbon')}</span>
-                      <span className="block text-[10px] text-slate-500 dark:text-slate-400 mt-0.5 font-medium">{t('calc_addon_carbon_desc')}</span>
                     </div>
                   </label>
                 </div>
@@ -384,47 +357,21 @@ export default function Calculator() {
                     </div>
                   )}
 
-                  {isCarbonOffset && (
-                    <div className={`flex justify-between items-center text-sm ${isRtl ? 'flex-row-reverse' : ''}`}>
-                      <span className="text-slate-500 dark:text-slate-400 font-medium">
-                        {t('calc_line_carbon')}
-                      </span>
-                      <span className="font-mono text-slate-950 dark:text-slate-100 font-bold">+€{results.carbonOffsetCost.toFixed(2)}</span>
-                    </div>
-                  )}
+                  <div className={`flex justify-between items-center text-sm border-t border-dashed border-slate-100 dark:border-slate-800 pt-3 ${isRtl ? 'flex-row-reverse' : ''}`}>
+                    <span className="text-slate-500 dark:text-slate-400 font-medium">
+                      {t('calc_line_net')}
+                    </span>
+                    <span className="font-mono text-slate-950 dark:text-slate-100 font-bold">€{results.net.toFixed(2)}</span>
+                  </div>
 
-                  {isCarbonOffset && (
-                    <div className={`flex justify-between items-center text-sm border-t border-dashed border-slate-100 dark:border-slate-800 pt-3 ${isRtl ? 'flex-row-reverse' : ''}`}>
-                      <span className={`text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1.5 ${isRtl ? 'flex-row-reverse' : ''}`}>
-                        <Check className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-                        {t('calc_line_discount')}
-                      </span>
-                      <span className="font-mono text-emerald-600 dark:text-emerald-400 font-bold">-€{results.discount.toFixed(2)}</span>
-                    </div>
-                  )}
+                  <div className={`flex justify-between items-center text-sm ${isRtl ? 'flex-row-reverse' : ''}`}>
+                    <span className="text-slate-500 dark:text-slate-400 font-medium">
+                      {t('calc_line_vat')}
+                    </span>
+                    <span className="font-mono text-slate-950 dark:text-slate-100 font-bold">+€{results.vat.toFixed(2)}</span>
+                  </div>
 
                 </div>
-
-                {/* Carbon Offset Visual Highlight Badge */}
-                {isCarbonOffset && (
-                  <div className={`bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/30 rounded-2xl p-4 mb-6 flex items-start gap-3 ${isRtl ? 'flex-row-reverse text-right' : ''}`}>
-                    <div className="p-2 rounded-xl bg-emerald-100 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 shrink-0">
-                      <Trees className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <h4 className="text-xs font-bold text-emerald-800 dark:text-emerald-300 uppercase tracking-wider font-sans">
-                        {t('calc_carbon_verified')}
-                      </h4>
-                      <p className="text-[11px] text-emerald-700 dark:text-emerald-400 mt-1 font-medium leading-relaxed font-sans">
-                        <span>
-                          {t('calc_carbon_desc_1')}{' '}
-                          <strong className="text-slate-950 dark:text-slate-100 font-bold">{results.carbonSavedKg} kg</strong>{' '}
-                          {t('calc_carbon_desc_2')}
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                )}
 
                 {/* Timing Specs Box */}
                 <div className="bg-slate-50 dark:bg-slate-950 border border-slate-200/60 dark:border-slate-900 rounded-2xl p-4 mb-6 grid grid-cols-2 gap-4 text-center">

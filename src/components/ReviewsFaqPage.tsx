@@ -3,6 +3,10 @@ import { useLanguage } from '../LanguageContext';
 import { Star, ChevronLeft, ChevronRight, MessageCircleQuestion } from 'lucide-react';
 import Faq from './Faq';
 
+// Testimonials stay hidden until real customer reviews (with the customer's consent) are in
+// data.ts / translations.ts — invented reviews are misleading advertising under § 5 UWG.
+const SHOW_TESTIMONIALS = false;
+
 export default function ReviewsFaqPage() {
   const { isRtl, testimonials, t } = useLanguage();
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -14,6 +18,14 @@ export default function ReviewsFaqPage() {
   const handleNextTest = () => {
     setActiveTestimonial((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
   };
+
+  if (!SHOW_TESTIMONIALS) {
+    return (
+      <div className="min-h-screen bg-slate-50 dark:bg-slate-950 pt-16">
+        <Faq />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 pt-24 pb-24">
