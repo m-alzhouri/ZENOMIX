@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Logo from './Logo';
-import { Menu, X, Sun, Moon, Globe, ChevronDown, Check } from 'lucide-react';
+import { Menu, X, Sun, Moon, Globe, ChevronDown, Check, Phone } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { motion, AnimatePresence } from 'motion/react';
 import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
@@ -215,6 +215,35 @@ export default function Navbar({ onNavigate, activeSection, isDark, onToggleDark
 
           {/* Mobile Actions Container */}
           <div className="lg:hidden flex items-center gap-2">
+            {/* Mobile Call Button */}
+            <a
+              href="tel:+4915777268389"
+              className={`p-1.5 rounded-lg cursor-pointer ${
+                isDark
+                  ? 'bg-slate-800/50 border border-slate-700/50'
+                  : 'bg-white/50 border border-slate-300/50'
+              }`}
+              aria-label="Call"
+              title="+49 157 77268389"
+            >
+              <Phone className={`h-[18px] w-[18px] ${isDark ? 'text-blue-400' : 'text-blue-600'}`} />
+            </a>
+
+            {/* Mobile WhatsApp Button */}
+            <a
+              href="https://wa.me/4915777268389"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`p-1.5 rounded-lg cursor-pointer ${
+                isDark
+                  ? 'bg-slate-800/50 border border-slate-700/50'
+                  : 'bg-white/50 border border-slate-300/50'
+              }`}
+              aria-label="WhatsApp"
+            >
+              <FaWhatsapp className="h-[18px] w-[18px] text-[#25D366]" />
+            </a>
+
             {/* Mobile Theme Toggle */}
             <button
               onClick={onToggleDark}

@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-10-08
+
+### Feature — WhatsApp- und Anruf-Button in der mobilen Kopfzeile
+
+**Symptom / Description**
+Auf dem Handy war der WhatsApp-Kontakt nur im aufgeklappten Menü erreichbar. Er soll direkt
+oben neben dem Hell/Dunkel-Schalter sichtbar sein, zusätzlich mit einem Telefon-Button, der
+die Nummer sofort in der Standard-Telefon-App zum Anrufen öffnet.
+
+**Fix / Change**
+- Mobile Kopfzeile (unter `lg`): neue Buttons „Anrufen“ (`tel:+4915777268389`, Lucide-Icon
+  `Phone`) und WhatsApp (`wa.me`-Link) links vom Theme-Schalter, im gleichen Stil wie
+  Theme- und Menü-Button.
+- Telefonnummer ist dieselbe wie die WhatsApp-Nummer; die Desktop-Leiste bleibt unverändert.
+
+**Affected Files**
+- `src/components/Navbar.tsx` — Anruf- und WhatsApp-Button in der mobilen Aktionsleiste
+
 ## 2026-10-07
 
 ### Refactor — Touren-/Schichtübersicht („Tourenstatus“) entfernt
