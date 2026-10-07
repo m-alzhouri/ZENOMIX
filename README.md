@@ -37,7 +37,6 @@ Built as a React 19 + TypeScript SPA with Vite and Tailwind CSS v4, fully trilin
 | **Hero** | Full-screen section with a looping background video (`public/videos/hero-background.mp4`) and CTAs into the tracking/tech page. |
 | **About** | Company story plus three pillars: dependability inside logistics networks, digital dispatch, trained drivers. |
 | **Services** | Four service cards in a 2×2 grid (Logistics, Fleet & Shift Management, Courier & Parcel, Moving Help) with a detail modal that locks body scroll while open. |
-| **Transport cost calculator** | Interactive quote estimator for the light-commercial segment: assignment type (direct run / standard round / overnight / groupage), weight in kg and distance in km, plus temperature-control, high-value and carbon-contribution add-ons. Produces a cost breakdown in EUR, a lead-time estimate, a CO₂ saving and a generated reference ID. |
 | **Route & shift overview** | Search by route number against a mock in-memory database, with preset routes, status badges, a progress bar and a full shift log. Reflects what the in-house software actually does — organising drivers, shifts and routes, not tracking individual parcels. |
 | **Fleet** | Filterable catalogue of vehicles under 3.5 t (all / large van 3.5 t / panel van / box van + electric) with a metric spec panel for the selected vehicle. |
 | **Reviews & FAQ page** | Testimonial carousel plus an animated accordion FAQ. |
@@ -119,7 +118,7 @@ project runs inside Google AI Studio:
     ├── assets/                # Logos and language flags
     └── components/
         ├── Navbar.tsx  Hero.tsx  About.tsx  Services.tsx
-        ├── Calculator.tsx  Tracker.tsx  Fleet.tsx
+        ├── Tracker.tsx  Fleet.tsx
         ├── ReviewsFaqPage.tsx  Faq.tsx  Contact.tsx
         ├── Impressum.tsx  Datenschutz.tsx
         └── Footer.tsx  Logo.tsx
@@ -134,7 +133,7 @@ There is no router library. [`App.tsx`](src/App.tsx) holds a `currentPage` state
 matching branch:
 
 - **home** → `Hero` + `About` + `Services` + `Contact`
-- **tracking-tech** → `Calculator` + `Tracker` + `Fleet`
+- **tracking-tech** → `Tracker` + `Fleet`
 - **impressum** / **datenschutz** → legal pages with a back button
 - **reviews-faq** → testimonials + FAQ
 
@@ -149,7 +148,7 @@ An `IntersectionObserver` (`rootMargin: '-30% 0px -50% 0px'`) watches the `home`
 
 ### Section IDs
 
-`home`, `about`, `services`, `contact`, `calculator`, `tracker`, `fleet`, `faq` — used both
+`home`, `about`, `services`, `contact`, `tracker`, `fleet`, `faq` — used both
 for anchor navigation and by the scroll-spy observer.
 
 ## Internationalisation
@@ -206,10 +205,6 @@ these route numbers in the route & shift overview:
 | `ZN-982-A3` | Direct run (same-day courier), Düsseldorf depot → Neuss | Out for Delivery |
 | `ZN-104-C8` | Moving help (private move), Duisburg-Neudorf → Düsseldorf-Bilk | In Transit |
 | `ZN-334-D9` | Moving help (office move), Essen-Rüttenscheid → Essen-Süd | Delivered |
-
-The calculator is likewise a client-side estimate: per-tier rates on kg and km, surcharges for
-temperature control (+25 %) and high-value securing (+15 %), a flat carbon contribution with a
-rebate, and a €25 minimum dispatch rate. Number formatting follows the active locale.
 
 ## Contact form
 

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
-import Calculator from './components/Calculator';
 import Tracker from './components/Tracker';
 import Fleet from './components/Fleet';
 import About from './components/About';
@@ -125,7 +124,7 @@ export default function App() {
       return;
     }
 
-    const trackingTechSections = ['tracking-tech', 'calculator', 'tracker', 'fleet'];
+    const trackingTechSections = ['tracking-tech', 'tracker', 'fleet'];
     const isTrackingTechTarget = trackingTechSections.includes(sectionId);
 
     if (isTrackingTechTarget) {
@@ -223,8 +222,6 @@ export default function App() {
 
         {currentPage === 'tracking-tech' && (
           <div className="pt-16">
-            <Calculator />
-
             <Tracker />
 
             <Fleet />

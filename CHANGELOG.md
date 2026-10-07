@@ -1,5 +1,34 @@
 # Changelog
 
+## 2026-10-07
+
+### Refactor — Transportkosten-Rechner entfernt
+
+**Symptom / Description**
+Der Transportkosten-Rechner wird derzeit nicht gebraucht und soll vollständig aus der Webapp
+verschwinden — inklusive aller Buttons und Links, die dorthin führen.
+
+**Fix / Change**
+- Komponente `Calculator.tsx` gelöscht und aus der Tracking-/Tech-Seite entfernt.
+- Hero: Button „Transportkosten berechnen" entfernt; „Tourenstatus ansehen" ist jetzt der
+  primäre (blaue) Button.
+- Footer: Menülink „Kostenrechner" entfernt.
+- Leistungs-Modal: „Angebot anfragen" scrollt jetzt zum Kontaktformular statt zum (auf der
+  Startseite ohnehin nicht vorhandenen) Rechner.
+- Alle `calc_*`-Übersetzungen sowie `nav_calculator` und `hero_btn_calc` in DE/EN/AR gelöscht.
+- Datenschutzerklärung Abschnitt 9 auf die Touren-Demo reduziert (DE/EN/AR).
+- README um die Rechner-Beschreibung bereinigt.
+
+**Affected Files**
+- `src/components/Calculator.tsx` — gelöscht
+- `src/App.tsx` — Import, Rendering und Section-ID `calculator` entfernt
+- `src/components/Hero.tsx` — Rechner-Button entfernt
+- `src/components/Footer.tsx` — Menülink entfernt
+- `src/components/Services.tsx` — CTA im Modal führt zum Kontaktformular
+- `src/components/Datenschutz.tsx` — Abschnitt 9 ohne Kostenrechner, Icon `Route`
+- `src/translations.ts` — Rechner-Texte in allen drei Sprachen entfernt
+- `README.md` — Feature-Tabelle, Dateibaum, Routing und Section-IDs aktualisiert
+
 ## 2026-10-03
 
 ### Fix — Wettbewerbsrecht: Bewertungen ausgeblendet, CO2-Aussagen entfernt, Bruttopreise im Rechner

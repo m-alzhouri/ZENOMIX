@@ -50,15 +50,8 @@ export default function Hero({ onNavigate }: HeroProps) {
                 onClick={() => onNavigate('tracking-tech')}
                 className="flex items-center justify-center gap-2.5 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full shadow-md shadow-blue-500/10 transition-all duration-300 hover:scale-[1.02] cursor-pointer"
               >
-                {t('hero_btn_calc')}
-                <ArrowRight className={`h-[18px] w-[18px] ${isRtl ? 'rotate-180' : ''}`} />
-              </button>
-
-              <button
-                onClick={() => onNavigate('tracking-tech')}
-                className="flex items-center justify-center gap-2.5 bg-white hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full shadow-sm transition-all duration-300 hover:scale-[1.02] cursor-pointer"
-              >
                 {t('hero_btn_track')}
+                <ArrowRight className={`h-[18px] w-[18px] ${isRtl ? 'rotate-180' : ''}`} />
               </button>
             </div>
 

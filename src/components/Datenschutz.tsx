@@ -2,7 +2,7 @@ import React from 'react';
 import { useLanguage } from '../LanguageContext';
 import {
   ArrowLeft, Shield, Building2, Eye, Server, Lock, HardDrive, Type, Mail, MessageCircle,
-  Calculator, UserCheck, ShieldAlert, Scale, Info, LucideIcon
+  Route, UserCheck, ShieldAlert, Scale, Info, LucideIcon
 } from 'lucide-react';
 
 interface DatenschutzProps {
@@ -128,10 +128,10 @@ export default function Datenschutz({ onBack }: DatenschutzProps) {
           ]
         },
         {
-          icon: Calculator,
-          title: '9. Kostenrechner und Touren-Demo',
+          icon: Route,
+          title: '9. Touren-Demo',
           paragraphs: [
-            'Der Kostenrechner und die Touren- und Schichtübersicht laufen vollständig in Ihrem Browser. Ihre Eingaben werden weder an uns noch an Dritte übertragen und nicht gespeichert. Die angezeigten Tour-Nummern und Einsatzprotokolle sind lokal erzeugte Beispieldaten; echte Auftrags-, Fahrer- oder Bewegungsdaten werden nicht verarbeitet.'
+            'Die Touren- und Schichtübersicht läuft vollständig in Ihrem Browser. Ihre Eingaben werden weder an uns noch an Dritte übertragen und nicht gespeichert. Die angezeigten Tour-Nummern und Einsatzprotokolle sind lokal erzeugte Beispieldaten; echte Auftrags-, Fahrer- oder Bewegungsdaten werden nicht verarbeitet.'
           ]
         },
         {
@@ -246,10 +246,10 @@ export default function Datenschutz({ onBack }: DatenschutzProps) {
           ]
         },
         {
-          icon: Calculator,
-          title: '9. Cost calculator and route demo',
+          icon: Route,
+          title: '9. Route demo',
           paragraphs: [
-            'The cost calculator and the route and shift overview run entirely in your browser. Your input is not transmitted to us or to third parties and is not stored. The route numbers and dispatch logs shown are sample data generated locally; no real order, driver or movement data is processed.'
+            'The route and shift overview runs entirely in your browser. Your input is not transmitted to us or to third parties and is not stored. The route numbers and dispatch logs shown are sample data generated locally; no real order, driver or movement data is processed.'
           ]
         },
         {
@@ -364,10 +364,10 @@ export default function Datenschutz({ onBack }: DatenschutzProps) {
           ]
         },
         {
-          icon: Calculator,
-          title: '9. حاسبة التكلفة والعرض التوضيحي للجولات',
+          icon: Route,
+          title: '9. العرض التوضيحي للجولات',
           paragraphs: [
-            'تعمل حاسبة التكلفة ونظرة الجولات والورديات بالكامل داخل متصفحك. لا تُرسَل مدخلاتك إلينا أو إلى أي طرف ثالث ولا تُحفظ. أرقام الجولات وسجلات التشغيل المعروضة هي بيانات نموذجية تُنشأ محلياً، ولا تتم معالجة أي بيانات حقيقية للطلبات أو السائقين أو التنقلات.'
+            'تعمل نظرة الجولات والورديات بالكامل داخل متصفحك. لا تُرسَل مدخلاتك إلينا أو إلى أي طرف ثالث ولا تُحفظ. أرقام الجولات وسجلات التشغيل المعروضة هي بيانات نموذجية تُنشأ محلياً، ولا تتم معالجة أي بيانات حقيقية للطلبات أو السائقين أو التنقلات.'
           ]
         },
         {

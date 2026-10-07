@@ -212,8 +212,8 @@ export default function Services() {
                 <button
                   onClick={() => {
                     setSelectedService(null);
-                    // scroll to calculator
-                    const element = document.getElementById('calculator');
+                    // scroll to contact form
+                    const element = document.getElementById('contact');
                     if (element) {
                       element.scrollIntoView({ behavior: 'smooth' });
                     }
