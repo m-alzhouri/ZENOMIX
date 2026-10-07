@@ -1,12 +1,8 @@
 import React from 'react';
-import { ArrowRight, ShieldCheck, Zap, Globe } from 'lucide-react';
+import { ShieldCheck, Zap, Globe } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 
-interface HeroProps {
-  onNavigate: (id: string) => void;
-}
-
-export default function Hero({ onNavigate }: HeroProps) {
+export default function Hero() {
   const { t, isRtl } = useLanguage();
   const heroVideoSrc = `${import.meta.env.BASE_URL}videos/hero-background.mp4`;
 
@@ -44,16 +40,6 @@ export default function Hero({ onNavigate }: HeroProps) {
             <p className="text-white/95 dark:text-slate-400 text-sm sm:text-base lg:text-lg max-w-2xl leading-relaxed font-normal">
               {t('hero_subtitle')}
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <button
-                onClick={() => onNavigate('tracking-tech')}
-                className="flex items-center justify-center gap-2.5 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full shadow-md shadow-blue-500/10 transition-all duration-300 hover:scale-[1.02] cursor-pointer"
-              >
-                {t('hero_btn_track')}
-                <ArrowRight className={`h-[18px] w-[18px] ${isRtl ? 'rotate-180' : ''}`} />
-              </button>
-            </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-6 border-t border-slate-200 dark:border-slate-800 w-full">
               <div className="flex items-start gap-2.5">

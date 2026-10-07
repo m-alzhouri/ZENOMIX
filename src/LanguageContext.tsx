@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { enTranslations, arTranslations, deTranslations, servicesData_ar, servicesData_de, fleetData_ar, fleetData_de, testimonialsData_ar, testimonialsData_de, mockTrackingDatabase_ar, mockTrackingDatabase_de } from './translations';
-import { servicesData, fleetData, testimonialsData, mockTrackingDatabase } from './data';
-import { ServiceItem, FleetVehicle, Testimonial, TrackingData } from './types';
+import { enTranslations, arTranslations, deTranslations, servicesData_ar, servicesData_de, fleetData_ar, fleetData_de, testimonialsData_ar, testimonialsData_de } from './translations';
+import { servicesData, fleetData, testimonialsData } from './data';
+import { ServiceItem, FleetVehicle, Testimonial } from './types';
 
 type Language = 'en' | 'ar' | 'de';
 
@@ -13,7 +13,6 @@ interface LanguageContextProps {
   services: ServiceItem[];
   fleet: FleetVehicle[];
   testimonials: Testimonial[];
-  trackingDb: Record<string, TrackingData>;
 }
 
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
@@ -55,12 +54,12 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   // Select appropriate collections based on language
   const dataMap = {
-    en: { services: servicesData, fleet: fleetData, testimonials: testimonialsData, trackingDb: mockTrackingDatabase },
-    ar: { services: servicesData_ar, fleet: fleetData_ar, testimonials: testimonialsData_ar, trackingDb: mockTrackingDatabase_ar },
-    de: { services: servicesData_de, fleet: fleetData_de, testimonials: testimonialsData_de, trackingDb: mockTrackingDatabase_de },
+    en: { services: servicesData, fleet: fleetData, testimonials: testimonialsData },
+    ar: { services: servicesData_ar, fleet: fleetData_ar, testimonials: testimonialsData_ar },
+    de: { services: servicesData_de, fleet: fleetData_de, testimonials: testimonialsData_de },
   };
 
-  const { services, fleet, testimonials, trackingDb } = dataMap[language];
+  const { services, fleet, testimonials } = dataMap[language];
 
   return (
     <LanguageContext.Provider
@@ -72,7 +71,6 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
         services,
         fleet,
         testimonials,
-        trackingDb,
       }}
     >
       {children}

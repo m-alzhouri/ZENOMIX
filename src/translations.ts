@@ -1,23 +1,20 @@
-import { ServiceItem, FleetVehicle, Testimonial, TrackingData } from './types';
+import { ServiceItem, FleetVehicle, Testimonial } from './types';
 
 export const enTranslations = {
   // nav
   nav_home: 'Home',
   nav_services: 'Services',
   nav_tracking_tech: 'Dispatch & Technology',
-  nav_tracker: 'Route Status',
   nav_fleet: 'Fleet',
   nav_about: 'About Us',
   nav_faq: 'FAQ',
   nav_contact: 'Contact',
-  nav_track_btn: 'Check Route',
 
   // hero
   hero_badge: 'TRANSPORT & LOGISTICS UP TO 3.5 T',
   hero_title_1: 'We handle every transport need in the',
   hero_title_2: 'light-commercial sector',
   hero_subtitle: 'Zenomix GbR is your partner for logistics, courier and parcel services and moving help. We operate exclusively with vehicles under 3.5 tonnes — dispatched through our own fleet and shift management software.',
-  hero_btn_track: 'View Route Status',
   hero_feat1_title: 'Dependable',
   hero_feat1_desc: 'Insured & inspected',
   hero_feat2_title: 'Available 24/7',
@@ -40,33 +37,6 @@ export const enTranslations = {
   services_modal_insurance: 'Every assignment is carried out with valid goods-in-transit insurance in place.',
   services_modal_quote: 'Request a Quote',
   services_modal_close: 'Close service details',
-
-  // tracker
-  tracker_badge: 'LIVE DISPATCH',
-  tracker_title: 'Route and shift overview in real time',
-  tracker_subtitle: 'Our own software brings drivers, shifts and routes together in one place. Enter a route number to review the assignment log, its status and the planned end of shift.',
-  tracker_search_title: 'Route Search',
-  tracker_search_placeholder: 'e.g. ZN-982-A3',
-  tracker_active_routes: 'Active Demo Routes',
-  tracker_routes_desc: 'Select a stored route number to load its assignment log in the dispatch view:',
-  tracker_copy_id: 'Copy number',
-  tracker_copied: 'Copied',
-  tracker_no_manifest: 'No route loaded',
-  tracker_no_manifest_desc: 'Pick one of the demo routes on the left, or enter a valid route number in the search field above.',
-  tracker_manifest_bill: 'Active Route',
-  tracker_progress: 'ROUTE PROGRESS',
-  tracker_complete: 'COMPLETE',
-  tracker_origin: 'Departure Depot',
-  tracker_destination: 'Destination Area',
-  tracker_sender: 'Client',
-  tracker_receiver: 'Vehicle & Driver',
-  tracker_class: 'Assignment Type',
-  tracker_eta: 'Planned End of Route',
-  tracker_checkpoint_title: 'Shift Log & Assignment Record',
-  tracker_status_delivered: 'Completed',
-  tracker_status_out_delivery: 'Out for Delivery',
-  tracker_status_in_transit: 'On Assignment',
-  tracker_status_pending: 'Scheduled',
 
   // fleet
   fleet_badge: 'FLEET UP TO 3.5 T',
@@ -191,19 +161,16 @@ export const arTranslations: typeof enTranslations = {
   nav_home: 'الرئيسية',
   nav_services: 'خدماتنا',
   nav_tracking_tech: 'التشغيل والتقنية',
-  nav_tracker: 'حالة المهمة',
   nav_fleet: 'أسطول المركبات',
   nav_about: 'من نحن',
   nav_faq: 'الأسئلة الشائعة',
   nav_contact: 'اتصل بنا',
-  nav_track_btn: 'تتبع المهمة',
 
   // hero
   hero_badge: 'نقل وخدمات لوجستية حتى ٣٫٥ طن',
   hero_title_1: 'ننفّذ جميع مهام النقل في',
   hero_title_2: 'قطاع المركبات التجارية الخفيفة',
   hero_subtitle: 'شركة Zenomix GbR شريككم في الخدمات اللوجستية، وخدمات البريد والطرود، والمساعدة في نقل الأثاث. نعمل حصراً بمركبات لا يتجاوز وزنها ٣٫٥ طن، وتُدار عملياتنا عبر برنامجنا الخاص لإدارة الأسطول والورديات.',
-  hero_btn_track: 'عرض حالة المهمة',
   hero_feat1_title: 'موثوقية',
   hero_feat1_desc: 'مؤمّنة ومفحوصة',
   hero_feat2_title: 'متاحون 24/7',
@@ -226,33 +193,6 @@ export const arTranslations: typeof enTranslations = {
   services_modal_insurance: 'تُنفَّذ جميع المهام بوجود تأمين ساري على البضائع المنقولة.',
   services_modal_quote: 'اطلب عرض سعر',
   services_modal_close: 'إغلاق تفاصيل الخدمة',
-
-  // tracker
-  tracker_badge: 'إدارة التشغيل المباشرة',
-  tracker_title: 'متابعة المهام والورديات لحظياً',
-  tracker_subtitle: 'يجمع برنامجنا الخاص السائقين والورديات والمهام في مكان واحد. أدخل رقم المهمة لعرض سجل التنفيذ والحالة والموعد المخطط لانتهاء الوردية.',
-  tracker_search_title: 'البحث عن مهمة',
-  tracker_search_placeholder: 'مثال: ZN-982-A3',
-  tracker_active_routes: 'مهام تجريبية نشطة',
-  tracker_routes_desc: 'اختر رقم مهمة محفوظاً لعرض سجل التنفيذ في لوحة التشغيل:',
-  tracker_copy_id: 'نسخ الرقم',
-  tracker_copied: 'تم النسخ',
-  tracker_no_manifest: 'لم يتم تحميل أي مهمة',
-  tracker_no_manifest_desc: 'اختر إحدى المهام التجريبية من اليمين، أو أدخل رقم مهمة صالحاً في حقل البحث أعلاه.',
-  tracker_manifest_bill: 'المهمة النشطة',
-  tracker_progress: 'نسبة إنجاز المهمة',
-  tracker_complete: 'مكتملة',
-  tracker_origin: 'نقطة الانطلاق',
-  tracker_destination: 'منطقة الوجهة',
-  tracker_sender: 'جهة التكليف',
-  tracker_receiver: 'المركبة والسائق',
-  tracker_class: 'نوع المهمة',
-  tracker_eta: 'الانتهاء المخطط للمهمة',
-  tracker_checkpoint_title: 'سجل الوردية ومحطات التنفيذ',
-  tracker_status_delivered: 'مكتملة',
-  tracker_status_out_delivery: 'قيد التسليم',
-  tracker_status_in_transit: 'قيد التنفيذ',
-  tracker_status_pending: 'مجدولة',
 
   // fleet
   fleet_badge: 'أسطول حتى ٣٫٥ طن',
@@ -525,95 +465,21 @@ export const testimonialsData_ar: Testimonial[] = [
   }
 ];
 
-export const mockTrackingDatabase_ar: Record<string, TrackingData> = {
-  'ZN-772-B1': {
-    trackingId: 'ZN-772-B1',
-    origin: 'مستودع كولونيا - أوسندورف',
-    destination: 'منطقة التوصيل شمال كولونيا',
-    sender: 'Nord-West Paketlogistik',
-    receiver: 'Sprinter Maxi · السائق م. كيلر',
-    serviceType: 'جولة توصيل (تعاقد من الباطن)',
-    estimatedDelivery: 'اليوم، ١٧:٣٠',
-    currentStatus: 'In Transit',
-    progressPercentage: 65,
-    history: [
-      { step: 1, location: 'مستودع كولونيا - أوسندورف', time: 'اليوم، ٠٦:٠٠', status: 'بداية الوردية', details: 'تسجيل حضور السائق واستلام المركبة وإتمام الفحص الظاهري.' },
-      { step: 2, location: 'مستودع كولونيا - أوسندورف', time: 'اليوم، ٠٧:١٥', status: 'تأكيد التحميل', details: 'تم تحميل الجولة ومطابقتها مع كشف العميل.' },
-      { step: 3, location: 'شمال كولونيا، القطاع ١', time: 'اليوم، ١١:٤٠', status: 'اكتمال القطاع ١', details: 'اكتمل قطاع التوصيل الأول وأُعيدت جدولة المحطات المتبقية تلقائياً.' },
-      { step: 4, location: 'شمال كولونيا، القطاع ٢', time: 'قيد الانتظار', status: 'القطاع ٢ قيد التنفيذ', details: 'قطاع التوصيل الثاني جارٍ، وتنتهي الوردية الساعة ١٧:٣٠.' },
-    ]
-  },
-  'ZN-982-A3': {
-    trackingId: 'ZN-982-A3',
-    origin: 'مستودع دوسلدورف',
-    destination: 'موقع العميل، نويس',
-    sender: 'Vance Elektronik GmbH',
-    receiver: 'Cargo Van · السائقة س. عاري',
-    serviceType: 'رحلة مباشرة (بريد في نفس اليوم)',
-    estimatedDelivery: 'اليوم، ١٥:٤٠',
-    currentStatus: 'Out for Delivery',
-    progressPercentage: 90,
-    history: [
-      { step: 1, location: 'قسم التشغيل، دوسلدورف', time: 'اليوم، ١٢:٠٥', status: 'قبول الطلب', details: 'تم قبول الرحلة المباشرة وإسنادها إلى وردية متاحة.' },
-      { step: 2, location: 'مستودع دوسلدورف', time: 'اليوم، ١٢:٥٠', status: 'تم الاستلام', details: 'تم استلام الشحنة وتأمينها، والسائقة في الطريق.' },
-      { step: 3, location: 'الطريق B7 باتجاه نويس', time: 'اليوم، ١٤:٢٠', status: 'في الطريق', details: 'الرحلة تسير وفق الخطة دون أي انحراف.' },
-      { step: 4, location: 'موقع العميل، نويس', time: 'اليوم، ١٥:٢٠', status: 'قيد التسليم', details: 'الوصول إلى منطقة التسليم والتحضير لعملية التسليم.' },
-    ]
-  },
-  'ZN-104-C8': {
-    trackingId: 'ZN-104-C8',
-    origin: 'العنوان القديم، دويسبورغ - نويدورف',
-    destination: 'العنوان الجديد، دوسلدورف - بيلك',
-    sender: 'عميل خاص',
-    receiver: 'Box Van · السائق ت. أوز + عاملان',
-    serviceType: 'مساعدة في نقل الأثاث (نقل منزل)',
-    estimatedDelivery: 'اليوم، ١٦:٠٠',
-    currentStatus: 'In Transit',
-    progressPercentage: 50,
-    history: [
-      { step: 1, location: 'مرآب دويسبورغ', time: 'اليوم، ٠٧:٣٠', status: 'بداية الوردية', details: 'فحص الشاحنة الصندوقية وتحميل البطانيات والأحزمة وعربات النقل، وتسجيل حضور فريق من ثلاثة أشخاص.' },
-      { step: 2, location: 'العنوان القديم، دويسبورغ - نويدورف', time: 'اليوم، ٠٨:١٥', status: 'فكّ الأثاث', details: 'تم فكّ الخزائن والأسرّة، والصناديق جاهزة للتحميل.' },
-      { step: 3, location: 'العنوان القديم، دويسبورغ - نويدورف', time: 'اليوم، ١١:٣٠', status: 'اكتمال التحميل', details: 'تم تحميل جميع القطع وتثبيتها، والانطلاق نحو دوسلدورف.' },
-      { step: 4, location: 'العنوان الجديد، دوسلدورف - بيلك', time: 'قيد الانتظار', status: 'التفريغ والتركيب', details: 'التفريغ وإعادة تركيب الأثاث مجدولان، والانتهاء مخطط الساعة ١٦:٠٠.' },
-    ]
-  },
-  'ZN-334-D9': {
-    trackingId: 'ZN-334-D9',
-    origin: 'المكتب، إيسن - روتنشايد',
-    destination: 'المكتب الجديد، جنوب إيسن',
-    sender: 'Steuerbüro Lindner',
-    receiver: 'Box Van · السائقة ل. براون + ٣ عمّال',
-    serviceType: 'مساعدة في نقل الأثاث (نقل مكتب)',
-    estimatedDelivery: 'اليوم، ١٥:٠٠',
-    currentStatus: 'Delivered',
-    progressPercentage: 100,
-    history: [
-      { step: 1, location: 'المرآب، إيسن', time: 'اليوم، ٠٦:٣٠', status: 'بداية الوردية', details: 'فحص الرافعة الخلفية وتسجيل حضور فريق النقل المكوّن من أربعة أشخاص.' },
-      { step: 2, location: 'المكتب، إيسن - روتنشايد', time: 'اليوم، ٠٧:١٥', status: 'فكّ محطات العمل', details: 'تم فكّ المكاتب والخزائن، وتغليف الأجهزة التقنية وترقيمها.' },
-      { step: 3, location: 'في الطريق، جنوب إيسن', time: 'اليوم، ١٠:٤٠', status: 'في الطريق', details: 'الحمولة الثانية في الطريق، والرحلة تسير وفق الخطة.' },
-      { step: 4, location: 'المكتب الجديد، جنوب إيسن', time: 'اليوم، ١٤:٥٠', status: 'اكتمل النقل', details: 'أُعيد تركيب الأثاث وتجهيز محطات العمل، ووقّع العميل على محضر التسليم.' },
-    ]
-  }
-};
-
 export const deTranslations: typeof enTranslations = {
   // nav
   nav_home: 'Startseite',
   nav_services: 'Leistungen',
   nav_tracking_tech: 'Disposition & Technik',
-  nav_tracker: 'Tourenstatus',
   nav_fleet: 'Fuhrpark',
   nav_about: 'Über uns',
   nav_faq: 'FAQ',
   nav_contact: 'Kontakt',
-  nav_track_btn: 'Tour prüfen',
 
   // hero
   hero_badge: 'TRANSPORT & LOGISTIK BIS 3,5 T',
   hero_title_1: 'Wir übernehmen alle Transportaufgaben im',
   hero_title_2: 'leichten Nutzfahrzeugbereich',
   hero_subtitle: 'Die Zenomix GbR ist Ihr Partner für Logistik, Kurier- und Paketdienst sowie Umzugshilfe. Wir fahren ausschließlich mit Fahrzeugen unter 3,5 t – disponiert über unsere eigene Software für Flotten- und Schichtmanagement.',
-  hero_btn_track: 'Tourenstatus ansehen',
   hero_feat1_title: 'Verlässlich',
   hero_feat1_desc: 'Versichert & geprüft',
   hero_feat2_title: '24/7 erreichbar',
@@ -636,33 +502,6 @@ export const deTranslations: typeof enTranslations = {
   services_modal_insurance: 'Alle Aufträge werden mit gültiger Transportversicherung ausgeführt.',
   services_modal_quote: 'Angebot anfragen',
   services_modal_close: 'Servicedetails schließen',
-
-  // tracker
-  tracker_badge: 'LIVE-DISPOSITION',
-  tracker_title: 'Touren- und Schichtübersicht in Echtzeit',
-  tracker_subtitle: 'Unsere eigene Software bündelt Fahrer, Schichten und Touren an einem Ort. Geben Sie eine Tour-Nummer ein, um Einsatzverlauf, Status und das geplante Tourende einzusehen.',
-  tracker_search_title: 'Tour-Suche',
-  tracker_search_placeholder: 'z. B. ZN-982-A3',
-  tracker_active_routes: 'Aktive Demo-Touren',
-  tracker_routes_desc: 'Wählen Sie eine hinterlegte Tour-Nummer, um den Einsatzverlauf in der Disposition zu laden:',
-  tracker_copy_id: 'Nummer kopieren',
-  tracker_copied: 'Kopiert',
-  tracker_no_manifest: 'Keine Tour geladen',
-  tracker_no_manifest_desc: 'Wählen Sie links eine der Demo-Touren aus oder geben Sie oben eine gültige Tour-Nummer ein.',
-  tracker_manifest_bill: 'Aktive Tour',
-  tracker_progress: 'TOURFORTSCHRITT',
-  tracker_complete: 'ABGESCHLOSSEN',
-  tracker_origin: 'Startdepot',
-  tracker_destination: 'Zielgebiet',
-  tracker_sender: 'Auftraggeber',
-  tracker_receiver: 'Fahrzeug & Fahrer',
-  tracker_class: 'Einsatzart',
-  tracker_eta: 'Geplantes Tourende',
-  tracker_checkpoint_title: 'Schichtverlauf & Einsatzprotokoll',
-  tracker_status_delivered: 'Abgeschlossen',
-  tracker_status_out_delivery: 'In Zustellung',
-  tracker_status_in_transit: 'Im Einsatz',
-  tracker_status_pending: 'Geplant',
 
   // fleet
   fleet_badge: 'FUHRPARK BIS 3,5 T',
@@ -934,74 +773,3 @@ export const testimonialsData_de: Testimonial[] = [
     rating: 5
   }
 ];
-
-export const mockTrackingDatabase_de: Record<string, TrackingData> = {
-  'ZN-772-B1': {
-    trackingId: 'ZN-772-B1',
-    origin: 'Depot Köln-Ossendorf',
-    destination: 'Zustellgebiet Köln Nord',
-    sender: 'Nord-West Paketlogistik',
-    receiver: 'Sprinter Maxi · Fahrer M. Keller',
-    serviceType: 'Zustelltour (Subunternehmer)',
-    estimatedDelivery: 'Heute, 17:30 Uhr',
-    currentStatus: 'In Transit',
-    progressPercentage: 65,
-    history: [
-      { step: 1, location: 'Depot Köln-Ossendorf', time: 'Heute, 06:00', status: 'Schichtbeginn', details: 'Fahrer eingecheckt, Fahrzeugübernahme und Abfahrtskontrolle abgeschlossen.' },
-      { step: 2, location: 'Depot Köln-Ossendorf', time: 'Heute, 07:15', status: 'Beladung bestätigt', details: 'Tour beladen und gegen die Auftraggeberliste abgeglichen.' },
-      { step: 3, location: 'Köln Nord, Block 1', time: 'Heute, 11:40', status: 'Block 1 abgeschlossen', details: 'Erster Zustellblock beendet, offene Stopps automatisch neu eingeplant.' },
-      { step: 4, location: 'Köln Nord, Block 2', time: 'Ausstehend', status: 'Block 2 läuft', details: 'Zweiter Zustellblock in Bearbeitung, Schichtende um 17:30 Uhr.' },
-    ]
-  },
-  'ZN-982-A3': {
-    trackingId: 'ZN-982-A3',
-    origin: 'Depot Düsseldorf',
-    destination: 'Kundenstandort Neuss',
-    sender: 'Vance Elektronik GmbH',
-    receiver: 'Cargo Kastenwagen · Fahrerin S. Ari',
-    serviceType: 'Direktfahrt (Sofortkurier)',
-    estimatedDelivery: 'Heute, 15:40 Uhr',
-    currentStatus: 'Out for Delivery',
-    progressPercentage: 90,
-    history: [
-      { step: 1, location: 'Disposition Düsseldorf', time: 'Heute, 12:05', status: 'Auftrag angenommen', details: 'Direktfahrt angenommen und einer freien Schicht zugewiesen.' },
-      { step: 2, location: 'Depot Düsseldorf', time: 'Heute, 12:50', status: 'Sendung übernommen', details: 'Sendung aufgenommen und gesichert, Fahrerin unterwegs.' },
-      { step: 3, location: 'B7 Richtung Neuss', time: 'Heute, 14:20', status: 'Unterwegs', details: 'Fahrt verläuft planmäßig, keine Abweichung gemeldet.' },
-      { step: 4, location: 'Kundenstandort Neuss', time: 'Heute, 15:20', status: 'In Zustellung', details: 'Zustellgebiet erreicht, Übergabe wird vorbereitet.' },
-    ]
-  },
-  'ZN-104-C8': {
-    trackingId: 'ZN-104-C8',
-    origin: 'Alte Adresse, Duisburg-Neudorf',
-    destination: 'Neue Adresse, Düsseldorf-Bilk',
-    sender: 'Privatkunde',
-    receiver: 'Koffer-Transporter · Fahrer T. Öz + 2 Helfer',
-    serviceType: 'Umzugshilfe (Privatumzug)',
-    estimatedDelivery: 'Heute, 16:00 Uhr',
-    currentStatus: 'In Transit',
-    progressPercentage: 50,
-    history: [
-      { step: 1, location: 'Betriebshof Duisburg', time: 'Heute, 07:30', status: 'Schichtbeginn', details: 'Koffer-Transporter geprüft, Decken, Gurte und Rollbretter geladen, Umzugsteam zu dritt eingecheckt.' },
-      { step: 2, location: 'Alte Adresse, Duisburg-Neudorf', time: 'Heute, 08:15', status: 'Möbel abgebaut', details: 'Schränke und Betten abgebaut, Kartons zum Verladen bereit.' },
-      { step: 3, location: 'Alte Adresse, Duisburg-Neudorf', time: 'Heute, 11:30', status: 'Beladung abgeschlossen', details: 'Alles verladen und gesichert, Abfahrt Richtung Düsseldorf.' },
-      { step: 4, location: 'Neue Adresse, Düsseldorf-Bilk', time: 'Ausstehend', status: 'Entladen & Aufbau', details: 'Entladen und Möbelaufbau eingeplant, Abschluss vorgesehen für 16:00 Uhr.' },
-    ]
-  },
-  'ZN-334-D9': {
-    trackingId: 'ZN-334-D9',
-    origin: 'Büro Essen-Rüttenscheid',
-    destination: 'Neues Büro Essen-Süd',
-    sender: 'Steuerbüro Lindner',
-    receiver: 'Koffer-Transporter · Fahrerin L. Braun + 3 Helfer',
-    serviceType: 'Umzugshilfe (Büroumzug)',
-    estimatedDelivery: 'Heute, 15:00 Uhr',
-    currentStatus: 'Delivered',
-    progressPercentage: 100,
-    history: [
-      { step: 1, location: 'Betriebshof Essen', time: 'Heute, 06:30', status: 'Schichtbeginn', details: 'Ladebordwand geprüft, Umzugsteam zu viert eingecheckt.' },
-      { step: 2, location: 'Büro Essen-Rüttenscheid', time: 'Heute, 07:15', status: 'Arbeitsplätze abgebaut', details: 'Schreibtische und Schränke abgebaut, IT-Geräte verpackt und beschriftet.' },
-      { step: 3, location: 'Unterwegs, Essen-Süd', time: 'Heute, 10:40', status: 'Unterwegs', details: 'Zweite Ladung unterwegs, Fahrt verläuft planmäßig.' },
-      { step: 4, location: 'Neues Büro Essen-Süd', time: 'Heute, 14:50', status: 'Umzug abgeschlossen', details: 'Möbel aufgebaut und Arbeitsplätze eingerichtet, Übergabe vom Auftraggeber abgezeichnet.' },
-    ]
-  }
-};

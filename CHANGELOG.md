@@ -2,6 +2,37 @@
 
 ## 2026-10-07
 
+### Refactor — Touren-/Schichtübersicht („Tourenstatus“) entfernt
+
+**Symptom / Description**
+Nach dem Kostenrechner sollen auch die Features „Tourenstatus ansehen“ und „Tour prüfen“
+komplett aus der Webapp verschwinden, inklusive aller Buttons und Links.
+
+**Fix / Change**
+- Komponente `Tracker.tsx` gelöscht; die Seite „Disposition & Technik“ zeigt nur noch den Fuhrpark.
+- Navbar: Button „Tour prüfen“ in Desktop-Leiste und mobilem Menü entfernt.
+- Hero: Button „Tourenstatus ansehen“ entfernt; der Hero hat damit keinen CTA-Button mehr
+  (`onNavigate`-Prop entfällt).
+- Footer: Menülink „Tourenstatus“ entfernt.
+- Demo-Touren (`mockTrackingDatabase` in EN/DE/AR), Typen `TrackingData`/`ShipmentStatus` und
+  `trackingDb` im `LanguageContext` gelöscht.
+- Alle `tracker_*`-Übersetzungen sowie `nav_tracker`, `nav_track_btn` und `hero_btn_track` gelöscht.
+- Datenschutzerklärung: Abschnitt 9 (Touren-Demo) entfernt, folgende Abschnitte auf 9–12
+  umnummeriert (DE/EN/AR).
+- README: Feature-Tabelle, Dateibaum, Routing, Section-IDs, i18n-Abschnitt und Demo-Daten bereinigt.
+
+**Affected Files**
+- `src/components/Tracker.tsx` — gelöscht
+- `src/App.tsx` — Import, Rendering und Section-ID `tracker` entfernt
+- `src/components/Navbar.tsx` — „Tour prüfen“-Buttons entfernt
+- `src/components/Hero.tsx` — Button-Leiste und `onNavigate`-Prop entfernt
+- `src/components/Footer.tsx` — Menülink entfernt
+- `src/components/Datenschutz.tsx` — Abschnitt 9 entfernt, Nummerierung angepasst
+- `src/LanguageContext.tsx` — `trackingDb` entfernt
+- `src/data.ts`, `src/translations.ts` — Demo-Touren und Tracker-Texte entfernt
+- `src/types.ts` — `TrackingData` und `ShipmentStatus` entfernt
+- `README.md` — Tracker-Beschreibung und Demo-Daten entfernt
+
 ### Refactor — Transportkosten-Rechner entfernt
 
 **Symptom / Description**

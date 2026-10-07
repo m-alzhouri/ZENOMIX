@@ -33,7 +33,6 @@ export default function Footer({ onNavigate, onNavigatePage, isDark = false }: F
     { label: t('nav_home'), id: 'home' },
     { label: t('nav_about'), id: 'about' },
     { label: t('nav_services'), id: 'services' },
-    { label: t('nav_tracker'), id: 'tracker' },
     { label: t('nav_fleet'), id: 'fleet' },
     { label: t('nav_contact'), id: 'contact' },
     { label: t('nav_faq'), id: 'reviews-faq' },

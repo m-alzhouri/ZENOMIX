@@ -34,10 +34,9 @@ Built as a React 19 + TypeScript SPA with Vite and Tailwind CSS v4, fully trilin
 
 | Area | Description |
 | --- | --- |
-| **Hero** | Full-screen section with a looping background video (`public/videos/hero-background.mp4`) and CTAs into the tracking/tech page. |
+| **Hero** | Full-screen section with a looping background video (`public/videos/hero-background.mp4`), headline and three feature highlights. |
 | **About** | Company story plus three pillars: dependability inside logistics networks, digital dispatch, trained drivers. |
 | **Services** | Four service cards in a 2×2 grid (Logistics, Fleet & Shift Management, Courier & Parcel, Moving Help) with a detail modal that locks body scroll while open. |
-| **Route & shift overview** | Search by route number against a mock in-memory database, with preset routes, status badges, a progress bar and a full shift log. Reflects what the in-house software actually does — organising drivers, shifts and routes, not tracking individual parcels. |
 | **Fleet** | Filterable catalogue of vehicles under 3.5 t (all / large van 3.5 t / panel van / box van + electric) with a metric spec panel for the selected vehicle. |
 | **Reviews & FAQ page** | Testimonial carousel plus an animated accordion FAQ. |
 | **Contact** | Validated contact form posting to Formspree, with a local session list of submissions. |
@@ -112,14 +111,13 @@ project runs inside Google AI Studio:
     ├── App.tsx                # Page router, scroll-spy, theme state, navigation
     ├── LanguageContext.tsx    # Language provider + useLanguage() hook
     ├── translations.ts        # en/ar/de string dictionaries + translated datasets
-    ├── data.ts                # English source data (services, fleet, testimonials, tracking)
+    ├── data.ts                # English source data (services, fleet, testimonials)
     ├── types.ts               # Shared TypeScript interfaces
     ├── index.css              # Tailwind v4 theme tokens, fonts, animations, scrollbars
     ├── assets/                # Logos and language flags
     └── components/
         ├── Navbar.tsx  Hero.tsx  About.tsx  Services.tsx
-        ├── Tracker.tsx  Fleet.tsx
-        ├── ReviewsFaqPage.tsx  Faq.tsx  Contact.tsx
+        ├── Fleet.tsx  ReviewsFaqPage.tsx  Faq.tsx  Contact.tsx
         ├── Impressum.tsx  Datenschutz.tsx
         └── Footer.tsx  Logo.tsx
 ```
@@ -133,7 +131,7 @@ There is no router library. [`App.tsx`](src/App.tsx) holds a `currentPage` state
 matching branch:
 
 - **home** → `Hero` + `About` + `Services` + `Contact`
-- **tracking-tech** → `Tracker` + `Fleet`
+- **tracking-tech** → `Fleet`
 - **impressum** / **datenschutz** → legal pages with a back button
 - **reviews-faq** → testimonials + FAQ
 
@@ -148,7 +146,7 @@ An `IntersectionObserver` (`rootMargin: '-30% 0px -50% 0px'`) watches the `home`
 
 ### Section IDs
 
-`home`, `about`, `services`, `contact`, `tracker`, `fleet`, `faq` — used both
+`home`, `about`, `services`, `contact`, `fleet`, `faq` — used both
 for anchor navigation and by the scroll-spy observer.
 
 ## Internationalisation
@@ -156,7 +154,7 @@ for anchor navigation and by the scroll-spy observer.
 `LanguageProvider` ([`src/LanguageContext.tsx`](src/LanguageContext.tsx)) exposes:
 
 ```ts
-const { language, changeLanguage, t, isRtl, services, fleet, testimonials, trackingDb }
+const { language, changeLanguage, t, isRtl, services, fleet, testimonials }
   = useLanguage();
 ```
 
@@ -168,12 +166,12 @@ const { language, changeLanguage, t, isRtl, services, fleet, testimonials, track
 - **Strings:** `t(key)` looks the key up in the active dictionary and falls back to English.
   `enTranslations` is the source of truth — `arTranslations` and `deTranslations` are typed
   as `typeof enTranslations`, so a missing key is a compile error.
-- **Datasets:** services, fleet, testimonials and the tracking database exist per language
+- **Datasets:** services, fleet and testimonials exist per language
   (`servicesData`, `servicesData_de`, `servicesData_ar`, …) and are swapped by the provider,
   so switching language re-translates content instantly. Components key their selection by
   **id** (e.g. `selectedVehicleId`) rather than by object, so the selection survives the swap.
 
-Adding a language means: add the code to the `Language` union, add a dictionary and the four
+Adding a language means: add the code to the `Language` union, add a dictionary and the three
 datasets in `translations.ts`, register them in `dataMap`, and add an entry with a flag to
 `languageOptions` in `Navbar.tsx`.
 
@@ -193,18 +191,6 @@ Design tokens (also in `index.css`):
 | `--color-brand-navy` | `#0f172a` |
 | `--color-brand-blue` | `#2563eb` |
 | `--color-brand-cyan` | `#3b82f6` |
-
-## Demo data
-
-All route data is mock data in [`src/data.ts`](src/data.ts) — there is no backend. Try
-these route numbers in the route & shift overview:
-
-| ID | Assignment | Status |
-| --- | --- | --- |
-| `ZN-772-B1` | Delivery round (subcontracted), Cologne-Ossendorf depot → Cologne North | In Transit |
-| `ZN-982-A3` | Direct run (same-day courier), Düsseldorf depot → Neuss | Out for Delivery |
-| `ZN-104-C8` | Moving help (private move), Duisburg-Neudorf → Düsseldorf-Bilk | In Transit |
-| `ZN-334-D9` | Moving help (office move), Essen-Rüttenscheid → Essen-Süd | Delivered |
 
 ## Contact form
 

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
-import Tracker from './components/Tracker';
 import Fleet from './components/Fleet';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -124,7 +123,7 @@ export default function App() {
       return;
     }
 
-    const trackingTechSections = ['tracking-tech', 'tracker', 'fleet'];
+    const trackingTechSections = ['tracking-tech', 'fleet'];
     const isTrackingTechTarget = trackingTechSections.includes(sectionId);
 
     if (isTrackingTechTarget) {
@@ -213,7 +212,7 @@ export default function App() {
       <main className="flex-grow">
         {currentPage === 'home' && (
           <>
-            <Hero onNavigate={handleNavigate} />
+            <Hero />
             <About />
             <Services />
             <Contact onOpenPrivacy={() => navigatePage('datenschutz')} />
@@ -222,8 +221,6 @@ export default function App() {
 
         {currentPage === 'tracking-tech' && (
           <div className="pt-16">
-            <Tracker />
-
             <Fleet />
           </div>
         )}

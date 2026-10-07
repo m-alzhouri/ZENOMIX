@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Logo from './Logo';
-import { Menu, X, ArrowRight, Sun, Moon, Globe, ChevronDown, Check } from 'lucide-react';
+import { Menu, X, Sun, Moon, Globe, ChevronDown, Check } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { motion, AnimatePresence } from 'motion/react';
 import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
@@ -211,14 +211,6 @@ export default function Navbar({ onNavigate, activeSection, isDark, onToggleDark
             >
               {isDark ? <Sun className="h-[18px] w-[18px] text-amber-500" /> : <Moon className="h-[18px] w-[18px] text-slate-600" />}
             </button>
-
-            <button
-              onClick={() => handleItemClick('tracker')}
-              className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-sm tracking-wide px-5 py-2 rounded-full shadow-md shadow-blue-500/15 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] cursor-pointer"
-            >
-              {t('nav_track_btn')}
-              <ArrowRight className={`h-[18px] w-[18px] transition-transform ${isRtl ? 'rotate-180' : ''}`} />
-            </button>
           </div>
 
           {/* Mobile Actions Container */}
@@ -372,15 +364,6 @@ export default function Navbar({ onNavigate, activeSection, isDark, onToggleDark
                     </div>
                   )}
                 </div>
-
-                <button
-                  type="button"
-                  onClick={() => handleItemClick('tracker')}
-                  className="w-full flex items-center justify-center gap-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xs uppercase tracking-wider py-4 rounded-2xl shadow-lg shadow-blue-500/20 transition-all duration-300 hover:scale-[1.02] cursor-pointer"
-                >
-                  {t('nav_track_btn')}
-                  <ArrowRight className={`h-4 w-4 ${isRtl ? 'rotate-180' : ''}`} />
-                </button>
               </div>
             </div>
           </motion.div>

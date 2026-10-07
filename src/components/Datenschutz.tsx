@@ -2,7 +2,7 @@ import React from 'react';
 import { useLanguage } from '../LanguageContext';
 import {
   ArrowLeft, Shield, Building2, Eye, Server, Lock, HardDrive, Type, Mail, MessageCircle,
-  Route, UserCheck, ShieldAlert, Scale, Info, LucideIcon
+  UserCheck, ShieldAlert, Scale, Info, LucideIcon
 } from 'lucide-react';
 
 interface DatenschutzProps {
@@ -128,15 +128,8 @@ export default function Datenschutz({ onBack }: DatenschutzProps) {
           ]
         },
         {
-          icon: Route,
-          title: '9. Touren-Demo',
-          paragraphs: [
-            'Die Touren- und Schichtübersicht läuft vollständig in Ihrem Browser. Ihre Eingaben werden weder an uns noch an Dritte übertragen und nicht gespeichert. Die angezeigten Tour-Nummern und Einsatzprotokolle sind lokal erzeugte Beispieldaten; echte Auftrags-, Fahrer- oder Bewegungsdaten werden nicht verarbeitet.'
-          ]
-        },
-        {
           icon: UserCheck,
-          title: '10. Ihre Rechte',
+          title: '9. Ihre Rechte',
           paragraphs: [
             'Sie haben im Rahmen der gesetzlichen Bestimmungen jederzeit das Recht auf:\n• Auskunft über Ihre bei uns gespeicherten Daten (Art. 15 DSGVO)\n• Berichtigung unrichtiger Daten (Art. 16 DSGVO)\n• Löschung (Art. 17 DSGVO)\n• Einschränkung der Verarbeitung (Art. 18 DSGVO)\n• Datenübertragbarkeit (Art. 20 DSGVO)\n• Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft (Art. 7 Abs. 3 DSGVO)',
             'Dafür genügt eine formlose Nachricht an info@zenomix.de oder an unsere oben genannte Anschrift.'
@@ -144,7 +137,7 @@ export default function Datenschutz({ onBack }: DatenschutzProps) {
         },
         {
           icon: ShieldAlert,
-          title: '11. Widerspruchsrecht (Art. 21 DSGVO)',
+          title: '10. Widerspruchsrecht (Art. 21 DSGVO)',
           highlight: true,
           paragraphs: [
             'Soweit wir Ihre Daten auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO verarbeiten, haben Sie das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit Widerspruch gegen diese Verarbeitung einzulegen. Wir verarbeiten die Daten dann nicht mehr, es sei denn, wir können zwingende schutzwürdige Gründe nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen, oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.'
@@ -152,7 +145,7 @@ export default function Datenschutz({ onBack }: DatenschutzProps) {
         },
         {
           icon: Scale,
-          title: '12. Beschwerderecht bei der Aufsichtsbehörde',
+          title: '11. Beschwerderecht bei der Aufsichtsbehörde',
           paragraphs: [
             'Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren (Art. 77 DSGVO). Für uns zuständig ist:',
             'Landesbeauftragte für den Datenschutz Niedersachsen\nPrinzenstraße 5\n30159 Hannover\nhttps://www.lfd.niedersachsen.de'
@@ -160,7 +153,7 @@ export default function Datenschutz({ onBack }: DatenschutzProps) {
         },
         {
           icon: Info,
-          title: '13. Weitere Hinweise',
+          title: '12. Weitere Hinweise',
           paragraphs: [
             'Sie sind weder gesetzlich noch vertraglich verpflichtet, uns personenbezogene Daten bereitzustellen. Ohne Name, E-Mail-Adresse und Nachricht können wir eine Anfrage über das Kontaktformular jedoch nicht bearbeiten.',
             'Eine automatisierte Entscheidungsfindung einschließlich Profiling (Art. 22 DSGVO) findet nicht statt.',
@@ -246,15 +239,8 @@ export default function Datenschutz({ onBack }: DatenschutzProps) {
           ]
         },
         {
-          icon: Route,
-          title: '9. Route demo',
-          paragraphs: [
-            'The route and shift overview runs entirely in your browser. Your input is not transmitted to us or to third parties and is not stored. The route numbers and dispatch logs shown are sample data generated locally; no real order, driver or movement data is processed.'
-          ]
-        },
-        {
           icon: UserCheck,
-          title: '10. Your rights',
+          title: '9. Your rights',
           paragraphs: [
             'Within the scope of the statutory provisions, you have the right at any time to:\n• access the data we hold about you (Art. 15 GDPR)\n• rectification of inaccurate data (Art. 16 GDPR)\n• erasure (Art. 17 GDPR)\n• restriction of processing (Art. 18 GDPR)\n• data portability (Art. 20 GDPR)\n• withdraw any consent given, with effect for the future (Art. 7(3) GDPR)',
             'An informal message to info@zenomix.de or to our postal address above is sufficient.'
@@ -262,7 +248,7 @@ export default function Datenschutz({ onBack }: DatenschutzProps) {
         },
         {
           icon: ShieldAlert,
-          title: '11. Right to object (Art. 21 GDPR)',
+          title: '10. Right to object (Art. 21 GDPR)',
           highlight: true,
           paragraphs: [
             'Where we process your data on the basis of Art. 6(1)(f) GDPR, you have the right to object to this processing at any time on grounds relating to your particular situation. We will then no longer process the data unless we can demonstrate compelling legitimate grounds that override your interests, rights and freedoms, or the processing serves the establishment, exercise or defence of legal claims.'
@@ -270,7 +256,7 @@ export default function Datenschutz({ onBack }: DatenschutzProps) {
         },
         {
           icon: Scale,
-          title: '12. Right to lodge a complaint',
+          title: '11. Right to lodge a complaint',
           paragraphs: [
             'You have the right to lodge a complaint with a data protection supervisory authority (Art. 77 GDPR). The authority responsible for us is:',
             'Landesbeauftragte für den Datenschutz Niedersachsen\nPrinzenstraße 5\n30159 Hannover, Germany\nhttps://www.lfd.niedersachsen.de'
@@ -278,7 +264,7 @@ export default function Datenschutz({ onBack }: DatenschutzProps) {
         },
         {
           icon: Info,
-          title: '13. Further information',
+          title: '12. Further information',
           paragraphs: [
             'You are not legally or contractually obliged to provide personal data. However, without your name, email address and message we cannot process an enquiry submitted via the contact form.',
             'No automated decision-making, including profiling (Art. 22 GDPR), takes place.',
@@ -364,15 +350,8 @@ export default function Datenschutz({ onBack }: DatenschutzProps) {
           ]
         },
         {
-          icon: Route,
-          title: '9. العرض التوضيحي للجولات',
-          paragraphs: [
-            'تعمل نظرة الجولات والورديات بالكامل داخل متصفحك. لا تُرسَل مدخلاتك إلينا أو إلى أي طرف ثالث ولا تُحفظ. أرقام الجولات وسجلات التشغيل المعروضة هي بيانات نموذجية تُنشأ محلياً، ولا تتم معالجة أي بيانات حقيقية للطلبات أو السائقين أو التنقلات.'
-          ]
-        },
-        {
           icon: UserCheck,
-          title: '10. حقوقك',
+          title: '9. حقوقك',
           paragraphs: [
             'يحق لك في أي وقت وفي حدود الأحكام القانونية:\n• الاطلاع على بياناتك المخزنة لدينا (المادة 15)\n• تصحيح البيانات غير الصحيحة (المادة 16)\n• الحذف (المادة 17)\n• تقييد المعالجة (المادة 18)\n• نقل البيانات (المادة 20)\n• سحب الموافقة الممنوحة بأثر مستقبلي (المادة 7 (3))',
             'يكفي لذلك إرسال رسالة غير رسمية إلى info@zenomix.de أو إلى عنواننا البريدي المذكور أعلاه.'
@@ -380,7 +359,7 @@ export default function Datenschutz({ onBack }: DatenschutzProps) {
         },
         {
           icon: ShieldAlert,
-          title: '11. حق الاعتراض (المادة 21 من اللائحة)',
+          title: '10. حق الاعتراض (المادة 21 من اللائحة)',
           highlight: true,
           paragraphs: [
             'إذا كنا نعالج بياناتك استناداً إلى المادة 6 (1) (و)، فيحق لك في أي وقت الاعتراض على هذه المعالجة لأسباب تتعلق بوضعك الخاص. وعندها نتوقف عن معالجة البيانات، ما لم نتمكن من إثبات أسباب مشروعة وقاهرة تفوق مصالحك وحقوقك وحرياتك، أو كانت المعالجة لازمة لإثبات حقوق قانونية أو ممارستها أو الدفاع عنها.'
@@ -388,7 +367,7 @@ export default function Datenschutz({ onBack }: DatenschutzProps) {
         },
         {
           icon: Scale,
-          title: '12. حق تقديم شكوى',
+          title: '11. حق تقديم شكوى',
           paragraphs: [
             'يحق لك تقديم شكوى إلى سلطة رقابية لحماية البيانات (المادة 77). والجهة المختصة بنا هي:',
             '⁦Landesbeauftragte für den Datenschutz Niedersachsen⁩\n⁦Prinzenstraße 5⁩\n⁦30159 Hannover⁩، ألمانيا\nhttps://www.lfd.niedersachsen.de'
@@ -396,7 +375,7 @@ export default function Datenschutz({ onBack }: DatenschutzProps) {
         },
         {
           icon: Info,
-          title: '13. معلومات إضافية',
+          title: '12. معلومات إضافية',
           paragraphs: [
             'أنت غير ملزم قانونياً أو تعاقدياً بتقديم بيانات شخصية. لكن بدون الاسم والبريد الإلكتروني والرسالة لا يمكننا معالجة استفسار مرسل عبر نموذج الاتصال.',
             'لا يتم اتخاذ أي قرارات آلية، بما في ذلك التنميط (المادة 22).',
